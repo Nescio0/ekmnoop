@@ -2,20 +2,17 @@
 This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown), a free and open source Pokémon battle simulator. However, in the long run I intend to reuse the data for a new, fan-made, free, cross-platform (GNU/Linux, Apple Mac OS X, Microsoft Windows) Pokémon role-playing game, similar to but different from Nintendo's official game series.
 
 ## Table of contents
-* [Changes](https://github.com/ekmnoop/myshowdownmod#desired-gameplay-mechanics)
+* [Changes](https://github.com/ekmnoop/myshowdownmod#changes)
   * [Evolution](https://github.com/ekmnoop/myshowdownmod#evolution)
   * [Types](https://github.com/ekmnoop/myshowdownmod#types)
     * [Move types](https://github.com/ekmnoop/myshowdownmod#move-types)
     * [Pokemon types](https://github.com/ekmnoop/myshowdownmod#pokemon-types)
-* [Desired gameplay mechanics](https://github.com/ekmnoop/myshowdownmod#changes)
+* [Desired gameplay mechanics](https://github.com/ekmnoop/myshowdownmod#desired-gameplay-mechanics)
 * [Terminology](https://github.com/ekmnoop/myshowdownmod#terminology)
 
 
 
 ## Changes
-* Five new types: **Air**, **Bat**, **Bird**, **Fish**, **Light**.
-
-[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 ### Evolution
 All Pokémon can evolve without being traded and irrespective of happiness, specific location, or time
@@ -176,6 +173,23 @@ To do:
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 #### Move types
+* Changed effectiveness of existing types:
+  * **Electric** is normally effective vs **Dragon** (instead of not very effective)
+  * **Electric** is super-effective vs **Steel** (instead of normally effective)
+  * **Fairy** is normally effective vs **Fire** (instead of not very effective)
+  * **Fairy** is not very effective vs **Grass** (instead of normally effective)
+  * **Fairy** has no effect vs **Psychic** (instead of normally effective)
+  * **Fighting** is normally effective vs **Bug** (instead of not very effective)
+  * **Ground** is not very effective vs **Dragon** (instead of normally effective)
+  * **Ice** is super-effective vs **Fire** (instead of not very effective)
+  * **Psychic** is not very effective vs **Bug** (instead of normally effective)
+  * **Psychic** is normally effective vs **Steel** (instead of not very effective)
+  * **Steel** is normally effective vs **Electric** (instead of not very effective)
+  * **Steel** is not very effective vs **Fighting** (instead of normally effective)
+  * **Steel** is normally effective vs **Fire** (instead of not very effective)
+  * **Steel** is normally effective vs **Ice** (instead of super-effective)
+  * **Steel** is normally effective vs **Rock** (instead of super-effective)
+* **Rock** and **Steel** are normally affected by Sandstorms (instead of immune)
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
