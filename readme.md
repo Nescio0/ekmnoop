@@ -2,19 +2,58 @@
 This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown), a free and open source Pokémon battle simulator. However, in the long run I intend to reuse the data for a new, fan-made, free, cross-platform (GNU/Linux, Apple Mac OS X, Microsoft Windows) Pokémon role-playing game, similar to but different from Nintendo's official game series.
 
 ## Table of contents
-* [Changes](https://github.com/ekmnoop/myshowdownmod#changes)
-  * [Evolution](https://github.com/ekmnoop/myshowdownmod#evolution)
+* [Data changes](https://github.com/ekmnoop/myshowdownmod#data-changes)
   * [Types](https://github.com/ekmnoop/myshowdownmod#types)
-    * [Move types](https://github.com/ekmnoop/myshowdownmod#move-types)
+  * [Moves](https://github.com/ekmnoop/myshowdownmod#moves)
+  * [Pokemon](https://github.com/ekmnoop/myshowdownmod#pokemon)
+    * [Pokemon evolution](https://github.com/ekmnoop/myshowdownmod#pokemon-evolution)
+    * [Pokemon stats](https://github.com/ekmnoop/myshowdownmod#pokemon-stats)
     * [Pokemon types](https://github.com/ekmnoop/myshowdownmod#pokemon-types)
+  * [Items](https://github.com/ekmnoop/myshowdownmod#items)
 * [Desired gameplay mechanics](https://github.com/ekmnoop/myshowdownmod#desired-gameplay-mechanics)
 * [Terminology](https://github.com/ekmnoop/myshowdownmod#terminology)
 
 
 
-## Changes
+## Data changes
 
-### Evolution
+### Types
+* Effectiviness changes of existing types:
+  * **Electric** is normally effective vs **Dragon** (instead of not very effective)
+  * **Electric** is super-effective vs **Steel** (instead of normally effective)
+  * **Fairy** is normally effective vs **Fire** (instead of not very effective)
+  * **Fairy** is not very effective vs **Grass** (instead of normally effective)
+  * **Fairy** has no effect vs **Psychic** (instead of normally effective)
+  * **Fighting** is normally effective vs **Bug** (instead of not very effective)
+  * **Ground** is not very effective vs **Dragon** (instead of normally effective)
+  * **Ice** is super-effective vs **Fire** (instead of not very effective)
+  * **Psychic** is not very effective vs **Bug** (instead of normally effective)
+  * **Psychic** is normally effective vs **Steel** (instead of not very effective)
+  * **Steel** is normally effective vs **Electric** (instead of not very effective)
+  * **Steel** is not very effective vs **Fighting** (instead of normally effective)
+  * **Steel** is normally effective vs **Fire** (instead of not very effective)
+  * **Steel** is normally effective vs **Ice** (instead of super-effective)
+  * **Steel** is normally effective vs **Rock** (instead of super-effective)
+* **Rock** and **Steel** are normally affected by Sandstorms (instead of immune)
+
+To do:
+* Five new types: **Air**, **Bat**, **Bird**, **Fish**, **Light**.
+* Deprecated **Flying**.
+* Renamed **Ground** to **Earth**, **Steel** to **Metal**.
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+
+### Moves
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+
+### Pokemon
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+#### Pokemon evolution
 All Pokémon can evolve without being traded and irrespective of happiness, specific location, or time
 * exposed to an evolutionary stone:
   * Dawn Stone:
@@ -55,6 +94,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
     * #035 *Clefairy* into #036 *Clefable*
     * #039 *Jigglypuff* into #040 *Wigglytuff*
     * #517 *Munna* into #518 *Musharna*
+    * #790 *Cosmoem* into #792 *Lunala* (instead of at level 53)
   * Oval Stone:
     * #113 *Chansey* into #242 *Blissey*
   * Shiny Stone:
@@ -69,6 +109,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
     * #546 *Cottonee* into #547 *Whimsicott*
     * #548 *Petilil* into #549 *Lilligant*
     * #694 *Helioptile* into #695 *Heliolisk*
+    * #790 *Cosmoem* into #791 *Solgaleo* (instead of at level 53)
   * Thunder Stone:
     * #025 *Pikachu* into #026 *Raichu*
     * #025 *Alolan Pikachu* into #026 *Alolan Raichu*
@@ -147,6 +188,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * at level 42:
     * #708 *Phantump* into #709 *Trevenant* (instead of being traded)
     * #710 *Pumpkaboo* into #711 *Gourgeist* (instead of being traded)
+    * #772 *Type: Null* into #773 *Silvally* (instead of leveled up with high friendship)
   * at level 44:
     * #042 *Golbat* into #169 *Crobat* (instead of leveled up with high friendship)
   * at level 50:
@@ -156,44 +198,108 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
     * #093 *Haunter* into #094 *Gengar* (instead of being traded)
     * #525 *Boldore* into #526 *Gigalith* (instead of being traded)
     * #533 *Gurdurr* into #534 *Conkeldurr* (instead of being traded)
-    * #772 *Type: Null* into #773 *Silvally* (instead of leveled up with high friendship)
 * different Pokemon:
   * #588 *Karrablast* into #617 *Accelgor* at level 27 (instead of into *Escavalier* when traded for *Shelmet*)
   * #616 *Shelmet* into #589 *Escavalier* at level 27 (instead of into *Accelgor* when traded for *Karrablast*)
+  * #718 *Zygarde 10% forme* evolves into *Zygarde 50% forme* at level 50, which evolves into *Zygarde complete forme* at level 100
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
-### Types 
-To do:
-* Five new types: **Air**, **Bat**, **Bird**, **Fish**, **Light**.
-* Deprecated **Flying**.
-* Renamed **Ground** to **Earth**, **Steel** to **Metal**.
-* Effectiviness changes of existing types.
+#### Pokemon stats
+* Mythical:
+  * #493 *Arceus* +30 HP, +5 PA, +5 PD, +5 SA, +5 SD, -20 CS | total from 720 to 750
+* Legendary:
+  * #144 *Articuno* +30 SA, -30 SD | total at 580
+  * #150 *Mewtwo* +5 HP, +1 PA, -1 PD, +1 SA, -1 SD, -19 CS | total from 680 to 666
+  * #249 *Lugia* +2 HP, -4 SD | total from 680 to 678
+  * #250 *Ho-Oh* +2 HP, -4 SD | total from 680 to 678
+  * #380 *Latias* +30 CS | total from 600 to 630
+  * #381 *Latios* +30 CS | total from 600 to 630
+  * #382 *Kyogre* +8 HP, +10 SA | total from 660 to 678
+  * #383 *Groudon* +8 HP, +10 PA | total from 660 to 678
+  * #384 *Rayquaza* +3 HP, -5 PA, -5 SA, +5 CS | total from 680 to 678
+  * #483 *Dialga* -1 HP, -1 SD | total from 680 to 678
+  * #484 *Palkia* -1 PD, -1 CS | total from 680 to 678
+  * #485 *Heatran* +5 HP, +5 PA, +5 PD, +5 SA, +5 SD, +5 CS | total from 600 to 630
+  * #486 *Regigigas* +10 HP, -20 CS | total from 670 to 660
+  * #487 *Giratina* -1 PA, -1 SA | total from 680 to 678
+  * #643 *Reshiram* -1 HP, -1 PD | total from 680 to 678
+  * #644 *Zekrom* -1 HP, -1 SD | total from 680 to 678
+  * #716 *Xerneas* -3 HP, -3 SD, +4 CS | total from 680 to 678
+  * #717 *Yveltal* -3 HP, -3 SD, +4 CS | total from 680 to 678
+  * #791 *Solgaleo* -1 HP, -1 PA | total from 680 to 678
+  * #792 *Lunala* -1 HP, -1 SA | total from 680 to 678
+* Fossil:
+* Starter:
+* Other:
 
-[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
-
-#### Move types
-* Changed effectiveness of existing types:
-  * **Electric** is normally effective vs **Dragon** (instead of not very effective)
-  * **Electric** is super-effective vs **Steel** (instead of normally effective)
-  * **Fairy** is normally effective vs **Fire** (instead of not very effective)
-  * **Fairy** is not very effective vs **Grass** (instead of normally effective)
-  * **Fairy** has no effect vs **Psychic** (instead of normally effective)
-  * **Fighting** is normally effective vs **Bug** (instead of not very effective)
-  * **Ground** is not very effective vs **Dragon** (instead of normally effective)
-  * **Ice** is super-effective vs **Fire** (instead of not very effective)
-  * **Psychic** is not very effective vs **Bug** (instead of normally effective)
-  * **Psychic** is normally effective vs **Steel** (instead of not very effective)
-  * **Steel** is normally effective vs **Electric** (instead of not very effective)
-  * **Steel** is not very effective vs **Fighting** (instead of normally effective)
-  * **Steel** is normally effective vs **Fire** (instead of not very effective)
-  * **Steel** is normally effective vs **Ice** (instead of super-effective)
-  * **Steel** is normally effective vs **Rock** (instead of super-effective)
-* **Rock** and **Steel** are normally affected by Sandstorms (instead of immune)
+<!--
+* changed in Generation VI:
+  * #012 Butterfree +10 SA
+  * #015 Beedrill +10 PA
+  * #018 Pidgeot +10 CS
+  * #025 Pikachu +10 PD and +10 SD
+  * #026 Raichu +10 CS
+  * #031 Nidoqueen +10 PA
+  * #034 Nidoking +10 PA
+  * #036 Clefable +10 SA
+  * #040 Wigglytuff +10 SA
+  * #045 Vileplume +10 SA
+  * #062 Poliwrath +10 PA
+  * #065 Alakazam +10 SD
+  * #071 Victreebel +10 SD
+  * #076 Golem +10 PA
+  * #181 Ampharos +10 PD
+  * #182 Bellossom +10 PD
+  * #184 Azumarill +10 SA
+  * #189 Jumpluff +10 SD
+  * #267 Beautifly +10 SA
+  * #295 Exploud +10 SD
+  * #398 Staraptor +10 SD
+  * #407 Roserade +10 PD
+  * #508 Stoutland +10 PA
+  * #521 Unfezant +10 PA
+  * #526 Gigalith +10 SD
+  * #537 Seismitoad +10 PA
+  * #542 Leavanny +10 SD
+  * #545 Scolipede +10 PA
+  * #553 Krookodile +10 PD
+* changed in Generation VII:
+  * #024 Arbok +10 PA
+  * #051 Dugtrio +20 PA
+  * #083 Farfetch'd +25 PA
+  * #085 Dodrio +10 CS
+  * #101 Electrode +10 CS
+  * #103 Exeggutor +10 SD
+  * #164 Noctowl +10 SA
+  * #168 Ariados +10 SD
+  * #211 Qwilfish +10 PD
+  * #219 Magcargo +10 SA
+  * #222 Corsola +10 HP, 10 PD, +10 SD
+  * #226 Mantine +20 HP
+  * #277 Swellow +25 SA
+  * #279 Pelipper +10 SA
+  * #284 Masquerain +20 SA, +20 CS
+  * #301 Delcatty +20 CS
+  * #313 Volbeat +20 PD, +10 SD
+  * #314 Illumise +20 PD, +10 SD
+  * #337 Lunatone +20 HP
+  * #338 Solrock +20 HP
+  * #358 Chimecho +10 HP, +10 PD, +10 SD
+  * #527 Woobat +10 HP
+  * #558 Crustle +10 PA
+  * #614 Beartic +20 PA
+  * #615 Cryogonal +10 HP, +20 PD
+-->
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 #### Pokemon types
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+
+### Items
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
