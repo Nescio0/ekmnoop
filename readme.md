@@ -2,6 +2,7 @@
 This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown), a free and open source Pokémon battle simulator. However, in the long run I intend to reuse the data for a new, fan-made, free, cross-platform (GNU/Linux, Apple Mac OS X, Microsoft Windows) Pokémon role-playing game, similar to but different from Nintendo's official game series.
 
 ## Table of contents
+* [Terminology](https://github.com/ekmnoop/myshowdownmod#terminology)
 * [Data changes](https://github.com/ekmnoop/myshowdownmod#data-changes)
   * [Types](https://github.com/ekmnoop/myshowdownmod#types)
   * [Moves](https://github.com/ekmnoop/myshowdownmod#moves)
@@ -11,11 +12,36 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
     * [Pokemon types](https://github.com/ekmnoop/myshowdownmod#pokemon-types)
   * [Items](https://github.com/ekmnoop/myshowdownmod#items)
 * [Desired gameplay mechanics](https://github.com/ekmnoop/myshowdownmod#desired-gameplay-mechanics)
-* [Terminology](https://github.com/ekmnoop/myshowdownmod#terminology)
+
+
+
+## Terminology
+* base stats
+  * `HP`: health
+  * `PA`: physical attack
+  * `PD`: physical defence
+  * `SA`: special attack
+  * `SD`: special defence
+  * `CS`: combat speed
+  * “Attack stats”: both physical attack and special attack
+  * “Defence stats”: both physical defence and special defence
+  * “Physical stats”: both physical attack and physical defence
+  * “Special stats”: both special attack and special defence
+* status
+  * `brn`: burned
+  * `par`: paralysed
+  * `slp`: asleep
+  * `frz`: frozen
+  * `psn`: poisoned
+  * `tox`: badly poisoned
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 
 
 ## Data changes
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 ### Types
 * Effectiviness changes of existing types:
@@ -295,6 +321,22 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 #### Pokemon types
+* added **Air**-type to
+* added **Bat**-type to 
+* added **Bird**-type to 
+* added **Bug**-type to #098 *Krabby*, #099 *Kingler*, #140 *Kabuto*, #141 *Kabutops*, #341 *Corphish*, #342 *Crawdaunt*, #328 *Trapinch*, #329 *Vibrava*, #330 *Flygon*, #452 *Drapion*, #692 *Clauncher*, #693 *Clawitzer*, #739 *Crabrawler*, #740 *Crabominable*
+* removed **Dark**-type from #248 *Tyranitar*
+* added **Dragon**-type to #006 *Charizard*, #116 *Horsea*, #117 *Seadra*, #130 *Gyarados*, #142 *Aerodactyl*, #193 *Yanma*, #246 *Larvitar*, #246 *Pupitar*, #248 *Tyranitar*, #350 *Milotic*, #357 *Tropius*, #469 *Yanmega*, #690 *Skrelp*
+* added **Fighting**-type to #127 *Pinsir*
+* added **Fish**-type to 
+* removed **Flying**-type from #006 *Charizard*, #012 *Butterfree*, #123 *Scyther*, #130 *Gyarados*, #142 *Aerodactyl*, #149 *Dragonite*, #165 *Ledyba*, #166 *Ledian*, #193 *Yanma*, #267 *Beautifly*, #291 *Ninjask*, #350 *Milotic*, #357 *Tropius*, #373 *Salamence*, #414 *Mothim*, #415 *Combee*, #416 *Vespiqueen*, #469 *Yanmega*, #666 *Vivillon*
+* removed **Ground**-type from #074 *Geodude*, #075 *Graveler*, #076 *Golem*, #246 *Larvitar*, #247 *Pupitar*
+* added **Light**-type to 
+* added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #744 *Rockruff*, #745 *Lycanroc*
+* removed **Normal**-type from #039 *Jigglypuff*, #040 *Wigglytuff*, #174 *Igglybuff*, #694 *Helioptile*, #695 *Heliolisk*
+* removed **Psychic**-type from #386 *Deoxys* (making it typeless)
+* added **Water**-type to #691 *Dragalge*, #704 Goomy, #705 Sliggoo, #706 Goodra
+<!-- , # ** -->
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
@@ -326,23 +368,6 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   1. 100% female
   1. 100% male
   1. 100% neuter
-
-[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
-
-
-
-## Terminology
-* base stats
-  * `HP`: health
-  * `PA`: physical attack
-  * `PD`: physical defence
-  * `SA`: special attack
-  * `SD`: special defence
-  * `CS`: combat speed
-  * “Attack stats”: both physical attack and special attack
-  * “Defence stats”: both physical defence and special defence
-  * “Physical stats”: both physical attack and physical defence
-  * “Special stats”: both special attack and special defence
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
