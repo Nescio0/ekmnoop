@@ -228,6 +228,64 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * #588 *Karrablast* into #617 *Accelgor* at level 27 (instead of into *Escavalier* when traded for *Shelmet*)
   * #616 *Shelmet* into #589 *Escavalier* at level 27 (instead of into *Accelgor* when traded for *Karrablast*)
   * #718 *Zygarde 10% forme* evolves into *Zygarde 50% forme* at level 50, which evolves into *Zygarde complete forme* at level 100
+* starter Pokemon:
+  * first evolution at level 20:
+    * #001 *Bulbasaur* into #002 *Ivysaur* (instead of at level 16)
+    * #004 *Charmander* into #005 *Charmeleon* (instead of at level 16)
+    * #007 *Squirtle* into #008 *Wartortle* (instead of at level 16)
+    * #152 *Chikorita* into #153 *Bayleef* (instead of at level 16)
+    * #155 *Cyndaquil* into #156 *Quilava* (instead of at level 14)
+    * #158 *Totodile* into #159 *Croconaw* (instead of at level 18)
+    * #252 *Treecko* into #253 *Grovyle* (instead of at level 16)
+    * #255 *Torchic* into #256 *Combusken* (instead of at level 16)
+    * #258 *Mudkip* into #259 *Marshtomp* (instead of at level 16)
+    * #387 *Turtwig* into #388 *Grotle* (instead of at level 18)
+    * #390 *Chimchar* into #391 *Monferno* (instead of at level 14)
+    * #393 *Piplup* into #394 *Prinplup* (instead of at level 16)
+    * #495 *Snivy* into #496 *Servine* (instead of at level 17)
+    * #498 *Tepig* into #499 *Pignite* (instead of at level 17)
+    * #501 *Oshawott* into #502 *Dewott* (instead of at level 17)
+    * #650 *Chespin* into #651 *Quilladin* (instead of at level 16)
+    * #653 *Fennekin* into #654 *Braixen* (instead of at level 16)
+    * #656 *Froakie* into #657 *Frogadier* (instead of at level 16)
+    * #722 *Rowlet* into #723 *Dartrix* (instead of at level 16)
+    * #725 *Litten* into #726 *Torracat* (instead of at level 17)
+    * #728 *Popplio* into #729 *Brionne* (instead of at level 17)
+  * second evolution at level 40:
+    * #002 *Ivysaur* into #003 *Venusaur* (instead of at level 32)
+    * #005 *Charmeleon* into #006 *Charizard* (instead of at level 36)
+    * #008 *Wartortle* into #009 *Blastoise* (instead of at level 36)
+    * #153 *Bayleef* into #154 *Meganium* (instead of at level 32)
+    * #156 *Quilava* into #157 *Typhlosion* (instead of at level 36)
+    * #159 *Croconaw* into #160 *Feraligatr* (instead of at level 30)
+    * #253 *Grovyle* into #254 *Sceptile* (instead of at level 36)
+    * #256 *Combusken* into #257 *Blaziken* (instead of at level 36)
+    * #259 *Marshtomp* into #260 *Swampert* (instead of at level 36)
+    * #388 *Grotle* into #389 *Torterra* (instead of at level 32)
+    * #391 *Monferno* into #392 *Infernape* (instead of at level 36)
+    * #394 *Prinplup* into #395 *Empoleon* (instead of at level 36)
+    * #496 *Servine* into #497 *Serperior* (instead of at level 36)
+    * #499 *Pignite* into #500 *Emboar* (instead of at level 36)
+    * #502 *Dewott* into #503 *Samurott* (instead of at level 36)
+    * #651 *Quilladin* into #652 *Chesnaught* (instead of at level 36)
+    * #654 *Braixen* into #655 *Delphox* (instead of at level 36)
+    * #657 *Frogadier* into #658 *Greninja* (instead of at level 36)
+    * #723 *Dartrix* into #724 *Decidueye* (instead of at level 34)
+    * #726 *Torracat* into #727 *Incineroar* (instead of at level 34)
+    * #729 *Brionne* into #730 *Primarina* (instead of at level 34)
+<!--
+  * at level 36:
+    * #138 *Omanyte* into #139 *Omastar* (instead of at level 40)
+    * #140 *Kabuto* into #141 *Kabutops* (instead of at level 40)
+    * #345 *Lileep* into #346 *Cradily* (instead of at level 40)
+    * #347 *Anorith* into #348 *Armaldo* (instead of at level 40)
+    * #408 *Cranidos* into #409 *Rampardos* (instead of at level 30)
+    * #410 *Shieldon* into #411 *Bastiodon* (instead of at level 30)
+    * #564 *Tirtouga* into #565 *Carracosta* (instead of at level 37)
+    * #566 *Archen* into #567 *Archeops* (instead of at level 37)
+    * #696 *Tyrunt* into #697 *Tyrantrum* (instead of at level 39 during the day)
+    * #698 *Amaura* into #699 *Aurorus* (instead of at level 39 during the night)
+-->
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
@@ -335,7 +393,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 * added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #744 *Rockruff*, #745 *Lycanroc*
 * removed **Normal**-type from #039 *Jigglypuff*, #040 *Wigglytuff*, #174 *Igglybuff*, #694 *Helioptile*, #695 *Heliolisk*
 * removed **Psychic**-type from #386 *Deoxys* (making it typeless)
-* added **Water**-type to #691 *Dragalge*, #704 Goomy, #705 Sliggoo, #706 Goodra
+* added **Water**-type to #691 *Dragalge*, #704 *Goomy*, #705 *Sliggoo*, #706 *Goodra*
 <!-- , # ** -->
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)

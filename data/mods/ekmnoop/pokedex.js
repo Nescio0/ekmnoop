@@ -3,12 +3,33 @@
 // @type {{[k: string]: ModdedTemplateData}}
 let BattlePokedex = {
 // Generation I – 151 Pokémon – #001 Bulbasaur to #151 Mew
+	// #002
+	ivysaur: {
+		evoLevel: 20,
+	},
+	// #003
+	venusaur: {
+		evoLevel: 40,
+	},
+	// #005
+	charmeleon: {
+		evoLevel: 20,
+	},
 	// #006
 	charizard: {
+		evoLevel: 40,
 		types: ["Fire", "Dragon"],
 	},
 	charizardmegay: {
 		types: ["Fire", "Dragon"],
+	},
+	// #008
+	wartortle: {
+		evoLevel: 20,
+	},
+	// #009
+	blastoise: {
+		evoLevel: 40,
 	},
 	// #012
 	butterfree: {
@@ -153,6 +174,30 @@ let BattlePokedex = {
 		baseStats: {hp: 111, atk: 151, def: 69, spa: 195, spd: 119, spe: 121},
 	},
 // Generation II – 100 Pokémon – #152 Chikorita to #251 Celebi
+	// #153
+	bayleef: {
+		evoLevel: 20,
+	},
+	// #154
+	meganium: {
+		evoLevel: 40,
+	},
+	// #156
+	quilava: {
+		evoLevel: 20,
+	},
+	// #157
+	typhlosion: {
+		evoLevel: 40,
+	},
+	// #159
+	croconaw: {
+		evoLevel: 20,
+	},
+	// #160
+	feraligatr: {
+		evoLevel: 40,
+	},
 	// #165
 	ledyba: {
 		types: ["Bug"],
@@ -287,6 +332,30 @@ let BattlePokedex = {
 		baseStats: {hp: 108, atk: 130, def: 90, spa: 110, spd: 150, spe: 90},
 	},
 // Generation III – 135 Pokémon – #252 Treecko to #386 Deoxys
+	// #253
+	grovyle: {
+		evoLevel: 20,
+	},
+	// #254
+	sceptile: {
+		evoLevel: 40,
+	},
+	// #256
+	combusken: {
+		evoLevel: 20,
+	},
+	// #257
+	blaziken: {
+		evoLevel: 40,
+	},
+	// #259
+	marshtomp: {
+		evoLevel: 20,
+	},
+	// #260
+	swampert: {
+		evoLevel: 40,
+	},
 	// #267
 	beautifly: {
 		types: ["Bug"],
@@ -345,6 +414,9 @@ let BattlePokedex = {
 	salamence: {
 		types: ["Dragon"],
 	},
+	salamencemega: {
+		types: ["Dragon"],
+	},
 	// #380
 	latias: {
 		baseStats: {hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 140},
@@ -394,6 +466,30 @@ let BattlePokedex = {
 		types: [],
 	},
 // Generation IV – 107 Pokémon – #387 Turtwig to #493 Arceus
+	// #388
+	grotle: {
+		evoLevel: 20,
+	},
+	// #389
+	torterra: {
+		evoLevel: 40,
+	},
+	// #391
+	monferno: {
+		evoLevel: 20,
+	},
+	// #392
+	infernape: {
+		evoLevel: 40,
+	},
+	// #394
+	prinplup: {
+		evoLevel: 20,
+	},
+	// #395
+	empoleon: {
+		evoLevel: 40,
+	},
 	// #414
 	mothim: {
 		types: ["Bug"],
@@ -550,6 +646,30 @@ let BattlePokedex = {
 		baseStats: {hp: 150, atk: 125, def: 125, spa: 125, spd: 125, spe: 100},
 	},
 // Generation V – 156 Pokémon – #494 Victini to #649 Genesect
+	// #496
+	servine: {
+		evoLevel: 20,
+	},
+	// #497
+	serperior: {
+		evoLevel: 40,
+	},
+	// #499
+	pignite: {
+		evoLevel: 20,
+	},
+	// #500
+	emboar: {
+		evoLevel: 40,
+	},
+	// #502
+	dewott: {
+		evoLevel: 20,
+	},
+	// #503
+	samurott: {
+		evoLevel: 40,
+	},
 	// #526
 	gigalith: {
 		evoLevel: 50,
@@ -593,6 +713,30 @@ let BattlePokedex = {
 		baseStats: {hp: 99, atk: 150, def: 120, spa: 120, spd: 99, spe: 90},
 	},
 // Generation VI – 72 Pokémon – #650 Chespin to #721 Volcanion
+	// #651
+	quilladin: {
+		evoLevel: 20,
+	},
+	// #652
+	chesnaught: {
+		evoLevel: 40,
+	},
+	// #654
+	braixen: {
+		evoLevel: 20,
+	},
+	// #655
+	delphox: {
+		evoLevel: 40,
+	},
+	// #657
+	frogadier: {
+		evoLevel: 20,
+	},
+	// #658
+	greninja: {
+		evoLevel: 40,
+	},
 	// #666
 	vivillon: {
 		types: ["Bug"],
@@ -693,6 +837,30 @@ let BattlePokedex = {
 		evoLevel: 100,
 	},
 // Generation VII – 81+5+2 Pokémon – #722 Rowlet to #809 Melmetal
+	// #723
+	dartrix: {
+		evoLevel: 20,
+	},
+	// #724
+	decidueye: {
+		evoLevel: 40,
+	},
+	// #726
+	torracat: {
+		evoLevel: 20,
+	},
+	// #727
+	incineroar: {
+		evoLevel: 40,
+	},
+	// #729
+	brionne: {
+		evoLevel: 20,
+	},
+	// #730
+	primarina: {
+		evoLevel: 40,
+	},
 	// #738
 	vikavolt: {
 		evoType: "stone",
