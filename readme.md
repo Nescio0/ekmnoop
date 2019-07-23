@@ -71,6 +71,14 @@ To do:
 
 
 ### Moves
+* Accuracy changes:
+* Base power changes:
+* PP changes:
+  * from 5 to 10: Ancient Power
+* Type changes:
+  * **Grass** instead of **Poison**: Poison Powder
+  * **Ground** instead of **Rock**: Sandstorm
+* Other changes:
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
@@ -418,9 +426,42 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * experience gain uses `SpeciesBaseStatTotal` instead of *species* base experience yield
     * e.g. #001 *Bulbasaur* has 318 (instead of 64), #002 *Ivysaur* 405 (instead of 142), #003 *Venusaur* 525 (instead of 236)
     * multiplied by `LevelLoser / LevelWinner`, to ensure lower level Pokémon level up quicker
-* base stat vitamins (HP Up, Protein, Iron, Calcium, Zinc, Carbos) now directly grant +1 stat instead of +10 EV; the number of vitamins you can use on a Pokémon is limited by its level
-  * e.g. +10 HP for a level 10 Pokémon or +25 PA, PD, SA, SD each for a level 100 Pokémon
-  * wings remain unchanged (+1 EV each)
+* individual Pokémon stats are calculated differently:
+  * HP: `floor(2 × base × (0.85 + IV / 100) × (level + 10) / 110) + AV + level + 10`
+  * other stats: `floor((2 × base × (0.85 + IV / 100) + badges) × (level + 10) / 110) + AV`
+  * for comparison the official formulae:
+    * “Let's Go, Pikachu/Eevee!” HP: `floor((2 × base + IV) × level / 100) + AV + level + 10`
+    * “Let's Go, Pikachu/Eevee!” other stats: `floor(((2 × base + IV) × level / 100 + 5) × nature × friendship) + AV`
+    * generation III to VII HP: `floor((2 × base + IV + floor(EV / 4)) × level / 100) + level + 10`
+    * generation III to VII other stats: `floor((floor((2 × base + IV + floor(EV / 4)) × level / 100 ) + 5) × nature)`
+    * generation I and II HP: `floor((2 × (base + IV) + floor(sqrt(EV) / 4)) × level / 100) + level + 10`
+    * generation I and II other stats: `floor((2 × (base + IV) + floor(sqrt(EV) / 4)) × level / 100 ) + 5`
+  * legenda:
+    * `base`: Pokémon species base stat
+    * `IV`: individual value, a random number from 0 to 31 for each stat
+    * `EV`: effort values, gained by defeating other Pokémon; maximum is 255 for a stat and a total of 510 for a Pokémon
+    * `AV`: added/awakening values, gained from using certain items
+    * `badges`: the number of badges a player has acquired by defeating gym leaders
+    * `friendship`: a bonus between 0 (for a Pokémon with 0 friendship) to +10% (for a Pokémon with 255 friendship)
+    * `level`: current level of the Pokémon
+    * `nature`: either 0 change, +10%, or −10%
+  * changes:
+    * stats scale with `(level + 10) / 110` (instead of `level / 100`), which makes a significant difference for lower levels, e.g. 
+      * at level 1 stats are 10% (instead of 1%)
+      * at level 5 stats are 13.6% (instead of 5%)
+      * at level 12 stats are 20% (instead of 12%)
+      * at level 23 stats are 30% (instead of 23%)
+      * at level 34 stats are 40% (instead of 34%)
+      * at level 45 stats are 50% (instead of 45%)
+      * at level 100 stats are 100% (as they were)
+    * `IV` are now a multiplier (from −15% to +16%) instead of an addition
+    * `EV`, `friendship`, and `nature` are no longer used (wings (+1 `EV` each) and friendship-berries have no longer any effect)
+    * `AV`:
+      * no longer increased by leveling up; theoretically no maximum, in practice 
+      * vitamins (HP Up, Protein, Iron, Calcium, Zinc, Carbos) now grant +1 `AV` instead of +10 `EV` (similar to candies in “Let's Go, Pikachu/Eevee!”)
+      * the *total* number of vitamins you can use on a Pokémon is determined by its level, e.g. +10 HP for a level 10 Pokémon, or +25 PA, PD, SA, SD each for a level 100 Pokémon (instead of 50 candies *for each stat* for a Pokémon under level 30, 100 between level 30 and 60, 200 above level 60)
+      * can also be used to give specific story-line Pokémon higher-than-normally-possible stats
+    * `badges` slightly improve other stats, but not HP
 * simplified sex ratios for realism:
   1. 50% female, 50% male (default)
   1. 100% female
