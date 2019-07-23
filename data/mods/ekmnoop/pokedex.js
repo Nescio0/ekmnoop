@@ -17,8 +17,8 @@ let BattlePokedex = {
 	},
 	// #006
 	charizard: {
-		evoLevel: 40,
 		types: ["Fire", "Dragon"],
+		evoLevel: 40,
 	},
 	charizardmegay: {
 		types: ["Fire", "Dragon"],
@@ -109,6 +109,14 @@ let BattlePokedex = {
 	// #099
 	kingler: {
 		types: ["Water", "Bug"],
+	},
+	// #109
+	koffing: {
+		types: ["Poison", "Air"],
+	},
+	// #110
+	weezing: {
+		types: ["Poison", "Air"],
 	},
 	// #113
 	chansey: {
@@ -216,6 +224,7 @@ let BattlePokedex = {
 	},
 	// #176
 	togetic: {
+		types: ["Fairy", "Air"],
 		evoLevel: 10,
 	},
 	// #179
@@ -245,6 +254,18 @@ let BattlePokedex = {
 	politoed: {
 		evoType: "levelHold",
 		evoItem: "King's Rock",
+	},
+	// #187
+	hoppip: {
+		types: ["Grass", "Air"],
+	},
+	// #188
+	skiploom: {
+		types: ["Grass", "Air"],
+	},
+	// #189
+	jumpluff: {
+		types: ["Grass", "Air"],
 	},
 	// #193
 	yanma: {
@@ -286,6 +307,7 @@ let BattlePokedex = {
 	},
 	// #226
 	mantine: {
+		types: ["Water"],
 		evoLevel: 15,
 	},
 	// #230
@@ -360,6 +382,10 @@ let BattlePokedex = {
 	beautifly: {
 		types: ["Bug"],
 	},
+	// #284
+	masquerain: {
+		types: ["Bug", "Air"],
+	},
 	// #291
 	ninjask: {
 		types: ["Bug"],
@@ -392,6 +418,14 @@ let BattlePokedex = {
 	flygon: {
 		types: ["Bug", "Dragon", "Ground"],
 	},
+	// #333
+	swablu: {
+		types: ["Air", "Flying"],
+	},
+	// #334
+	altaria: {
+		types: ["Air", "Dragon"],
+	},
 	// #341
 	corphish: {
 		types: ["Water", "Bug"],
@@ -406,9 +440,26 @@ let BattlePokedex = {
 		evoType: "levelHold",
 		evoItem: "Dragon Scale",
 	},
+	// #351
+	castform: {
+		types: ["Air"],
+	},
+	castformsunny: {
+		types: ["Air", "Fire"],
+	},
+	castformrainy: {
+		types: ["Air", "Water"],
+	},
+	castformsnowy: {
+		types: ["Air", "Ice"],
+	},
 	// #357
 	tropius: {
 		types: ["Grass", "Dragon"],
+	},
+	// #358
+	chimecho: {
+		types: ["Psychic", "Air"],
 	},
 	// #373
 	salamence: {
@@ -419,16 +470,20 @@ let BattlePokedex = {
 	},
 	// #380
 	latias: {
+		types: ["Air", "Dragon", "Psychic"],
 		baseStats: {hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 140},
 	},
 	latiasmega: {
+		types: ["Air", "Dragon", "Psychic"],
 		baseStats: {hp: 80, atk: 100, def: 120, spa: 140, spd: 150, spe: 140},
 	},
 	// #381
 	latios: {
+		types: ["Air", "Dragon", "Psychic"],
 		baseStats: {hp: 80, atk: 90, def: 80, spa: 130, spd: 110, spe: 140},
 	},
 	latiosmega: {
+		types: ["Air", "Dragon", "Psychic"],
 		baseStats: {hp: 80, atk: 130, def: 100, spa: 160, spd: 120, spe: 140},
 	},
 	// #382
@@ -447,9 +502,11 @@ let BattlePokedex = {
 	},
 	// #384
 	rayquaza: {
+		types: ["Dragon", "Air"],
 		baseStats: {hp: 108, atk: 145, def: 90, spa: 145, spd: 90, spe: 100},
 	},
 	rayquazamega: {
+		types: ["Dragon", "Air"],
 		baseStats: {hp: 108, atk: 175, def: 100, spa: 175, spd: 100, spe: 120},
 	},
 	// #386
@@ -502,6 +559,14 @@ let BattlePokedex = {
 	vespiqueen: {
 		types: ["Bug"],
 	},
+	// #425
+	drifloon: {
+		types: ["Ghost", "Air"],
+	},
+	// #426
+	drifblim: {
+		types: ["Ghost", "Air"],
+	},
 	// #428
 	lopunny: {
 		evoLevel: 19,
@@ -517,6 +582,10 @@ let BattlePokedex = {
 	// #452
 	drapion: {
 		types: ["Poison", "Bug", "Dark"],
+	},
+	// #458
+	mantyke: {
+		types: ["Water"],
 	},
 	// #462
 	magnezone: {
@@ -537,6 +606,10 @@ let BattlePokedex = {
 	magmortar: {
 		evoType: "levelHold",
 		evoItem: "Magmarizer",
+	},
+	// #468
+	togekiss: {
+		types: ["Fairy", "Air"],
 	},
 	// #469
 	yanmega: {
@@ -686,6 +759,10 @@ let BattlePokedex = {
 	leavanny: {
 		evoLevel: 40,
 	},
+	// #587
+	emolga: {
+		types: ["Electric", "Air"],
+	},
 	// #588
 	karrablast: {
 		evos: ["accelgor"],
@@ -704,6 +781,20 @@ let BattlePokedex = {
 		prevo: "karrablast",
 		evoLevel: 27,
 	},
+	// #641
+	tornadus: {
+		types: ["Air"],
+	},
+	tornadustherian: {
+		types: ["Air"],
+	},
+	// #642
+	thundurus: {
+		types: ["Air", "Electric"],
+	},
+	thundurustherian: {
+		types: ["Air", "Electric"],
+	},
 	// #643
 	reshiram: {
 		baseStats: {hp: 99, atk: 120, def: 99, spa: 150, spd: 120, spe: 90},
@@ -711,6 +802,13 @@ let BattlePokedex = {
 	// #644
 	zekrom: {
 		baseStats: {hp: 99, atk: 150, def: 120, spa: 120, spd: 99, spe: 90},
+	},
+	// #645
+	landorus: {
+		types: ["Air", "Ground"],
+	},
+	landorustherian: {
+		types: ["Ground"],
 	},
 // Generation VI – 72 Pokémon – #650 Chespin to #721 Volcanion
 	// #651
@@ -884,9 +982,20 @@ let BattlePokedex = {
 	lycanroc: {
 		types: ["Normal", "Rock"],
 	},
+	// #764
+	comfey: {
+		types: ["Fairy", "Air"],
+	},
 	// #773
 	silvally: {
 		evoLevel: 42,
+	},
+	// #774
+	minior: {
+		types: ["Rock", "Air"],
+	},
+	miniormeteor: {
+		types: ["Rock", "Air"],
 	},
 	// #791
 	solgaleo: {
@@ -899,6 +1008,10 @@ let BattlePokedex = {
 		baseStats: {hp: 136, atk: 113, def: 89, spa: 136, spd: 107, spe: 97},
 		evoType: "stone",
 		evoItem: "Moon Stone",
+	},
+	// #792
+	celesteela: {
+		types: ["Steel", "Air"],
 	},
 };
 

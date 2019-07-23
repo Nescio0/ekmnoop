@@ -44,6 +44,8 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 ### Types
+* New types:
+  * **Air**
 * Effectiviness changes of existing types:
   * **Electric** is normally effective vs **Dragon** (instead of not very effective)
   * **Electric** is super-effective vs **Steel** (instead of normally effective)
@@ -63,21 +65,27 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
 * **Rock** and **Steel** are normally affected by Sandstorms (instead of immune)
 
 To do:
-* Five new types: **Air**, **Bat**, **Bird**, **Fish**, **Light**.
-* Deprecated **Flying**.
-* Renamed **Ground** to **Earth**, **Steel** to **Metal**.
+* Five new types: **Bat**, **Bird**, **Fish**, **Light**.
+* Deprecate **Flying**.
+* Rename **Ground** to **Earth**, **Steel** to **Metal**.
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 
 ### Moves
+* New moves:
 * Accuracy changes:
 * Base power changes:
 * PP changes:
   * from 5 to 10: Ancient Power
 * Type changes:
+  * **Air** instead of **Dragon**: Twister
+  * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, Gust, Hurricane, Sky Attack, Supersonic Skystrike, Tail Wind
+  * **Air** instead of **Normal**: Sonic Boom, Supersonic, Weather Ball, Whirlwind
+  * **Dragon** instead of **Flying**: Dragon Ascent
   * **Grass** instead of **Poison**: Poison Powder
   * **Ground** instead of **Rock**: Sandstorm
+  * **Normal** instead of **Flying**: Acrobatics
 * Other changes:
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
@@ -387,7 +395,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 #### Pokemon types
-* added **Air**-type to
+* added **Air**-type to #109 *Koffing*, #110 *Weezing*, #176 *Togetic*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #284 *Masquerain*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #358 *Chimecho*, #380 *Latias*, #381 *Latios*, #384 *Rayquaza*, #425 *Drifloon*, #426 *Drifblim*, #468 *Togekiss*, #587 *Emolga*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
 * added **Bat**-type to 
 * added **Bird**-type to 
 * added **Bug**-type to #098 *Krabby*, #099 *Kingler*, #140 *Kabuto*, #141 *Kabutops*, #341 *Corphish*, #342 *Crawdaunt*, #328 *Trapinch*, #329 *Vibrava*, #330 *Flygon*, #452 *Drapion*, #692 *Clauncher*, #693 *Clawitzer*, #739 *Crabrawler*, #740 *Crabominable*
@@ -395,11 +403,11 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 * added **Dragon**-type to #006 *Charizard*, #116 *Horsea*, #117 *Seadra*, #130 *Gyarados*, #142 *Aerodactyl*, #193 *Yanma*, #246 *Larvitar*, #246 *Pupitar*, #248 *Tyranitar*, #350 *Milotic*, #357 *Tropius*, #469 *Yanmega*, #690 *Skrelp*
 * added **Fighting**-type to #127 *Pinsir*
 * added **Fish**-type to 
-* removed **Flying**-type from #006 *Charizard*, #012 *Butterfree*, #123 *Scyther*, #130 *Gyarados*, #142 *Aerodactyl*, #149 *Dragonite*, #165 *Ledyba*, #166 *Ledian*, #193 *Yanma*, #267 *Beautifly*, #291 *Ninjask*, #350 *Milotic*, #357 *Tropius*, #373 *Salamence*, #414 *Mothim*, #415 *Combee*, #416 *Vespiqueen*, #469 *Yanmega*, #666 *Vivillon*
+* removed **Flying**-type from #006 *Charizard*, #012 *Butterfree*, #123 *Scyther*, #130 *Gyarados*, #142 *Aerodactyl*, #149 *Dragonite*, #165 *Ledyba*, #166 *Ledian*, #176 *Togetic*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #193 *Yanma*, #226 *Mantine*, #267 *Beautifly*, #284 *Masquerain*, #291 *Ninjask*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #357 *Tropius*, #358 *Chimecho*, #373 *Salamence*, #384 *Rayquaza*, #414 *Mothim*, #415 *Combee*, #416 *Vespiqueen*, #425 *Drifloon*, #426 *Drifblim*, #468 *Togekiss*, #458 *Mantyke*, #469 *Yanmega*, #587 *Emolga*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #666 *Vivillon*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
 * removed **Ground**-type from #074 *Geodude*, #075 *Graveler*, #076 *Golem*, #246 *Larvitar*, #247 *Pupitar*
 * added **Light**-type to 
 * added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #744 *Rockruff*, #745 *Lycanroc*
-* removed **Normal**-type from #039 *Jigglypuff*, #040 *Wigglytuff*, #174 *Igglybuff*, #694 *Helioptile*, #695 *Heliolisk*
+* removed **Normal**-type from #039 *Jigglypuff*, #040 *Wigglytuff*, #174 *Igglybuff*, #351 *Castform*, #694 *Helioptile*, #695 *Heliolisk*
 * removed **Psychic**-type from #386 *Deoxys* (making it typeless)
 * added **Water**-type to #691 *Dragalge*, #704 *Goomy*, #705 *Sliggoo*, #706 *Goodra*
 <!-- , # ** -->

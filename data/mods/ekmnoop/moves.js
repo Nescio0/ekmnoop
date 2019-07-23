@@ -27,9 +27,57 @@ Flags:
 
 /**@type {{[k: string]: ModdedMoveData}} */
 let BattleMovedex = {
+	"acrobatics": {
+		inherit: true,
+		type: "Normal",
+	},
+	"aerialace": {
+		inherit: true,
+		type: "Air",
+	},
+	"aeroblast": {
+		inherit: true,
+		type: "Air",
+	},
+	"aircutter": {
+		inherit: true,
+		type: "Air",
+	},
+	"airslash": {
+		inherit: true,
+		type: "Air",
+	},
 	"ancientpower": {
 		inherit: true,
 		pp: 10,
+	},
+	"bounce": {
+		inherit: true,
+		type: "Air",
+	},
+	"defog": {
+		inherit: true,
+		type: "Air",
+	},
+	"dragonascent": {
+		inherit: true,
+		type: "Dragon",
+	},
+	"floatyfall": {
+		inherit: true,
+		type: "Air",
+	},
+	"fly": {
+		inherit: true,
+		type: "Air",
+	},
+	"gust": {
+		inherit: true,
+		type: "Air",
+	},
+	"hurricane": {
+		inherit: true,
+		type: "Air",
 	},
 	"poisonpowder": {
 		inherit: true,
@@ -38,6 +86,39 @@ let BattleMovedex = {
 	"sandstorm": {
 		inherit: true,
 		type: "Ground",
+  },
+	"skyattack": {
+		inherit: true,
+		type: "Air",
+	},
+	"sonicboom": {
+		inherit: true,
+		type: "Air",
+	},
+	"supersonic": {
+		inherit: true,
+		type: "Air",
+	},
+	"supersonicskystrike": {
+		inherit: true,
+		type: "Air",
+	},
+	"tailwind": {
+		inherit: true,
+		type: "Air",
+	},
+	"twister": {
+		inherit: true,
+		type: "Air",
+	},
+	"weatherball": {
+		inherit: true,
+		type: "Air",
+	},
+	"whirlwind": {
+		inherit: true,
+		type: "Air",
+	},
 };
 
 exports.BattleMovedex = BattleMovedex;
