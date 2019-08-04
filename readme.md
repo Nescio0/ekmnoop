@@ -58,8 +58,13 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
     * super-effective vs **Bug**
     * not very effective vs **Rock**, **Steel**
   * **Fish**:
+  * **Light**:
+    * super-effective vs **Bat**, **Dark**, **Ghost**
+    * not very effective vs **Rock**, **Steel**
+    * no effect vs **Grass**
 * Effectiviness changes of existing types:
   * **Bug** is not very effective vs **Bird** (new)
+  * **Dark** has no effect vs **Light** (new)
   * **Electric** is not very effective vs **Air** (new)
   * **Electric** is normally effective vs **Dragon** (instead of not very effective)
   * **Electric** is super-effective vs **Steel** (instead of normally effective)
@@ -69,10 +74,12 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
   * **Fire** is super-effective vs **Bat** (new)
   * **Fighting** is normally effective vs **Bug** (instead of not very effective)
   * **Ghost** is not very effective vs **Bat** (new)
+  * **Ghost** is not very effective vs **Light** (new)
   * **Grass** is not very effective vs **Bird** (new)
   * **Ground** is not very effective vs **Dragon** (instead of normally effective)
   * **Ice** is super-effective vs **Bat** (new)
   * **Ice** is super-effective vs **Fire** (instead of not very effective)
+  * **Poison** is not very effective vs **Steel** (instead of no effect)
   * **Psychic** is not very effective vs **Bug** (instead of normally effective)
   * **Psychic** is normally effective vs **Steel** (instead of not very effective)
   * **Rock** is super-effective vs **Bat** (new)
@@ -85,7 +92,6 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
 * **Rock** and **Steel** are normally affected by Sandstorms (instead of immune)
 
 To do:
-* Add new type: **Light**.
 * Rename **Ground** to **Earth**, **Steel** to **Metal**.
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
@@ -117,6 +123,14 @@ To do:
   * **Dragon** instead of **Flying**: Dragon Ascent
   * **Grass** instead of **Poison**: Poison Powder
   * **Ground** instead of **Rock**: Sandstorm
+  * **Light** instead of **Bug**: Signal Beam
+  * **Light** instead of **Fairy**: Light of Ruin, Moonblast, Moonlight
+  * **Light** instead of **Fire**: Sunny Day
+  * **Light** instead of **Ghost**: Confuse Ray, Menacing Moonraze Maelstrom, Moongeist Beam
+  * **Light** instead of **Grass**: Solar Beam, Solar Blade
+  * **Light** instead of **Normal**: Double Team, Flash, Laser Focus, Morning Sun, Simple Beam, Spotlight, Swift
+  * **Light** instead of **Psychic**: Glitzy Glow, Light Screen, Light That Burns the Sky, Lunar Dance, Prismatic Laser, Reflect
+  * **Light** instead of **Steel**: Flash Cannon
   * **Normal** instead of **Flying**: Acrobatics, Mirror Move
 * Other changes:
   * Leech Life recovers 2/3 of damage dealt (instead of 1/2)
@@ -434,10 +448,10 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * **Ghost**-type from #724 *Decidueye*
   * **Ground**-type from #074 *Geodude*, #075 *Graveler*, #076 *Golem*, #246 *Larvitar*, #247 *Pupitar*
   * **Normal**-type from #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #039 *Jigglypuff*, #040 *Wigglytuff*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #163 *Hoothoot*, #164 *Noctowl*, #174 *Igglybuff*, #276 *Taillow*, #277 *Swellow*, #333 *Swablu*, #351 *Castform*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #441 *Chatot*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #627 *Rufflet*, #628 *Braviary*, #661 *Fletchling*, #694 *Helioptile*, #695 *Heliolisk*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*
-  * **Psychic**-type from #386 *Deoxys* (making it typeless)
+  * **Psychic**-type from #386 *Deoxys* (making it typeless), #789 *Cosmog*, #790 *Cosmoem*, #791 *Solgaleo*, #792 *Lunala*, #800 *Necrozma*
   * **Steel**-type from #395 *Empoleon*
 * added:
-  * **Air**-type to #109 *Koffing*, #110 *Weezing*, #176 *Togetic*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #284 *Masquerain*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #358 *Chimecho*, #380 *Latias*, #381 *Latios*, #384 *Rayquaza*, #425 *Drifloon*, #426 *Drifblim*, #468 *Togekiss*, #587 *Emolga*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
+  * **Air**-type to #109 *Koffing*, #110 *Weezing*, #176 *Togetic*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #284 *Masquerain*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #358 *Chimecho*, #380 *Latias*, #381 *Latios*, #384 *Rayquaza*, #425 *Drifloon*, #426 *Drifblim*, #468 *Togekiss*, #517 *Munna*, #518 *Musharna*, #587 *Emolga*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #764 *Comfey*, #774 *Minior*, #789 *Cosmog*, #797 *Celesteela*
   * **Bat**-type to #041 *Zubat*, #042 *Golbat*, #169 *Crobat*, #207 *Gligar*, #472 *Gliscor*, #527 *Woobat*, #528 *Swoobat*, #714 *Noibat*, #715 *Noivern*
   * **Bird**-type to #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #054 *Psyduck*, #055 *Golduck*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #144 *Articuno*, #145 *Zapdos*, #146 *Moltres*, #163 *Hoothoot*, #164 *Noctowl*, #177 *Natu*, #178 *Xatu*, #198 *Murkrow*, #225 *Delibird*, #227 *Skarmory*, #249 *Lugia*, #250 *Ho-Oh*, #255 *Torchic*, #256 Combusken*, #257 *Blaziken*, #276 *Taillow*, #277 *Swellow*, #278 *Wingull*, #279 *Pelipper*, #333 *Swablu*, #334 *Altaria*, #393 *Piplup*, #394 *Prinplup*, #395 *Empoleon*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #430 *Honchkrow*, #441 *Chatot*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #561 *Sigilyph*, #566 *Archen*, #567 *Archeops*, #580 *Ducklett*, #581 *Swanna*, #627 *Rufflet*, #628 *Braviary*, #629 *Vullaby*, #630 *Mandibuzz*, #661 *Fletchling*, #662 *Fletchinder*, #663 *Talonflame*, #682 *Spritzee*, #683 *Aromatisse*, #701 *Hawlucha*, #717 *Yveltal*, #722 *Rowlet*, #723 *Dartrix*, #724 *Decidueye*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*, #741 *Oricorio*
   * **Bug**-type to #098 *Krabby*, #099 *Kingler*, #140 *Kabuto*, #141 *Kabutops*, #341 *Corphish*, #342 *Crawdaunt*, #328 *Trapinch*, #329 *Vibrava*, #330 *Flygon*, #452 *Drapion*, #692 *Clauncher*, #693 *Clawitzer*, #739 *Crabrawler*, #740 *Crabominable*
@@ -445,8 +459,9 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * **Fighting**-type to #127 *Pinsir*
   * **Fire**-type to #661 *Fletchling*
   * **Fish**-type to #116 *Horsea*, #117 *Seadra*, #118 *Goldeen*, #119 *Seaking*, #129 *Magikarp*, #130 *Gyarados*, #170 *Chinchou*, #171 *Lanturn*, #211 *Qwilfish*, #223 *Remoraid*, #226 *Mantine*, #230 *Kingdra*, #318 *Carvanha*, #319 *Sharpedo*, #339 *Barboach*, #340 *Whiscash*, #349 *Feebas*, #350 *Milotic*, #367 *Huntail*, #368 *Gorebyss*, #369 *Relicanth*, #370 *Luvdisc*, #456 *Finneon*, #457 *Lumineon*, #458 *Mantyke*, #550 *Basculin*, #594 *Alomomola*, #602 *Tynamo*, #603 *Eelektrik*, #604 *Eelektross*, #690 *Skrelp*, #691 *Dragalge*, #746 *Wishiwashi*, #771 *Pyukumuku*, #779 *Bruxish*
-  * **Light**-type to 
+  * **Light**-type to #250 *Ho-Oh*, #488 *Cresselia*, #789 *Cosmog*, #790 *Cosmoem*, #791 *Solgaleo*, #792 *Lunala*, #800 *Necrozma*
   * **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #613 *Cubchoo*, #614 *Beartic*, #674 *Pancham*, #675 *Pangoro*, #716 *Xerneas*, #744 *Rockruff*, #745 *Lycanroc*, #749 *Mudbray*, #750 *Mudsdale*
+  * **Rock**-type to #790 *Cosmoem*
   * **Water**-type to #249 *Lugia*, #691 *Dragalge*, #704 *Goomy*, #705 *Sliggoo*, #706 *Goodra*
 <!-- , # ** -->
 

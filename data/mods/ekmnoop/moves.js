@@ -72,9 +72,21 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"confuseray": {
+		inherit: true,
+		type: "Light",
+	},
+	"dazzlinggleam": {
+		inherit: true,
+		type: "Light",
+	},
 	"defog": {
 		inherit: true,
 		type: "Air",
+	},
+	"doubleteam": {
+		inherit: true,
+		type: "Light",
 	},
 	"dragonascent": {
 		inherit: true,
@@ -96,6 +108,14 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"flash": {
+		inherit: true,
+		type: "Light",
+	},
+	"flashcannon": {
+		inherit: true,
+		type: "Light",
+	},
 	"floatyfall": {
 		inherit: true,
 		type: "Air",
@@ -109,6 +129,10 @@ let BattleMovedex = {
 		basePower: 40,
 		pp: 20,
 	},
+	"glitzyglow": {
+		inherit: true,
+		type: "Light",
+	},
 	"gust": {
 		inherit: true,
 		type: "Air",
@@ -116,6 +140,10 @@ let BattleMovedex = {
 	"hurricane": {
 		inherit: true,
 		type: "Air",
+	},
+	"laserfocus": {
+		inherit: true,
+		type: "Light",
 	},
 	"leechlife": {
 		inherit: true,
@@ -125,13 +153,49 @@ let BattleMovedex = {
 		drain: [2, 3],
 		type: "Bat",
 	},
+	"lightofruin": {
+		inherit: true,
+		type: "Light",
+	},
+	"lightscreen": {
+		inherit: true,
+		type: "Light",
+	},
+	"lightthatburnsthesky": {
+		inherit: true,
+		type: "Light",
+	},
+	"lunardance": {
+		inherit: true,
+		type: "Light",
+	},
 	"megadrain": {
 		inherit: true,
 		basePower: 60,
 	},
+	"menacingmoonrazemaelstrom": {
+		inherit: true,
+		type: "Light",
+	},
 	"mirrormove": {
 		inherit: true,
 		type: "Normal",
+	},
+	"moonblast": {
+		inherit: true,
+		type: "Light",
+	},
+	"moongeistbeam": {
+		inherit: true,
+		type: "Light",
+	},
+	"moonlight": {
+		inherit: true,
+		type: "Light",
+	},
+	"morningsun": {
+		inherit: true,
+		type: "Light",
 	},
 	"oblivionwing": {
 		inherit: true,
@@ -149,6 +213,14 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Grass",
 	},
+	"prismaticlaser": {
+		inherit: true,
+		type: "Light",
+	},
+	"reflect": {
+		inherit: true,
+		type: "Light",
+	},
 	"roost": {
 		inherit: true,
 		type: "Bird",
@@ -157,6 +229,14 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Ground",
   },
+	"signalbeam": {
+		inherit: true,
+		type: "Light",
+	},
+	"simplebeam": {
+		inherit: true,
+		type: "Light",
+	},
 	"skyattack": {
 		inherit: true,
 		type: "Air",
@@ -165,9 +245,25 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"solarbeam": {
+		inherit: true,
+		type: "Light",
+	},
+	"solarblade": {
+		inherit: true,
+		type: "Light",
+	},
 	"sonicboom": {
 		inherit: true,
 		type: "Air",
+	},
+	"spotlight": {
+		inherit: true,
+		type: "Light",
+	},
+	"sunnyday": {
+		inherit: true,
+		type: "Light",
 	},
 	"supersonic": {
 		inherit: true,
@@ -176,6 +272,10 @@ let BattleMovedex = {
 	"supersonicskystrike": {
 		inherit: true,
 		type: "Air",
+	},
+	"swift": {
+		inherit: true,
+		type: "Light",
 	},
 	"tailwind": {
 		inherit: true,

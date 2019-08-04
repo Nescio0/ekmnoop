@@ -477,7 +477,7 @@ let BattlePokedex = {
 	},
 	// #250
 	hooh: {
-		types: ["Bird", "Fire"],
+		types: ["Bird", "Light"],
 		baseStats: {hp: 108, atk: 130, def: 90, spa: 110, spd: 150, spe: 90},
 	},
 // Generation III – 135 Pokémon – #252 Treecko to #386 Deoxys
@@ -899,6 +899,10 @@ let BattlePokedex = {
 	giratinaorigin: {
 		baseStats: {hp: 150, atk: 120, def: 99, spa: 120, spd: 99, spe: 90},
 	},
+	// #488
+	cresselia: {
+		types: ["Light", "Psychic"],
+	},
 	// #492
 	shayminsky: {
 		types: ["Grass", "Air"],
@@ -982,6 +986,14 @@ let BattlePokedex = {
 	// #503
 	samurott: {
 		evoLevel: 40,
+	},
+	// #517
+	munna: {
+		types: ["Psychic", "Air"],
+	},
+	// #518
+	musharna: {
+		types: ["Psychic", "Air"],
 	},
 	// #519
 	pidove: {
@@ -1414,14 +1426,24 @@ let BattlePokedex = {
 	bruxish: {
 		types: ["Water", "Psychic", "Fish"],
 	},
+	// #789
+	cosmog: {
+		types: ["Light", "Air"],
+	},
+	// #790
+	cosmoem: {
+		types: ["Light", "Rock"],
+	},
 	// #791
 	solgaleo: {
+		types: ["Light", "Steel"],
 		baseStats: {hp: 136, atk: 136, def: 107, spa: 113, spd: 89, spe: 97},
 		evoType: "stone",
 		evoItem: "Sun Stone",
 	},
 	// #792
 	lunala: {
+		types: ["Light", "Ghost"],
 		baseStats: {hp: 136, atk: 113, def: 89, spa: 136, spd: 107, spe: 97},
 		evoType: "stone",
 		evoItem: "Moon Stone",
@@ -1429,6 +1451,19 @@ let BattlePokedex = {
 	// #792
 	celesteela: {
 		types: ["Steel", "Air"],
+	},
+	// #800
+	necrozma: {
+		types: ["Light"],
+	},
+	necrozmaduskmane: {
+		types: ["Light", "Steel"],
+	},
+	necrozmadawnwings: {
+		types: ["Light", "Ghost"],
+	},
+	necrozmaultra: {
+		types: ["Light", "Dragon"],
 	},
 };
 
