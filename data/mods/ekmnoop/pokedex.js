@@ -175,11 +175,19 @@ let BattlePokedex = {
 	},
 	// #116
 	horsea: {
-		types: ["Water", "Dragon"],
+		types: ["Water", "Dragon", "Fish"],
 	},
 	// #117
 	seadra: {
-		types: ["Water", "Dragon"],
+		types: ["Water", "Dragon", "Fish"],
+	},
+	// #118
+	goldeen: {
+		types: ["Water", "Fish"],
+	},
+	// #119
+	seaking: {
+		types: ["Water", "Fish"],
 	},
 	// #123
 	scyther: {
@@ -192,9 +200,13 @@ let BattlePokedex = {
 	pinsirmega: {
 		types: ["Bug", "Fighting"],
 	},
+	// #129
+	magikarp: {
+		types: ["Water", "Fish"],
+	},
 	// #130
 	gyarados: {
-		types: ["Water", "Dragon"],
+		types: ["Water", "Fish", "Dragon"],
 		evoType: "levelHold",
 		evoItem: "Dragon Scale",
 	},
@@ -289,6 +301,14 @@ let BattlePokedex = {
 	crobat: {
 		types: ["Bat", "Poison"],
 		evoLevel: 44,
+	},
+	// #170
+	chinchou: {
+		types: ["Water", "Electric", "Fish"],
+	},
+	// #171
+	lanturn: {
+		types: ["Water", "Electric", "Fish"],
 	},
 	// #174
 	igglybuff: {
@@ -388,10 +408,18 @@ let BattlePokedex = {
 	granbull: {
 		types: ["Fairy", "Normal"],
 	},
+	// #211
+	qwilfish: {
+		types: ["Water", "Poison", "Fish"],
+	},
 	// #212
 	scizor: {
 		evoType: "levelHold",
 		evoItem: "Metal Coat",
+	},
+	// #223
+	remoraid: {
+		types: ["Water", "Fish"],
 	},
 	// #225
 	delibird: {
@@ -399,7 +427,7 @@ let BattlePokedex = {
 	},
 	// #226
 	mantine: {
-		types: ["Water"],
+		types: ["Water", "Fish"],
 		evoLevel: 15,
 	},
 	// #227
@@ -408,6 +436,7 @@ let BattlePokedex = {
 	},
 	// #230
 	kingdra: {
+		types: ["Water", "Dragon", "Fish"],
 		evoType: "levelHold",
 		evoItem: "Dragon Scale",
 	},
@@ -521,6 +550,17 @@ let BattlePokedex = {
 	roselia: {
 		evoLevel: 10,
 	},
+	// #318
+	carvanha: {
+		types: ["Water", "Dark", "Fish"],
+	},
+	// #319
+	sharpedo: {
+		types: ["Water", "Dark", "Fish"],
+	},
+	sharpedomega: {
+		types: ["Water", "Dark", "Fish"],
+	},
 	// #325
 	spoink: {
 		types: ["Psychic", "Normal"],
@@ -552,6 +592,14 @@ let BattlePokedex = {
 	altariamega: {
 		types: ["Air", "Bird", "Dragon"],
 	},
+	// #339
+	barboach: {
+		types: ["Water", "Ground", "Fish"],
+	},
+	// #340
+	whiscash: {
+		types: ["Water", "Ground", "Fish"],
+	},
 	// #341
 	corphish: {
 		types: ["Water", "Bug"],
@@ -560,9 +608,13 @@ let BattlePokedex = {
 	crawdaunt: {
 		types: ["Water", "Bug", "Dark"],
 	},
+	// #349
+	feebas: {
+		types: ["Water", "Fish"],
+	},
 	// #350
 	milotic: {
-		types: ["Water", "Dragon"],
+		types: ["Water", "Fish", "Dragon"],
 		evoType: "levelHold",
 		evoItem: "Dragon Scale",
 	},
@@ -586,6 +638,22 @@ let BattlePokedex = {
 	// #358
 	chimecho: {
 		types: ["Psychic", "Air"],
+	},
+	// #367
+	huntail: {
+		types: ["Water", "Fish"],
+	},
+	// #368
+	gorebyss: {
+		types: ["Water", "Fish"],
+	},
+	// #369
+	relicanth: {
+		types: ["Water", "Rock", "Fish"],
+	},
+	// #370
+	luvdisc: {
+		types: ["Water", "Fish"],
 	},
 	// #373
 	salamence: {
@@ -735,9 +803,17 @@ let BattlePokedex = {
 	drapion: {
 		types: ["Poison", "Bug", "Dark"],
 	},
+	// #456
+	finneon: {
+		types: ["Water", "Fish"],
+	},
+	// #457
+	lumineon: {
+		types: ["Water", "Fish"],
+	},
 	// #458
 	mantyke: {
-		types: ["Water"],
+		types: ["Water", "Fish"],
 	},
 	// #462
 	magnezone: {
@@ -940,6 +1016,13 @@ let BattlePokedex = {
 	leavanny: {
 		evoLevel: 40,
 	},
+	// #550
+	basculin: {
+		types: ["Water", "Fish"],
+	},
+	basculinbluestriped: {
+		types: ["Water", "Fish"],
+	},
 	// #561
 	sigilyph: {
 		types: ["Psychic", "Bird"],
@@ -972,6 +1055,22 @@ let BattlePokedex = {
 	escavalier: {
 		prevo: "shelmet",
 		evoLevel: 27,
+	},
+	// #594
+	alomomola: {
+		types: ["Water", "Fish"],
+	},
+	// #602
+	tynamo: {
+		types: ["Electric", "Fish"],
+	},
+	// #603
+	eelektrik: {
+		types: ["Electric", "Fish"],
+	},
+	// #604
+	eelektross: {
+		types: ["Electric", "Fish"],
 	},
 	// #613
 	cubchoo: {
@@ -1107,11 +1206,11 @@ let BattlePokedex = {
 	},
 	// #690
 	skrelp: {
-		types: ["Dragon", "Poison", "Water"],
+		types: ["Dragon", "Poison", "Water", "Fish"],
 	},
 	// #691
 	dragalge: {
-		types: ["Dragon", "Poison", "Water"],
+		types: ["Dragon", "Poison", "Water", "Fish"],
 	},
 	// #692
 	clauncher: {
@@ -1277,6 +1376,13 @@ let BattlePokedex = {
 	lycanroc: {
 		types: ["Normal", "Rock"],
 	},
+	// #746
+	wishiwashi: {
+		types: ["Water", "Fish"],
+	},
+	wishiwashischool: {
+		types: ["Water", "Fish"],
+	},
 	// #749
 	mudbray: {
 		types: ["Ground", "Normal"],
@@ -1289,6 +1395,10 @@ let BattlePokedex = {
 	comfey: {
 		types: ["Fairy", "Air"],
 	},
+	// #771
+	pyukumuku: {
+		types: ["Water", "Fish"],
+	},
 	// #773
 	silvally: {
 		evoLevel: 42,
@@ -1299,6 +1409,10 @@ let BattlePokedex = {
 	},
 	miniormeteor: {
 		types: ["Rock", "Air"],
+	},
+	// #779
+	bruxish: {
+		types: ["Water", "Psychic", "Fish"],
 	},
 	// #791
 	solgaleo: {
