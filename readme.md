@@ -44,13 +44,19 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
 ### Types
+* Deprecated:
+  * **Flying**
 * New types:
-  * **Air**
+  * **Air**:
   * **Bat**:
     * super-effective vs **Fighting**, **Psychic**
-    * not very effective vs **Rock**
+    * not very effective vs **Ghost**, **Rock**
     * no effect vs **Steel**
+  * **Bird**:
+    * super-effective vs **Bug**
+    * not very effective vs **Rock**, **Steel**
 * Effectiviness changes of existing types:
+  * **Bug** is not very effective vs **Bird** (new)
   * **Electric** is normally effective vs **Dragon** (instead of not very effective)
   * **Electric** is super-effective vs **Steel** (instead of normally effective)
   * **Fairy** is normally effective vs **Fire** (instead of not very effective)
@@ -59,12 +65,14 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
   * **Fire** is super-effective vs **Bat** (new)
   * **Fighting** is normally effective vs **Bug** (instead of not very effective)
   * **Ghost** is not very effective vs **Bat** (new)
+  * **Grass** is not very effective vs **Bird** (new)
   * **Ground** is not very effective vs **Dragon** (instead of normally effective)
   * **Ice** is super-effective vs **Bat** (new)
   * **Ice** is super-effective vs **Fire** (instead of not very effective)
   * **Psychic** is not very effective vs **Bug** (instead of normally effective)
   * **Psychic** is normally effective vs **Steel** (instead of not very effective)
   * **Rock** is super-effective vs **Bat** (new)
+  * **Rock** is super-effective vs **Bird** (new)
   * **Steel** is normally effective vs **Electric** (instead of not very effective)
   * **Steel** is not very effective vs **Fighting** (instead of normally effective)
   * **Steel** is normally effective vs **Fire** (instead of not very effective)
@@ -73,8 +81,7 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
 * **Rock** and **Steel** are normally affected by Sandstorms (instead of immune)
 
 To do:
-* Five new types: **Bird**, **Fish**, **Light**.
-* Deprecate **Flying**.
+* Add new types: **Fish**, **Light**.
 * Rename **Ground** to **Earth**, **Steel** to **Metal**.
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
@@ -91,10 +98,11 @@ To do:
   * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, Gust, Hurricane, Sky Attack, Supersonic Skystrike, Tail Wind
   * **Air** instead of **Normal**: Sonic Boom, Supersonic, Weather Ball, Whirlwind
   * **Bat** instead of **Bug**: Leech Life
+  * **Bird** instead of **Flying**: Beak Blast, Brave Bird, Chatter, Drill Peck, Feather Dance, Oblivion Wing, Peck, Pluck, Roost, Sky Drop, Wing Attack
   * **Dragon** instead of **Flying**: Dragon Ascent
   * **Grass** instead of **Poison**: Poison Powder
   * **Ground** instead of **Rock**: Sandstorm
-  * **Normal** instead of **Flying**: Acrobatics
+  * **Normal** instead of **Flying**: Acrobatics, Mirror Move
 * Other changes:
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
@@ -406,19 +414,22 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 #### Pokemon types
 * added **Air**-type to #109 *Koffing*, #110 *Weezing*, #176 *Togetic*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #284 *Masquerain*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #358 *Chimecho*, #380 *Latias*, #381 *Latios*, #384 *Rayquaza*, #425 *Drifloon*, #426 *Drifblim*, #468 *Togekiss*, #587 *Emolga*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
 * added **Bat**-type to #041 *Zubat*, #042 *Golbat*, #169 *Crobat*, #207 *Gligar*, #472 *Gliscor*, #527 *Woobat*, #528 *Swoobat*, #714 *Noibat*, #715 *Noivern*
-* added **Bird**-type to 
+* added **Bird**-type to #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #054 *Psyduck*, #055 *Golduck*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #144 *Articuno*, #145 *Zapdos*, #146 *Moltres*, #163 *Hoothoot*, #164 *Noctowl*, #177 *Natu*, #178 *Xatu*, #198 *Murkrow*, #225 *Delibird*, #227 *Skarmory*, #249 *Lugia*, #250 *Ho-Oh*, #255 *Torchic*, #256 Combusken*, #257 *Blaziken*, #276 *Taillow*, #277 *Swellow*, #278 *Wingull*, #279 *Pelipper*, #333 *Swablu*, #334 *Altaria*, #393 *Piplup*, #394 *Prinplup*, #395 *Empoleon*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #430 *Honchkrow*, #441 *Chatot*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #561 *Sigilyph*, #566 *Archen*, #567 *Archeops*, #580 *Ducklett*, #581 *Swanna*, #627 *Rufflet*, #628 *Braviary*, #629 *Vullaby*, #630 *Mandibuzz*, #661 *Fletchling*, #662 *Fletchinder*, #663 *Talonflame*, #682 *Spritzee*, #683 *Aromatisse*, #701 *Hawlucha*, #717 *Yveltal*, #722 *Rowlet*, #723 *Dartrix*, #724 *Decidueye*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*, #741 *Oricorio*
 * added **Bug**-type to #098 *Krabby*, #099 *Kingler*, #140 *Kabuto*, #141 *Kabutops*, #341 *Corphish*, #342 *Crawdaunt*, #328 *Trapinch*, #329 *Vibrava*, #330 *Flygon*, #452 *Drapion*, #692 *Clauncher*, #693 *Clawitzer*, #739 *Crabrawler*, #740 *Crabominable*
 * removed **Dark**-type from #248 *Tyranitar*
 * added **Dragon**-type to #006 *Charizard*, #116 *Horsea*, #117 *Seadra*, #130 *Gyarados*, #142 *Aerodactyl*, #193 *Yanma*, #246 *Larvitar*, #246 *Pupitar*, #248 *Tyranitar*, #350 *Milotic*, #357 *Tropius*, #469 *Yanmega*, #690 *Skrelp*
 * added **Fighting**-type to #127 *Pinsir*
+* added **Fire**-type to #661 *Fletchling*
 * added **Fish**-type to 
-* removed **Flying**-type from #006 *Charizard*, #012 *Butterfree*, #041 *Zubat*, #042 *Golbat*, #123 *Scyther*, #130 *Gyarados*, #142 *Aerodactyl*, #149 *Dragonite*, #165 *Ledyba*, #166 *Ledian*, #169 *Crobat*, #176 *Togetic*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #193 *Yanma*, #207 *Gligar*, #226 *Mantine*, #267 *Beautifly*, #284 *Masquerain*, #291 *Ninjask*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #357 *Tropius*, #358 *Chimecho*, #373 *Salamence*, #384 *Rayquaza*, #414 *Mothim*, #415 *Combee*, #416 *Vespiqueen*, #425 *Drifloon*, #426 *Drifblim*, #468 *Togekiss*, #458 *Mantyke*, #469 *Yanmega*, #472 *Gliscor*, #527 *Woobat*, #528 *Swoobat*, #587 *Emolga*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #666 *Vivillon*, #714 *Noibat*, #715 *Noivern*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
+* removed **Flying**-type from #006 *Charizard*, #012 *Butterfree*, #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #041 *Zubat*, #042 *Golbat*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #123 *Scyther*, #130 *Gyarados*, #142 *Aerodactyl*, #144 *Articuno*, #145 *Zapdos*, #146 *Moltres*, #149 *Dragonite*, #163 *Hoothoot*, #164 *Noctowl*, #165 *Ledyba*, #166 *Ledian*, #169 *Crobat*, #176 *Togetic*, #177 *Natu*, #178 *Xatu*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #193 *Yanma*, #198 *Murkrow*, #207 *Gligar*, #225 *Delibird*, #226 *Mantine*, #227 *Skarmory*, #249 *Lugia*, #250 *Ho-Oh*, #267 *Beautifly*, #276 *Taillow*, #277 *Swellow*, #278 *Wingull*, #279 *Pelipper*, #284 *Masquerain*, #291 *Ninjask*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #357 *Tropius*, #358 *Chimecho*, #373 *Salamence*, #384 *Rayquaza*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #414 *Mothim*, #415 *Combee*, #416 *Vespiqueen*, #425 *Drifloon*, #426 *Drifblim*, #430 *Honchkrow*, #441 *Chatot*, #458 *Mantyke*, #468 *Togekiss*, #469 *Yanmega*, #472 *Gliscor*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #527 *Woobat*, #528 *Swoobat*, #561 *Sigilyph*, #566 *Archen*, #567 *Archeops*, #580 *Ducklett*, #581 *Swanna*, #587 *Emolga*, #627 *Rufflet*, #628 *Braviary*, #629 *Vullaby*, #630 *Mandibuzz*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #661 *Fletchling*, #662 *Fletchinder*, #663 *Talonflame*, #666 *Vivillon*, #701 *Hawlucha*, #714 *Noibat*, #715 *Noivern*, #717 *Yveltal*, #722 *Rowlet*, #723 *Dartrix*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*, #741 *Oricorio*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
+* removed **Steel**-type from #724 *Decidueye*
 * removed **Ground**-type from #074 *Geodude*, #075 *Graveler*, #076 *Golem*, #246 *Larvitar*, #247 *Pupitar*
 * added **Light**-type to 
-* added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #744 *Rockruff*, #745 *Lycanroc*
-* removed **Normal**-type from #039 *Jigglypuff*, #040 *Wigglytuff*, #174 *Igglybuff*, #351 *Castform*, #694 *Helioptile*, #695 *Heliolisk*
+* added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #716 *Xerneas*, #744 *Rockruff*, #745 *Lycanroc*
+* removed **Normal**-type from #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #039 *Jigglypuff*, #040 *Wigglytuff*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #163 *Hoothoot*, #164 *Noctowl*, #174 *Igglybuff*, #276 *Taillow*, #277 *Swellow*, #333 *Swablu*, #351 *Castform*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #441 *Chatot*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #627 *Rufflet*, #628 *Braviary*, #661 *Fletchling*, #694 *Helioptile*, #695 *Heliolisk*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*
 * removed **Psychic**-type from #386 *Deoxys* (making it typeless)
-* added **Water**-type to #691 *Dragalge*, #704 *Goomy*, #705 *Sliggoo*, #706 *Goodra*
+* removed **Steel**-type from #395 *Empoleon*
+* added **Water**-type to #249 *Lugia*, #691 *Dragalge*, #704 *Goomy*, #705 *Sliggoo*, #706 *Goodra*
 <!-- , # ** -->
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)

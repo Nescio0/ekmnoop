@@ -51,9 +51,21 @@ let BattleMovedex = {
 		inherit: true,
 		pp: 10,
 	},
+	"beakblast": {
+		inherit: true,
+		type: "Bird",
+	},
 	"bounce": {
 		inherit: true,
 		type: "Air",
+	},
+	"bravebird": {
+		inherit: true,
+		type: "Bird",
+	},
+	"chatter": {
+		inherit: true,
+		type: "Bird",
 	},
 	"defog": {
 		inherit: true,
@@ -62,6 +74,14 @@ let BattleMovedex = {
 	"dragonascent": {
 		inherit: true,
 		type: "Dragon",
+	},
+	"drillpeck": {
+		inherit: true,
+		type: "Bird",
+	},
+	"featherdance": {
+		inherit: true,
+		type: "Bird",
 	},
 	"floatyfall": {
 		inherit: true,
@@ -80,11 +100,32 @@ let BattleMovedex = {
 		type: "Air",
 	},
 	"leechlife": {
+		inherit: true,
 		type: "Bat",
+	},
+	"mirrormove": {
+		inherit: true,
+		type: "Normal",
+	},
+	"oblivionwing": {
+		inherit: true,
+		type: "Bird",
+	},
+	"peck": {
+		inherit: true,
+		type: "Bird",
+	},
+	"pluck": {
+		inherit: true,
+		type: "Bird",
 	},
 	"poisonpowder": {
 		inherit: true,
 		type: "Grass",
+	},
+	"roost": {
+		inherit: true,
+		type: "Bird",
 	},
 	"sandstorm": {
 		inherit: true,
@@ -93,6 +134,10 @@ let BattleMovedex = {
 	"skyattack": {
 		inherit: true,
 		type: "Air",
+	},
+	"skydrop": {
+		inherit: true,
+		type: "Bird",
 	},
 	"sonicboom": {
 		inherit: true,
@@ -121,6 +166,10 @@ let BattleMovedex = {
 	"whirlwind": {
 		inherit: true,
 		type: "Air",
+	},
+	"wingattack": {
+		inherit: true,
+		type: "Bird",
 	},
 };
 
