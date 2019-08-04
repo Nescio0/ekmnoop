@@ -79,6 +79,9 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
+	"leechlife": {
+		type: "Bat",
+	},
 	"poisonpowder": {
 		inherit: true,
 		type: "Grass",

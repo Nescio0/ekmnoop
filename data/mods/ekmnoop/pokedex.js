@@ -52,6 +52,14 @@ let BattlePokedex = {
 	wigglytuff: {
 		types: ["Fairy"],
 	},
+	// #041
+	zubat: {
+		types: ["Bat", "Poison"],
+	},
+	// #042
+	golbat: {
+		types: ["Bat", "Poison"],
+	},
 	// #053
 	persianalola: {
 		evoLevel: 28,
@@ -216,6 +224,7 @@ let BattlePokedex = {
 	},
 	// #169
 	crobat: {
+		types: ["Bat", "Poison"],
 		evoLevel: 44,
 	},
 	// #174
@@ -286,6 +295,10 @@ let BattlePokedex = {
 	slowking: {
 		evoType: "levelHold",
 		evoItem: "King's Rock",
+	},
+	// #207
+	gligar: {
+		types: ["Bat", "Ground"],
 	},
 	// #208
 	steelix: {
@@ -625,6 +638,10 @@ let BattlePokedex = {
 		evoType: "stone",
 		evoItem: "Ice Stone",
 	},
+	// #472
+	gliscor: {
+		types: ["Bat", "Ground"],
+	},
 	// #474
 	porygonz: {
 		evoType: "levelHold",
@@ -747,8 +764,13 @@ let BattlePokedex = {
 	gigalith: {
 		evoLevel: 50,
 	},
+	// #527
+	woobat: {
+		types: ["Bat", "Psychic"],
+	},
 	// #528
 	swoobat: {
+		types: ["Bat", "Psychic"],
 		evoLevel: 25,
 	},
 	// #534
@@ -912,6 +934,14 @@ let BattlePokedex = {
 	},
 	gourgeistsuper: {
 		evoLevel: 42,
+	},
+	// #714
+	noibat: {
+		types: ["Bat", "Dragon"],
+	},
+	// #715
+	noivern: {
+		types: ["Bat", "Dragon"],
 	},
 	// #716
 	xerneas: {
