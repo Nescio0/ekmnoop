@@ -973,6 +973,14 @@ let BattlePokedex = {
 		prevo: "shelmet",
 		evoLevel: 27,
 	},
+	// #613
+	cubchoo: {
+		types: ["Ice", "Normal"],
+	},
+	// #614
+	beartic: {
+		types: ["Ice", "Normal"],
+	},
 	// #616
 	shelmet: {
 		evos: ["escavalier"],
@@ -1073,6 +1081,14 @@ let BattlePokedex = {
 	},
 	vivillonpokeball: {
 		types: ["Bug"],
+	},
+	// #674
+	pancham: {
+		types: ["Fighting", "Normal"],
+	},
+	// #675
+	pangoro: {
+		types: ["Fighting", "Normal", "Dark"],
 	},
 	// #682
 	spritzee: {
@@ -1260,6 +1276,14 @@ let BattlePokedex = {
 	// #745
 	lycanroc: {
 		types: ["Normal", "Rock"],
+	},
+	// #749
+	mudbray: {
+		types: ["Ground", "Normal"],
+	},
+	// #750
+	mudsdale: {
+		types: ["Ground", "Normal"],
 	},
 	// #764
 	comfey: {

@@ -48,6 +48,8 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
   * **Flying**
 * New types:
   * **Air**:
+    * not very effective vs **Dragon**
+    * no effect vs **Rock**
   * **Bat**:
     * super-effective vs **Fighting**, **Psychic**
     * not very effective vs **Ghost**, **Rock**
@@ -57,6 +59,7 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
     * not very effective vs **Rock**, **Steel**
 * Effectiviness changes of existing types:
   * **Bug** is not very effective vs **Bird** (new)
+  * **Electric** is not very effective vs **Air** (new)
   * **Electric** is normally effective vs **Dragon** (instead of not very effective)
   * **Electric** is super-effective vs **Steel** (instead of normally effective)
   * **Fairy** is normally effective vs **Fire** (instead of not very effective)
@@ -91,8 +94,19 @@ To do:
 * New moves:
 * Accuracy changes:
 * Base power changes:
+  * decreased:
+    * from 75 to 70: Drain Punch
+    * from 80 to 75: Leech Life
+  * increased:
+    * from 20 to 40: Absorb
+    * from 40 to 60: Mega Drain
+    * from 75 to 80: Giga Drain
 * PP changes:
-  * from 5 to 10: Ancient Power
+  * decreased:
+    * from 15 to 10: Dream Eater
+    * from 25 to 20: Absorb
+  * increased:
+    * from 5 to 10: Ancient Power
 * Type changes:
   * **Air** instead of **Dragon**: Twister
   * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, Gust, Hurricane, Sky Attack, Supersonic Skystrike, Tail Wind
@@ -104,6 +118,7 @@ To do:
   * **Ground** instead of **Rock**: Sandstorm
   * **Normal** instead of **Flying**: Acrobatics, Mirror Move
 * Other changes:
+  * Leech Life recovers 2/3 of damage dealt (instead of 1/2)
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
@@ -425,7 +440,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 * removed **Steel**-type from #724 *Decidueye*
 * removed **Ground**-type from #074 *Geodude*, #075 *Graveler*, #076 *Golem*, #246 *Larvitar*, #247 *Pupitar*
 * added **Light**-type to 
-* added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #716 *Xerneas*, #744 *Rockruff*, #745 *Lycanroc*
+* added **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #613 *Cubchoo*, #614 *Beartic*, #674 *Pancham*, #675 *Pangoro*, #716 *Xerneas*, #744 *Rockruff*, #745 *Lycanroc*, #749 *Mudbray*, #750 *Mudsdale*
 * removed **Normal**-type from #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #039 *Jigglypuff*, #040 *Wigglytuff*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #163 *Hoothoot*, #164 *Noctowl*, #174 *Igglybuff*, #276 *Taillow*, #277 *Swellow*, #333 *Swablu*, #351 *Castform*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #441 *Chatot*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #627 *Rufflet*, #628 *Braviary*, #661 *Fletchling*, #694 *Helioptile*, #695 *Heliolisk*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*
 * removed **Psychic**-type from #386 *Deoxys* (making it typeless)
 * removed **Steel**-type from #395 *Empoleon*

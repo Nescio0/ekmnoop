@@ -27,6 +27,11 @@ Flags:
 
 /**@type {{[k: string]: ModdedMoveData}} */
 let BattleMovedex = {
+	"absorb": {
+		inherit: true,
+		basePower: 40,
+		pp: 20,
+	},
 	"acrobatics": {
 		inherit: true,
 		type: "Normal",
@@ -75,6 +80,14 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Dragon",
 	},
+	"drainpunch": {
+		inherit: true,
+		basePower: 70,
+	},
+	"dreameater": {
+		inherit: true,
+		pp: 10,
+	},
 	"drillpeck": {
 		inherit: true,
 		type: "Bird",
@@ -91,6 +104,11 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
+	"gigadrain": {
+		inherit: true,
+		basePower: 40,
+		pp: 20,
+	},
 	"gust": {
 		inherit: true,
 		type: "Air",
@@ -101,7 +119,15 @@ let BattleMovedex = {
 	},
 	"leechlife": {
 		inherit: true,
+		basePower: 75,
+		desc: "The user recovers 2/3 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3× normal, rounded half down.",
+		shortDesc: "User recovers 67% of the damage dealt.",
+		drain: [2, 3],
 		type: "Bat",
+	},
+	"megadrain": {
+		inherit: true,
+		basePower: 60,
 	},
 	"mirrormove": {
 		inherit: true,
