@@ -118,8 +118,8 @@ To do:
     * from 5 to 10: Ancient Power, Ominous Wind, Silver Wind
 * Type changes:
   * **Air** instead of **Dragon**: Twister
-  * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, Gust, Hurricane, Sky Attack, Supersonic Skystrike, Tail Wind
-  * **Air** instead of **Normal**: Sonic Boom, Supersonic, Weather Ball, Whirlwind
+  * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, G-Max Wind Rage, Gust, Hurricane, Max Airstream, Sky Attack, Supersonic Skystrike, Tailwind
+  * **Air** instead of **Normal**: Boom Burst, Sonic Boom, Supersonic, Uproar, Weather Ball, Whirlwind
   * **Bat** instead of **Bug**: Leech Life
   * **Bird** instead of **Flying**: Beak Blast, Brave Bird, Chatter, Drill Peck, Feather Dance, Oblivion Wing, Peck, Pluck, Roost, Sky Drop, Wing Attack
   * **Dragon** instead of **Flying**: Dragon Ascent

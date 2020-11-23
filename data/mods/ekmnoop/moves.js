@@ -9,6 +9,7 @@ Flags:
   defrost: Thaws the user if executed successfully while the user is frozen.
   distance: Can target a Pokemon positioned anywhere in a Triple Battle.
   gravity: Prevented from being executed or selected during Gravity's effect.
+  grounded: Has no effect on Flying-type Pokemon, Pokemon with the Levitate Ability, Pokemon holding Air Balloon, or Pokemon affected by Magnet Rise or Telekinesis – except when grounded (by Gravity, Ingrain, Roost, Smack Down, Thousand Arrows, or holding an Iron Ball).
   heal: Prevented from being executed or selected during Heal Block's effect.
   mirror: Can be copied by Mirror Move.
   mystery: Unknown effect.
@@ -60,6 +61,10 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"boomburst": {
+		inherit: true,
+		type: "Air",
+	},
 	"bounce": {
 		inherit: true,
 		type: "Air",
@@ -70,7 +75,11 @@ let BattleMovedex = {
 	},
 	"chatter": {
 		inherit: true,
-		type: "Bird",
+		type: "Air",
+	},
+	"coil": {
+		inherit: true,
+		type: "Normal",
 	},
 	"confuseray": {
 		inherit: true,
@@ -83,6 +92,10 @@ let BattleMovedex = {
 	"defog": {
 		inherit: true,
 		type: "Air",
+	},
+	"dig": {
+		inherit: true,
+		flags: {contact: 1, charge: 1, grounded: 1, protect: 1, mirror: 1, nonsky: 1},
 	},
 	"doubleteam": {
 		inherit: true,
@@ -104,9 +117,21 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"dualwingbeat": {
+		inherit: true,
+		type: "Bird",
+	},
+	"earthquake": {
+		inherit: true,
+		flags: {grounded: 1, protect: 1, mirror: 1, nonsky: 1},
+	},
 	"featherdance": {
 		inherit: true,
 		type: "Bird",
+	},
+	"fissure": {
+		inherit: true,
+		flags: {grounded: 1, protect: 1, mirror: 1, nonsky: 1},
 	},
 	"flash": {
 		inherit: true,
@@ -126,12 +151,19 @@ let BattleMovedex = {
 	},
 	"gigadrain": {
 		inherit: true,
-		basePower: 40,
-		pp: 20,
+		basePower: 80,
 	},
 	"glitzyglow": {
 		inherit: true,
 		type: "Light",
+	},
+	"gmaxwindrage": {
+		inherit: true,
+		type: "Air",
+	},
+	"guillotine": {
+		inherit: true,
+		type: "Steel",
 	},
 	"gust": {
 		inherit: true,
@@ -169,6 +201,14 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Light",
 	},
+	"magnitude": {
+		inherit: true,
+		flags: {grounded: 1, protect: 1, mirror: 1, nonsky: 1},
+	},
+	"maxairstream": {
+		inherit: true,
+		type: "Air",
+	},
 	"megadrain": {
 		inherit: true,
 		basePower: 60,
@@ -201,6 +241,10 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"ominouswind": {
+		inherit: true,
+		pp: 10,
+	},
 	"peck": {
 		inherit: true,
 		type: "Bird",
@@ -225,6 +269,10 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Bird",
 	},
+	"rototiller": {
+		inherit: true,
+		flags: {distance: 1, grounded: 1, nonsky: 1},
+	},
 	"sandstorm": {
 		inherit: true,
 		type: "Ground",
@@ -232,6 +280,10 @@ let BattleMovedex = {
 	"signalbeam": {
 		inherit: true,
 		type: "Light",
+	},
+	"silverwind": {
+		inherit: true,
+		pp: 10,
 	},
 	"simplebeam": {
 		inherit: true,
@@ -257,9 +309,17 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
+	"spikes": {
+		inherit: true,
+		flags: {grounded: 1, nonsky: 1, reflectable: 1},
+	},
 	"spotlight": {
 		inherit: true,
 		type: "Light",
+	},
+	"stickyweb": {
+		inherit: true,
+		flags: {grounded: 1, nonsky: 1, reflectable: 1},
 	},
 	"sunnyday": {
 		inherit: true,
@@ -281,7 +341,15 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
+	"toxicspikes": {
+		inherit: true,
+		flags: {grounded: 1, nonsky: 1, reflectable: 1},
+	},
 	"twister": {
+		inherit: true,
+		type: "Air",
+	},
+	"uproar": {
 		inherit: true,
 		type: "Air",
 	},

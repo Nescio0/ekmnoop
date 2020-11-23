@@ -27,7 +27,7 @@ let BattleTypeChart = {
 			"Ice": 0,
 			"Light": 0,
 			"Normal": 0,
-			"Poison": 0,
+			"Poison": 2,
 			"Psychic": 0,
 			"Rock": 0,
 			"Steel": 0,
