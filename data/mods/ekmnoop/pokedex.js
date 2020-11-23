@@ -23,6 +23,9 @@ let BattlePokedex = {
 	charizardmegay: {
 		types: ["Fire", "Dragon"],
 	},
+	charizardgmax: {
+		types: ["Fire", "Dragon"],
+	},
 	// #008
 	wartortle: {
 		evoLevel: 20,
@@ -33,6 +36,9 @@ let BattlePokedex = {
 	},
 	// #012
 	butterfree: {
+		types: ["Bug"],
+	},
+	butterfreegmax: {
 		types: ["Bug"],
 	},
 	// #016
@@ -83,8 +89,16 @@ let BattlePokedex = {
 	golbat: {
 		types: ["Bat", "Poison"],
 	},
+	// #052
+	meowthalola: {
+		types: ["Normal", "Dark"],
+	},
+	meowthgalar: {
+		types: ["Normal", "Steel"],
+	},
 	// #053
 	persianalola: {
+		types: ["Normal", "Dark"],
 		evoLevel: 28,
 	},
 	// #054
@@ -131,15 +145,22 @@ let BattlePokedex = {
 	ponyta: {
 		types: ["Fire", "Normal"],
 	},
+	ponytagalar: {
+		types: ["Fairy", "Normal"],
+	},
 	// #078
 	rapidash: {
 		types: ["Fire", "Normal"],
-		evoType: "stone",
-		evoItem: "Fire Stone",
+	},
+	rapidashgalar: {
+		types: ["Fairy", "Normal"],
 	},
 	// #083
 	farfetchd: {
 		types: ["Bird"],
+	},
+	farfetchdgalar: {
+		types: ["Bird", "Fighting"],
 	},
 	// #084
 	doduo: {
@@ -149,9 +170,28 @@ let BattlePokedex = {
 	dodrio: {
 		types: ["Bird"],
 	},
+	// #092
+	gastly: {
+		types: ["Ghost"],
+	},
+	// #093
+	haunter: {
+		types: ["Ghost"],
+	},
 	// #094
 	gengar: {
+		types: ["Ghost"],
 		evoLevel: 50,
+	},
+	gengarmega: {
+		types: ["Ghost"],
+	},
+	gengargmax: {
+		types: ["Ghost"],
+	},
+	// #095
+	onix: {
+		types: ["Rock"],
 	},
 	// #098
 	krabby: {
@@ -159,6 +199,9 @@ let BattlePokedex = {
 	},
 	// #099
 	kingler: {
+		types: ["Water", "Bug"],
+	},
+	kinglergmax: {
 		types: ["Water", "Bug"],
 	},
 	// #109
@@ -169,17 +212,20 @@ let BattlePokedex = {
 	weezing: {
 		types: ["Poison", "Air"],
 	},
+	weezinggalar: {
+		types: ["Poison", "Air"],
+	},
 	// #113
 	chansey: {
 		evoLevel: 10,
 	},
 	// #116
 	horsea: {
-		types: ["Water", "Dragon", "Fish"],
+		types: ["Water", "Fish"],
 	},
 	// #117
 	seadra: {
-		types: ["Water", "Dragon", "Fish"],
+		types: ["Water", "Fish"],
 	},
 	// #118
 	goldeen: {
@@ -188,6 +234,10 @@ let BattlePokedex = {
 	// #119
 	seaking: {
 		types: ["Water", "Fish"],
+	},
+	//  #122
+	mrmimegalar: {
+		types: ["Ice", "Fairy"],
 	},
 	// #123
 	scyther: {
@@ -210,13 +260,17 @@ let BattlePokedex = {
 		evoType: "levelHold",
 		evoItem: "Dragon Scale",
 	},
+	// #137
+	porygon: {
+		types: [],
+	},
 	// #140
 	kabuto: {
-		types: ["Water", "Rock", "Bug"],
+		types: ["Bug", "Rock", "Water"],
 	},
 	// #141
 	kabutops: {
-		types: ["Water", "Rock", "Bug"],
+		types: ["Bug", "Rock", "Water"],
 	},
 	// #142
 	aerodactyl: {
@@ -231,16 +285,25 @@ let BattlePokedex = {
 	},
 	// #144
 	articuno: {
-		types: ["Bird", "Ice"],
+		types: ["Ice", "Bird"],
 		baseStats: {hp: 90, atk: 85, def: 100, spa: 125, spd: 95, spe: 85},
+	},
+	articunogalar: {
+		types: ["Psychic", "Bird"],
 	},
 	// #145
 	zapdos: {
-		types: ["Bird", "Electric"],
+		types: ["Electric", "Bird"],
+	},
+	zapdos: {
+		types: ["Fighting", "Bird"],
 	},
 	// #146
 	moltres: {
-		types: ["Bird", "Fire"],
+		types: ["Fire", "Bird"],
+	},
+	moltresgalar: {
+		types: ["Dark", "Bird"],
 	},
 	// #149
 	dragonite: {
@@ -369,7 +432,7 @@ let BattlePokedex = {
 	},
 	// #193
 	yanma: {
-		types: ["Bug", "Dragon"],
+		types: ["Bug"],
 	},
 	// #196
 	espeon: {
@@ -381,10 +444,11 @@ let BattlePokedex = {
 	umbreon: {
 		evoType: "stone",
 		evoItem: "Dusk Stone",
+		evoCondition: "",
 	},
 	// #198
 	murkrow: {
-		types: ["Dark", "Bird"],
+		types: ["Bird", "dark"],
 	},
 	// #199
 	slowking: {
@@ -397,6 +461,7 @@ let BattlePokedex = {
 	},
 	// #208
 	steelix: {
+		types: ["Steel", "Rock"],
 		evoType: "levelHold",
 		evoItem: "Metal Coat",
 	},
@@ -432,11 +497,11 @@ let BattlePokedex = {
 	},
 	// #227
 	skarmory: {
-		types: ["Bird", "Steel"],
+		types: ["Steel", "Bird"],
 	},
 	// #230
 	kingdra: {
-		types: ["Water", "Dragon", "Fish"],
+		types: ["Water", "Fish", "Dragon"],
 		evoType: "levelHold",
 		evoItem: "Dragon Scale",
 	},
@@ -450,6 +515,7 @@ let BattlePokedex = {
 	},
 	// #233
 	porygon2: {
+		types: [],
 		evoType: "levelHold",
 		evoItem: "Up-Grade",
 	},
@@ -472,13 +538,17 @@ let BattlePokedex = {
 	},
 	// #249
 	lugia: {
-		types: ["Bird", "Psychic", "Water"],
+		types: ["Water", "Psychic", "Bird"],
 		baseStats: {hp: 108, atk: 90, def: 130, spa: 90, spd: 150, spe: 110},
 	},
 	// #250
 	hooh: {
-		types: ["Bird", "Light"],
+		types: ["Light", "Bird"],
 		baseStats: {hp: 108, atk: 130, def: 90, spa: 110, spd: 150, spe: 90},
+	},
+	// #251
+	celebi: {
+		types: ["Grass", "Fairy"],
 	},
 // Generation III – 135 Pokémon – #252 Treecko to #386 Deoxys
 	// #253
@@ -571,15 +641,15 @@ let BattlePokedex = {
 	},
 	// #328
 	trapinch: {
-		types: ["Bug", "Ground"],
+		types: ["Ground", "Bug"],
 	},
 	// #329
 	vibrava: {
-		types: ["Bug", "Dragon", "Ground"],
+		types: ["Ground", "Bug"],
 	},
 	// #330
 	flygon: {
-		types: ["Bug", "Dragon", "Ground"],
+		types: ["Ground", "Bug", "Dragon"],
 	},
 	// #333
 	swablu: {
@@ -637,15 +707,21 @@ let BattlePokedex = {
 	},
 	// #358
 	chimecho: {
-		types: ["Psychic", "Air"],
+		types: ["Psychic", "Fairy"],
+		evoLevel: 15,
+		evoCondition: "",
 	},
 	// #367
 	huntail: {
 		types: ["Water", "Fish"],
+		evoType: "levelHold",
+		evoItem: "Deep Sea Tooth",
 	},
 	// #368
 	gorebyss: {
 		types: ["Water", "Fish"],
+		evoType: "levelHold",
+		evoItem: "Deep Sea Scale",
 	},
 	// #369
 	relicanth: {
@@ -682,17 +758,17 @@ let BattlePokedex = {
 	},
 	// #382
 	kyogre: {
-		baseStats: {hp: 108, atk: 100, def: 90, spa: 160, spd: 140, spe: 90},
+		baseStats: {hp: 108, atk: 100, def: 90, spa: 150, spd: 140, spe: 90},
 	},
 	kyogreprimal: {
-		baseStats: {hp: 108, atk: 150, def: 90, spa: 190, spd: 160, spe: 90},
+		baseStats: {hp: 108, atk: 150, def: 90, spa: 180, spd: 160, spe: 90},
 	},
 	// #383
 	groudon: {
 		baseStats: {hp: 108, atk: 160, def: 140, spa: 100, spd: 90, spe: 90},
 	},
 	groudonprimal: {
-		baseStats: {hp: 108, atk: 190, def: 160, spa: 150, spd: 90, spe: 90},
+		baseStats: {hp: 108, atk: 180, def: 160, spa: 150, spd: 90, spe: 90},
 	},
 	// #384
 	rayquaza: {
@@ -702,6 +778,10 @@ let BattlePokedex = {
 	rayquazamega: {
 		types: ["Dragon", "Air"],
 		baseStats: {hp: 108, atk: 175, def: 100, spa: 175, spd: 100, spe: 120},
+	},
+	// #385
+	jirachi: {
+		types: ["Psychic", "Fairy"],
 	},
 	// #386
 	deoxys: {
@@ -785,11 +865,11 @@ let BattlePokedex = {
 	},
 	// #430
 	honchkrow: {
-		types: ["Dark", "Bird"],
+		types: ["Bird", "Dark"],
 	},
 	// #433
 	chingling: {
-		evoLevel: 15,
+		types: ["Psychic", "Fairy"],
 	},
 	// #441
 	chatot: {
@@ -797,7 +877,7 @@ let BattlePokedex = {
 	},
 	// #448
 	lucario: {
-		evoLevel: 25,
+		evoLevel: 23,
 	},
 	// #452
 	drapion: {
@@ -814,11 +894,6 @@ let BattlePokedex = {
 	// #458
 	mantyke: {
 		types: ["Water", "Fish"],
-	},
-	// #462
-	magnezone: {
-		evoType: "stone",
-		evoItem: "Magnetic Stone",
 	},
 	// #464
 	rhyperior: {
@@ -841,17 +916,7 @@ let BattlePokedex = {
 	},
 	// #469
 	yanmega: {
-		types: ["Bug", "Dragon"],
-	},
-	// #470
-	leafeon: {
-		evoType: "stone",
-		evoItem: "Leaf Stone",
-	},
-	// #471
-	glaceon: {
-		evoType: "stone",
-		evoItem: "Ice Stone",
+		types: ["Bug"],
 	},
 	// #472
 	gliscor: {
@@ -859,13 +924,14 @@ let BattlePokedex = {
 	},
 	// #474
 	porygonz: {
+		types: [],
 		evoType: "levelHold",
 		evoItem: "Dubious Disc",
 	},
 	// #476
 	probopass: {
 		evoType: "stone",
-		evoItem: "Magnetic Stone",
+		evoItem: "Metal Coat",
 	},
 	// #477
 	dusknoir: {
@@ -902,6 +968,14 @@ let BattlePokedex = {
 	// #488
 	cresselia: {
 		types: ["Light", "Psychic"],
+	},
+	// #489
+	phione: {
+		types: ["Water", "Fairy"],
+	},
+	// #490
+	manaphy: {
+		types: ["Water", "Fairy"],
 	},
 	// #492
 	shayminsky: {
@@ -963,6 +1037,10 @@ let BattlePokedex = {
 		baseStats: {hp: 150, atk: 125, def: 125, spa: 125, spd: 125, spe: 100},
 	},
 // Generation V – 156 Pokémon – #494 Victini to #649 Genesect
+	// #494
+	victini: {
+		types: ["Fire", "Fairy"],
+	},
 	// #496
 	servine: {
 		evoLevel: 20,
@@ -1101,6 +1179,13 @@ let BattlePokedex = {
 		prevo: "karrablast",
 		evoLevel: 27,
 	},
+	// #618
+	stunfisk: {
+		types: ["Ground", "Electric", "Fish"],
+	},
+	stunfiskgalar: {
+		types: ["Ground", "Steel", "Fish"],
+	},
 	// #627
 	rufflet: {
 		types: ["Bird"],
@@ -1129,7 +1214,7 @@ let BattlePokedex = {
 		types: ["Air", "Electric"],
 	},
 	thundurustherian: {
-		types: ["Air", "Electric"],
+		types: ["Electric"],
 	},
 	// #643
 	reshiram: {
@@ -1145,6 +1230,13 @@ let BattlePokedex = {
 	},
 	landorustherian: {
 		types: ["Ground"],
+	},
+	// #648
+	meloetta: {
+		types: ["Air", "Fairy"],
+	},
+	meloettapirouette: {
+		types: ["Air", "Fairy", "Fighting"],
 	},
 // Generation VI – 72 Pokémon – #650 Chespin to #721 Volcanion
 	// #651
@@ -1200,6 +1292,7 @@ let BattlePokedex = {
 	// #675
 	pangoro: {
 		types: ["Fighting", "Normal", "Dark"],
+		evoCondition: "",
 	},
 	// #682
 	spritzee: {
@@ -1218,11 +1311,11 @@ let BattlePokedex = {
 	},
 	// #690
 	skrelp: {
-		types: ["Dragon", "Poison", "Water", "Fish"],
+		types: ["Poison", "Dragon", "Fish"],
 	},
 	// #691
 	dragalge: {
-		types: ["Dragon", "Poison", "Water", "Fish"],
+		types: ["Poison", "Dragon", "Fish"],
 	},
 	// #692
 	clauncher: {
@@ -1403,10 +1496,6 @@ let BattlePokedex = {
 	mudsdale: {
 		types: ["Ground", "Normal"],
 	},
-	// #764
-	comfey: {
-		types: ["Fairy", "Air"],
-	},
 	// #771
 	pyukumuku: {
 		types: ["Water", "Fish"],
@@ -1448,7 +1537,7 @@ let BattlePokedex = {
 		evoType: "stone",
 		evoItem: "Moon Stone",
 	},
-	// #792
+	// #797
 	celesteela: {
 		types: ["Steel", "Air"],
 	},
@@ -1464,6 +1553,117 @@ let BattlePokedex = {
 	},
 	necrozmaultra: {
 		types: ["Light", "Dragon"],
+	},
+// Generation VIII – 81+3+5 Pokémon – #810 Rowlet to #898 Calyrex
+	// #811
+	thwackey: {
+		evoLevel: 20,
+	},
+	// #812
+	rillaboom: {
+		evoLevel: 40,
+	},
+	// #814
+	raboot: {
+		evoLevel: 20,
+	},
+	// #815
+	cinderace: {
+		evoLevel: 40,
+	},
+	// #817
+	drizzile: {
+		evoLevel: 20,
+	},
+	// #818
+	inteleon: {
+		evoLevel: 40,
+	},
+	// #821
+	rookidee: {
+		types: ["Bird"],
+	},
+	// #822
+	corvisquire: {
+		types: ["Bird"],
+	},
+	// #823
+	corviknight: {
+		types: ["Bird", "Steel"],
+	},
+	corviknightgmax: {
+		types: ["Bird", "Steel"],
+	},
+	// #845
+	cramorant: {
+		types: ["Bird", "Water"],
+	},
+	cramorantgulping: {
+		types: ["Bird", "Water"],
+	},
+	cramorantgorging: {
+		types: ["Bird", "Water"],
+	},
+	// #846
+	arrokuda: {
+		types: ["Water", "Fish"],
+	},
+	// #847
+	barraskweda: {
+		types: ["Water", "Fish"],
+	},
+	// #863
+	perrserker: {
+		types: ["Normal", "Steel"],
+	},
+	// #865
+	sirfetchd: {
+		types: ["Bird", "Fighting"],
+	},
+	//  #866
+	mrrime: {
+		types: ["Ice", "Fairy"],
+	},
+	// #878
+	cufant: {
+		types: ["Steel", "Normal"],
+	},
+	// #879
+	copperajah: {
+		types: ["Steel", "Normal"],
+	},
+	// #882
+	dracovish: {
+		types: ["Water", "Dragon", "Fish"],
+	},
+	// #883
+	arctovish: {
+		types: ["Water", "Dragon", "Fish"],
+	},
+	// #891
+	kubfu: {
+		types: ["Fighting", "Normal"],
+	},
+	// #892
+	urshifu: {
+		types: ["Fighting", "Normal", "Dark"],
+	},
+	urshifurapidstrike: {
+		types: ["Fighting", "Normal", "Water"],
+	},
+	urshifugmax: {
+		types: ["Fighting", "Normal", "Dark"],
+	},
+	urshifurapidstrikegmax: {
+		types: ["Fighting", "Normal", "Water"],
+	},
+	// #897
+	glastrier: {
+		types: ["Ice", "Normal"],
+	},
+	// #898
+	spectrier: {
+		types: ["Ghost", "Normal"],
 	},
 };
 

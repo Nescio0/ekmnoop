@@ -11,6 +11,8 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
     * [Pokemon stats](https://github.com/ekmnoop/myshowdownmod#pokemon-stats)
     * [Pokemon types](https://github.com/ekmnoop/myshowdownmod#pokemon-types)
   * [Items](https://github.com/ekmnoop/myshowdownmod#items)
+    * [Department Stores](https://github.com/ekmnoop/myshowdownmod#department-stores)
+    * [Marts](https://github.com/ekmnoop/myshowdownmod#marts)
 * [Desired gameplay mechanics](https://github.com/ekmnoop/myshowdownmod#desired-gameplay-mechanics)
 
 
@@ -113,7 +115,7 @@ To do:
     * from 15 to 10: Dream Eater
     * from 25 to 20: Absorb
   * increased:
-    * from 5 to 10: Ancient Power
+    * from 5 to 10: Ancient Power, Ominous Wind, Silver Wind
 * Type changes:
   * **Air** instead of **Dragon**: Twister
   * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, Gust, Hurricane, Sky Attack, Supersonic Skystrike, Tail Wind
@@ -132,8 +134,20 @@ To do:
   * **Light** instead of **Psychic**: Glitzy Glow, Light Screen, Light That Burns the Sky, Lunar Dance, Prismatic Laser, Reflect
   * **Light** instead of **Steel**: Flash Cannon
   * **Normal** instead of **Flying**: Acrobatics, Mirror Move
+  * **Normal** instead of **Poison**: Coil
 * Other changes:
   * Leech Life recovers 2/3 of damage dealt (instead of 1/2)
+  * added new `grounded` flag to Dig, Earthquake, Fissure, Magnitude, Rototiller, Spikes, Sticky Web, Toxic Spikes
+* To do:
+  * Lunar Dance:
+    * (instead of fainting the user and fully restoring (HP, PP, status) the Pokémon switched in)
+    * affects the user and all allied Pokémon
+    * removes all stat changes, cures all status conditions, and heals by 1/4 of HP
+
+<!--
+Guard Split, Pain Split, Power Split
+
+-->
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
@@ -145,67 +159,67 @@ To do:
 #### Pokemon evolution
 All Pokémon can evolve without being traded and irrespective of happiness, specific location, or time
 * exposed to an evolutionary stone:
-  * Dawn Stone:
+  * **Dawn Stone**:
     * #133 *Eevee* into #196 *Espeon* (instead of leveled up with high friendship during the morning)
     * #281 *male Kirlia* into #475 *Gallade*
     * #361 *female Snorunt* into #478 *Froslass*
-  * Dusk Stone:
+  * **Dusk Stone**:
     * #133 *Eevee* into #197 *Umbreon* (instead of leveled up with high friendship during the night)
     * #198 *Murkrow* into #430 *Honchkrow*
     * #200 *Misdreavus* into #429 *Mismagius*
     * #608 *Lampent* into #609 *Chandelure*
     * #680 *Doublade* into #681 *Aegislash*
-  * Fire Stone:
+  * **Fire Stone**:
     * #037 *Vulpix* to evolve into #038 *Ninetales*
     * #058 *Growlithe* into #059 *Arcanine*
     * #077 *Ponyta* into #078 *Rapidash* (instead of at level 40)
     * #133 *Eevee* into #136 *Flareon*
     * #513 *Pansear* into #514 *Simisear*
-  * Ice Stone:
+  * **Ice Stone**:
     * #027 *Alolan Sandshrew* into #028 *Alolan Sandslash*
     * #037 *Alolan Vulpix* to evolve into #038 *Alolan Ninetales*
     * #133 *Eevee* into #471 *Glaceon* (instead of leveled up near an Ice Rock)
     * #739 *Crabrawler* into #740 *Crabominable* (instead of leveled up at Mount Lanakila)
-  * Leaf Stone:
+  * **Leaf Stone**:
     * #044 *Gloom* into #045 *Vileplume*
     * #070 *Weepinbell* into #071 *Victreebel*
     * #101 *Exeggcute* into #102 *Exeggutor* or #102 *Alolan Exeggutor*
     * #133 *Eevee* into #470 *Leafeon* (instead of leveled up near a Moss Rock)
     * #274 *Nuzleaf* into #275 *Shiftry*
     * #511 *Pansage* into #512 *Simisage*
-  * Magnetic Stone (*new, to be created*):
+  * **Magnetic Stone** (*new, to be created*):
     * #082 *Magneton* into #462 *Magnezone* (instead of leveled up in a special magnetic field)
     * #299 *Nosepass* into #476 *Probopass* (instead of leveled up in a special magnetic field)
     * #737 *Charjabug* into #738 *Vikavolt* (instead of leveled up in a special magnetic field)
-  * Moon Stone:
+  * **Moon Stone**:
     * #030 *Nidorina* into #031 *Nidoqueen*
     * #033 *Nidorino* into #034 *Nidoking*
     * #035 *Clefairy* into #036 *Clefable*
     * #039 *Jigglypuff* into #040 *Wigglytuff*
     * #517 *Munna* into #518 *Musharna*
     * #790 *Cosmoem* into #792 *Lunala* (instead of at level 53)
-  * Oval Stone:
+  * **Oval Stone**:
     * #113 *Chansey* into #242 *Blissey*
-  * Shiny Stone:
+  * **Shiny Stone**:
     * #133 *Eevee* into #700 *Sylveon* (instead of leveled up with a *Fairy*-type move and two levels of Affection)
     * #176 *Togetic* into #468 *Togekiss*
     * #315 *Roselia* into #407 *Roserade*
     * #572 *Minccino* into #573 *Cinccino*
     * #670 *Floette* into #671 *Florges*
-  * Sun Stone:
+  * **Sun Stone**:
     * #044 *Gloom* into #182 *Bellossom*
     * #191 *Sunkern* into #192 *Sunflora*
     * #546 *Cottonee* into #547 *Whimsicott*
     * #548 *Petilil* into #549 *Lilligant*
     * #694 *Helioptile* into #695 *Heliolisk*
     * #790 *Cosmoem* into #791 *Solgaleo* (instead of at level 53)
-  * Thunder Stone:
+  * **Thunder Stone**:
     * #025 *Pikachu* into #026 *Raichu*
     * #025 *Alolan Pikachu* into #026 *Alolan Raichu*
     * #133 *Eevee* into #135 *Jolteon*
     * #180 *Flaaffy* into #181 *Ampharos* (instead of at level 30)
     * #603 *Eelektrik* into #604 *Eelektross*
-  * Water Stone:
+  * **Water Stone**:
     * #061 *Poliwhirl* into #062 *Poliwrath*
     * #090 *Shellder* into #091 *Cloyster*
     * #120 *Staryu* into #121 *Starmie*
@@ -214,39 +228,39 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
     * #270 *Lombre* into #271 *Ludicolo*
     * #515 *Panpour* into #516 *Simipour*
 * level-up while holding item:
-  * Deep Sea Scale:
+  * **Deep Sea Scale**:
     * #366 *Clamperl* into #368 *Gorebyss* (instead of being traded)
-  * Deep Sea Tooth:
+  * **Deep Sea Tooth**:
     * #366 *Clamperl* into #367 *Huntail* (instead of being traded)
-  * Dragon Scale:
+  * **Dragon Scale**:
     * #117 *Seadra* into #230 *Kingdra* (instead of being traded)
     * #129 *Magikarp* into #130 *Gyarados* (instead of at level 20)
     * #349 *Feebas* into #350 *Milotic* (instead of leveled up with high Beauty or being traded with Prism Scale)
-  * Dubious Disc:
+  * **Dubious Disc**:
     * #233 *Porygon2* into #474 *Porygon-Z* (instead of being traded)
-  * Electirizer:
+  * **Electirizer**:
     * #125 *Electabuzz* into #466 *Electivire* (instead of being traded)
-  * King's Rock:
+  * **King's Rock**:
     * #061 *Poliwhirl* into #186 *Politoed* (instead of being traded)
     * #079 *Slowpoke* into #199 *Slowking* (instead of being traded)
-  * Magmarizer:
+  * **Magmarizer**:
     * #126 *Magmar* into #467 *Magmortar* (instead of being traded)
-  * Metal Coat:
+  * **Metal Coat**:
     * #095 *Onix* into #208 *Steelix* (instead of being traded)
     * #123 *Scyther* into #212 *Scizor* (instead of being traded)
-  * Protector:
+  * **Protector**:
     * #112 *Rhydon* into #464 *Rhyperior* (instead of being traded)
-  * Razor Claw
+  * **Razor Claw**:
     * #215 *Sneasel* into #461 *Weavile* holding a Razor Claw
-  * Razor Fang:
+  * **Razor Fang**:
     * #207 *Gligar* into #472 *Gliscor* holding a Razor Fang
-  * Reaper Cloth:
+  * **Reaper Cloth**:
     * #356 *Dusclops* into #477 *Dusknoir* (instead of being traded)
-  * Sachet:
+  * **Sachet**:
     * #682 *Spritzee* into #683 *Aromatisse* (instead of being traded)
-  * Up-Grade Disc:
+  * **Up-Grade Disc**:
     * #137 *Porygon* into #233 *Porygon2* (instead of being traded)
-  * Whipped Dream:
+  * **Whipped Dream**:
     * #684 *Swirlix* into #685 *Slurpuff* (instead of being traded)
 * ordinary level-up:
   * at level 10:
@@ -314,6 +328,9 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
     * #722 *Rowlet* into #723 *Dartrix* (instead of at level 16)
     * #725 *Litten* into #726 *Torracat* (instead of at level 17)
     * #728 *Popplio* into #729 *Brionne* (instead of at level 17)
+    * #810 *Grookey* into #811 *Thwackey* (instead of at level 16)
+    * #813 *Scorbunny* into #814 *Raboot* (instead of at level 16)
+    * #816 *Sobble* into #817 *Drizzile* (instead of at level 16)
   * second evolution at level 40:
     * #002 *Ivysaur* into #003 *Venusaur* (instead of at level 32)
     * #005 *Charmeleon* into #006 *Charizard* (instead of at level 36)
@@ -336,6 +353,9 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
     * #723 *Dartrix* into #724 *Decidueye* (instead of at level 34)
     * #726 *Torracat* into #727 *Incineroar* (instead of at level 34)
     * #729 *Brionne* into #730 *Primarina* (instead of at level 34)
+    * #811 *Thwackey* into #812 *Rillaboom* (instead of at level 35)
+    * #814 *Raboot* into #815 *Cinderace* (instead of at level 35)
+    * #817 *Drizzile* into #818 *Inteleon* (instead of at level 35)
 <!--
   * at level 36:
     * #138 *Omanyte* into #139 *Omastar* (instead of at level 40)
@@ -352,34 +372,17 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
-#### Pokemon stats
-* Mythical:
-  * #493 *Arceus* +30 HP, +5 PA, +5 PD, +5 SA, +5 SD, -20 CS | total from 720 to 750
-* Legendary:
-  * #144 *Articuno* +30 SA, -30 SD | total at 580
-  * #150 *Mewtwo* +5 HP, +1 PA, -1 PD, +1 SA, -1 SD, -19 CS | total from 680 to 666
-  * #249 *Lugia* +2 HP, -4 SD | total from 680 to 678
-  * #250 *Ho-Oh* +2 HP, -4 SD | total from 680 to 678
-  * #380 *Latias* +30 CS | total from 600 to 630
-  * #381 *Latios* +30 CS | total from 600 to 630
-  * #382 *Kyogre* +8 HP, +10 SA | total from 660 to 678
-  * #383 *Groudon* +8 HP, +10 PA | total from 660 to 678
-  * #384 *Rayquaza* +3 HP, -5 PA, -5 SA, +5 CS | total from 680 to 678
-  * #483 *Dialga* -1 HP, -1 SD | total from 680 to 678
-  * #484 *Palkia* -1 PD, -1 CS | total from 680 to 678
-  * #485 *Heatran* +5 HP, +5 PA, +5 PD, +5 SA, +5 SD, +5 CS | total from 600 to 630
-  * #486 *Regigigas* +10 HP, -20 CS | total from 670 to 660
-  * #487 *Giratina* -1 PA, -1 SA | total from 680 to 678
-  * #643 *Reshiram* -1 HP, -1 PD | total from 680 to 678
-  * #644 *Zekrom* -1 HP, -1 SD | total from 680 to 678
-  * #716 *Xerneas* -3 HP, -3 SD, +4 CS | total from 680 to 678
-  * #717 *Yveltal* -3 HP, -3 SD, +4 CS | total from 680 to 678
-  * #791 *Solgaleo* -1 HP, -1 PA | total from 680 to 678
-  * #792 *Lunala* -1 HP, -1 SA | total from 680 to 678
-* Fossil:
-* Starter:
-* Other:
-
+<!--
+* Starter: {318, 408, 528}
+  * #002 *Ivysaur* +2 PA, +1 PD | total from 405 to 408
+  * #003 *Venusaur* +2 PA, +1 PD | total from 525 to 528
+    * *Mega Venusaur* +4 PA, +1 PD, -2 SA | total from 625 to 628
+  * #153 *Bayleef* +2 PA, +1 SA | total from 405 to 408
+  * #154 *Meganium* +2 PA, +1 SA | total from 525 to 528
+  * #253 *Grovyle* +3 HP | total from 405 to 408
+  * #254 *Sceptile* +3 HP, -5 CS | total from 530 to 528
+    * *Mega Sceptile* +3 HP, -5 CS | total from 630 to 628
+-->
 <!--
 * changed in Generation VI:
   * #012 Butterfree +10 SA
@@ -439,15 +442,15 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * #615 Cryogonal +10 HP, +20 PD
 -->
 
-[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
-
 #### Pokemon types
 * removed:
   * **Dark**-type from #248 *Tyranitar*
+  * **Fire**-type from #250 *Ho-Oh*
   * **Flying**-type from #006 *Charizard*, #012 *Butterfree*, #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #041 *Zubat*, #042 *Golbat*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #123 *Scyther*, #130 *Gyarados*, #142 *Aerodactyl*, #144 *Articuno*, #145 *Zapdos*, #146 *Moltres*, #149 *Dragonite*, #163 *Hoothoot*, #164 *Noctowl*, #165 *Ledyba*, #166 *Ledian*, #169 *Crobat*, #176 *Togetic*, #177 *Natu*, #178 *Xatu*, #187 *Hoppip*, #188 *Skiploom*, #189 *Jumpluff*, #193 *Yanma*, #198 *Murkrow*, #207 *Gligar*, #225 *Delibird*, #226 *Mantine*, #227 *Skarmory*, #249 *Lugia*, #250 *Ho-Oh*, #267 *Beautifly*, #276 *Taillow*, #277 *Swellow*, #278 *Wingull*, #279 *Pelipper*, #284 *Masquerain*, #291 *Ninjask*, #333 *Swablu*, #334 *Altaria*, #351 *Castform*, #357 *Tropius*, #358 *Chimecho*, #373 *Salamence*, #384 *Rayquaza*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #414 *Mothim*, #415 *Combee*, #416 *Vespiqueen*, #425 *Drifloon*, #426 *Drifblim*, #430 *Honchkrow*, #441 *Chatot*, #458 *Mantyke*, #468 *Togekiss*, #469 *Yanmega*, #472 *Gliscor*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #527 *Woobat*, #528 *Swoobat*, #561 *Sigilyph*, #566 *Archen*, #567 *Archeops*, #580 *Ducklett*, #581 *Swanna*, #587 *Emolga*, #627 *Rufflet*, #628 *Braviary*, #629 *Vullaby*, #630 *Mandibuzz*, #642 *Tornadus*, #643 *Thundurus*, #645 *Landorus*, #661 *Fletchling*, #662 *Fletchinder*, #663 *Talonflame*, #666 *Vivillon*, #701 *Hawlucha*, #714 *Noibat*, #715 *Noivern*, #717 *Yveltal*, #722 *Rowlet*, #723 *Dartrix*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*, #741 *Oricorio*, #764 *Comfey*, #774 *Minior*, #797 *Celesteela*
   * **Ghost**-type from #724 *Decidueye*
   * **Ground**-type from #074 *Geodude*, #075 *Graveler*, #076 *Golem*, #246 *Larvitar*, #247 *Pupitar*
   * **Normal**-type from #016 *Pidgey*, #017 *Pidgeotto*, #018 *Pidgeot*, #021 *Spearow*, #022 *Fearow*, #039 *Jigglypuff*, #040 *Wigglytuff*, #083 *Farfetch'd*, #084 *Doduo*, #085 *Dodrio*, #163 *Hoothoot*, #164 *Noctowl*, #174 *Igglybuff*, #276 *Taillow*, #277 *Swellow*, #333 *Swablu*, #351 *Castform*, #396 *Starly*, #397 *Staravia*, #398 *Staraptor*, #441 *Chatot*, #519 *Pidove*, #520 *Tranquil*, #521 *Unfezant*, #627 *Rufflet*, #628 *Braviary*, #661 *Fletchling*, #694 *Helioptile*, #695 *Heliolisk*, #731 *Pikipek*, #732 *Trumbeak*, #733 *Toucannon*
+  * **Poison**-type from #092 *Gastly*, #093 *Hanuter*, #094 *Gengar*
   * **Psychic**-type from #386 *Deoxys* (making it typeless), #789 *Cosmog*, #790 *Cosmoem*, #791 *Solgaleo*, #792 *Lunala*, #800 *Necrozma*
   * **Steel**-type from #395 *Empoleon*
 * added:
@@ -458,7 +461,7 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   * **Dragon**-type to #006 *Charizard*, #116 *Horsea*, #117 *Seadra*, #130 *Gyarados*, #142 *Aerodactyl*, #193 *Yanma*, #246 *Larvitar*, #246 *Pupitar*, #248 *Tyranitar*, #350 *Milotic*, #357 *Tropius*, #469 *Yanmega*, #690 *Skrelp*
   * **Fighting**-type to #127 *Pinsir*
   * **Fire**-type to #661 *Fletchling*
-  * **Fish**-type to #116 *Horsea*, #117 *Seadra*, #118 *Goldeen*, #119 *Seaking*, #129 *Magikarp*, #130 *Gyarados*, #170 *Chinchou*, #171 *Lanturn*, #211 *Qwilfish*, #223 *Remoraid*, #226 *Mantine*, #230 *Kingdra*, #318 *Carvanha*, #319 *Sharpedo*, #339 *Barboach*, #340 *Whiscash*, #349 *Feebas*, #350 *Milotic*, #367 *Huntail*, #368 *Gorebyss*, #369 *Relicanth*, #370 *Luvdisc*, #456 *Finneon*, #457 *Lumineon*, #458 *Mantyke*, #550 *Basculin*, #594 *Alomomola*, #602 *Tynamo*, #603 *Eelektrik*, #604 *Eelektross*, #690 *Skrelp*, #691 *Dragalge*, #746 *Wishiwashi*, #771 *Pyukumuku*, #779 *Bruxish*
+  * **Fish**-type to #116 *Horsea*, #117 *Seadra*, #118 *Goldeen*, #119 *Seaking*, #129 *Magikarp*, #130 *Gyarados*, #170 *Chinchou*, #171 *Lanturn*, #211 *Qwilfish*, #223 *Remoraid*, #226 *Mantine*, #230 *Kingdra*, #318 *Carvanha*, #319 *Sharpedo*, #339 *Barboach*, #340 *Whiscash*, #349 *Feebas*, #350 *Milotic*, #367 *Huntail*, #368 *Gorebyss*, #369 *Relicanth*, #370 *Luvdisc*, #456 *Finneon*, #457 *Lumineon*, #458 *Mantyke*, #550 *Basculin*, #594 *Alomomola*, #602 *Tynamo*, #603 *Eelektrik*, #604 *Eelektross*, #618 *Stunfisk*, #690 *Skrelp*, #691 *Dragalge*, #746 *Wishiwashi*, #771 *Pyukumuku*, #779 *Bruxish*
   * **Light**-type to #250 *Ho-Oh*, #488 *Cresselia*, #789 *Cosmog*, #790 *Cosmoem*, #791 *Solgaleo*, #792 *Lunala*, #800 *Necrozma*
   * **Normal**-type to #077 *Ponyta*, #078 *Rapidash*, #179 *Mareep*, #180 *Flaaffy*, #181 *Ampharos*, #209 *Snubbull*, #210 *Granbull*, #231 *Phanpy*, #232 *Donphan*, #325 *Spoink*, #326 *Grumpig*, #613 *Cubchoo*, #614 *Beartic*, #674 *Pancham*, #675 *Pangoro*, #716 *Xerneas*, #744 *Rockruff*, #745 *Lycanroc*, #749 *Mudbray*, #750 *Mudsdale*
   * **Rock**-type to #790 *Cosmoem*
@@ -469,6 +472,73 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
 
 
 ### Items
+* medicine:
+  * non-volatile status conditions:
+    * 50 **Awakening**: cures sleep
+    * 100 **Antidote**: cures poison
+    * 150 **Paralyse Heal**: cures paralysis
+    * 200 **Burn Heal**: cures burn
+    * 250 **Ice Heal**: cures frozen
+    * 500 **Full Heal**: cures sleep, poison, paralysis, burn, freeze, and confusion
+  * HP:
+    * 300 **Tiny Potion** (*Potion*): heals 30 HP
+    * 700 **Small Potion** (*Super Potion*): heals 60 HP
+    * 1200 **Medium Potion** (*new*): heals 120 HP
+    * 1800 **Large Potion** (*Hyper Potion*): heals 240 HP
+    * 2400 **Huge Potion** (*Max Potion*): heals 480 HP
+    * 3000 **Full Restore**: heals all HP and cures sleep, poison, paralysis, burn, freeze, and confusion
+  * PP: 
+    * 400 **Tiny Energy Bar** (*new*): restores the PP of one move by 20% of default PP
+    * 700 **Small Energy Bar** (*new*): restores the PP of one move by 40% of default PP
+    * 1000 **Medium Energy Bar** (*new*): restores the PP of one move by 60% of default PP
+    * 1300 **Large Energy Bar** (*new*): restores the PP of one move by 80% of default PP
+    * 1600 **Huge Energy Bar** (*new*): restores the PP of one move by 100% of default PP
+    * 1200 **Ether**: restores 10 PP of one move
+    * 2000 **Max Ether**: fully restores the PP of a selected move
+    * 3000 **Elixir**: restores 10 PP to each move
+    * 4500 **Max Elixir**: fully restores the PP of a Pokémon's moves
+* battle items:
+  * single-use consumables:
+    * 1000 **Smoke Ball** (*Fluffy Tail*, *Poké Doll*, *Poké Toy*): ends a battle with a wild Pokémon
+    * 500 **X Ph. Attack**: raises the physical attack of a Pokémon currently in battle by two stages
+    * 550 **X Ph. Defence**: raises the physical defence of a Pokémon currently in battle by two stages
+    * 350 **X Sp. Attack**: raises the special attack of a Pokémon currently in battle by two stages
+    * 350 **X Sp. Defence**: raises the special defence of a Pokémon currently in battle by two stages
+    * 350 **X Speed**: raises the combat speed of a Pokémon currently in battle by two stages
+    * 950 **X Accuracy**: raises the accuracy of a Pokémon currently in battle by two stages
+    * 650 **X Critical** (*Dire Hit*): raises the critical hit ratio of a Pokémon currently in battle by two stages
+    * 700 **X Guard** (*Guard Spec.*): prevents stat reduction by opponents' moves for the user's party for five turns
+  * repeated-use:
+    * **Blue Flute**: wakes a sleeping Pokémon
+    * **Green Flute** (*new*): snaps a Pokémon out of a taunt
+    * **Red Flute**: snaps a Pokémon out of infatuation
+    * **Yellow Flute**: snaps a Pokémon out of confusion
+* miscellaneous:
+  * repels:
+    * 200 **Tiny Repel** (*new*): no lower-level wild Pokémon for 50 steps
+    * 350 **Small Repel** (*Repel*): no lower-level wild Pokémon for 100 steps
+    * 500 **Medium Repel** (*new*): no lower-level wild Pokémon for 150 steps
+    * 650 **Large Repel** (*Super Repel*): no lower-level wild Pokémon for 200 steps
+    * 800 **Huge Repel** (*Max Repel*): no lower-level wild Pokémon for 250 steps
+  * mulch:
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+#### Department Stores
+Department stores sell the following items:
+  * adventure counter: **Poké Ball**, **Great Ball**, **Ultra Ball**, **Tiny Repel**, **Small Repel**, **Medium Repel**, **Large Repel**, **Huge Repel**, **Smoke Ball**
+  * medicine counter: **Awakening**, **Antidote**, **Paralyse Heal**, **Burn Heal**, **Ice Heal**, **Full Heal**, **Tiny Potion**, **Small Potion**, **Medium Potion**, **Large Potion**, **Huge Potion**, **Full Restore**, **Tiny Energy Bar**, **Small Energy Bar**, **Medium Energy Bar**, **Large Energy Bar**, **Huge Energy Bar**
+  * battle counter: **X Ph. Attack**, **X Ph. Defence**, **X Sp. Attack**, **X Sp. Defence**, **X Speed**, **X Accuracy**, **X Critical**, **X Guard**
+  * vitamin counter: **PP Up**, **HP Up**, **Protein**, **Iron**, **Calcium**, **Zinc**, **Carbos**
+  * evolution counter: **Dawn Stone**, **Dusk Stone**, **Fire Stone**, **Ice Stone**, **Leaf Stone**, **Magnetic Stone** (*new*), **Moon Stone**, **Oval Stone**, **Shiny Stone**, **Sun Stone**, **Thunder Stone**, **Water Stone**
+  * mulch counter:
+
+[(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+#### Marts
+Poké-marts are now a separate counter present in every Poké-centre (instead of a separate building)
+  * available at game start: **Poké Ball**, **Awakening**, **Antidote**, **Paralyse Heal**, **Burn Heal**, **Ice Heal**, **Tiny Potion**, **Tiny Energy Bar**, **Tiny Repel**, **Smoke Ball**
+  * added after acquiring a certain number of gym badges: **Small Potion** (1), **Small Energy Bar** (2), **Small Repel** (3), **Great Ball** (4), **Medium Potion** (5), **Medium Energy Bar**(6), **Medium Repel** (7), **Full Heal** (8), **Large Potion** (9), **Large Energy Bar** (10), **Large Repel** (11), **Ultra Ball** (12), **Huge Potion** (13), **Huge Energy Bar** (14), **Huge Repel** (15), **Full Restore** (16), **X Ph. Attack** (17), **X Ph. Defence** (18), **X Sp. Attack** (19), **X Sp. Defence** (20), **X Speed** (21), **X Accuracy** (22), **X Critical** (23), **X Guard** (24)
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
 
@@ -528,6 +598,57 @@ All Pokémon can evolve without being traded and irrespective of happiness, spec
   1. 100% female
   1. 100% male
   1. 100% neuter
+* one-hit knock-out moves (Fissure, Guillotine, Horn Drill, Sheer Cold) and self-destruct moves (Explosion, Final Gambit, Healing Wish, Memento, Self-Destruct) can no longer be learned
+* game is automatically saved whenever you enter a Poké-centre (you can still save at any other idle moment)
+* you can no longer store items at the computer
 
 [(return to table of contents)](https://github.com/ekmnoop/myshowdownmod#table-of-contents)
+
+<!--
+* Poké-centres contain:
+  * a nurse, Chansey, and healing machine to fully heal your Pokémon
+  * a computer to change Pokémon
+  * a Poké-mart to purchase ordinary items
+  * an Alakazam to teleport you to any other Poké-centre you've visited before (Dig, Fly, Teleport no longer work outside of battles)
+  * various NPCs to talk to
+
+ ×···×       #####
+ ··A··       ··S··
+ ·····       =====
+ ····· **·## ·····
+ ×···× **NC· ·····
+   ·   =====   ·
+ P···············P
+ ··++++·····++++··
+ ·+[][]+···+[][]+·
+ ·+[][]+···+[][]+·
+ ··++++·····++++··
+ ×······|||······×
+
+| entrance, exit
+· walking space
+\/ corners
++ chair
+[] table
+× plant
+= counter
+# shelves
+* healing machine
+A Alakazam (teleport)
+C Chansey
+E escalator
+N nurse
+P computer
+S shopkeeper
+V vending machine
+
+ /×##=**N#=P··\  
+ ·++·======····  /·=···####\
+ ··············  .S=·······×
+ ··············  ===···##··#
+ E·········+[]·  ······##··#
+ ··········+[]·  ······##··#
+ \·····||···++/  \··||·····/
+
+-->
 
