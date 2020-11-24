@@ -1,0 +1,1641 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+%\usepackage{fontspec} %\setmainfont{CMU Serif} % XeLaTeX 
+\usepackage[a4paper,margin=21mm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{xfrac}
+
+\definecolor{green}{rgb}{0,0.5,0}
+\newcommand{\immune}{{\color{blue} $0\times$}}
+\newcommand{\notvery}{{\color{green} \sfrac{1}{2}$\times$}}
+\newcommand{\normal}{{$1\times$}}
+\newcommand{\super}{{\color{red} $2\times$}}
+
+\newcommand{\hp}{\textsc{hp}}
+\newcommand{\pa}{\textsc{pa}}
+\newcommand{\pd}{\textsc{pd}}
+\newcommand{\sa}{\textsc{sa}}
+\newcommand{\sd}{\textsc{sd}}
+\newcommand{\cs}{\textsc{cs}}
+\newcommand{\acc}{\textsc{acc}}
+\newcommand{\eva}{\textsc{eva}}
+\newcommand{\chr}{\textsc{chr}}
+
+\title{Changes of yet another \emph{Pok\'emon Showdown} modification}
+%\author{}
+%\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%\section{Introduction}
+
+\clearpage
+\section{Types}
+
+% Air, Bat, Bird, Bug, Dark, Dragon, Electric, Fairy, Fighting, Fire, Fish, Ghost, Grass, Ground, Ice, Light, Normal, Poison, Psychic, Rock, Steel, Water
+
+\begin{itemize}
+\item new types: Air, Bat, Bird, Fish, Light
+\item deprecated: Flying
+\item Air:
+\subitem Air is super effective vs Bat
+\subitem Air is not very effective vs Bug, Dragon, Rock
+\subitem Electric is not very effective vs Air
+\item Bat:
+\subitem Bat is super effective vs Dark, Fighting, Psychic
+\subitem Bat is not very effective vs Ghost, Rock
+\subitem Bat has no effect vs Steel
+\subitem Air, Ice, Light, Rock are super effective vs Bat
+\subitem Ghost is not very effective vs Bat
+\subitem Ground has no effect vs Bat
+\item Bird:
+\subitem Bird is super effective vs Bug, Fighting
+\subitem Bird is not very effective vs Electric, Rock, Steel
+\subitem Electric, Rock are super effective vs Bird
+\subitem Bug, Fighting, Grass are not very effective vs Bird
+\subitem Ground has no effect vs Bird
+\item Fish:
+\subitem Fish is not very effective vs Ice, Rock, Steel
+\subitem Water is not very effective vs Fish
+\item Light:
+\subitem Light is super effective vs Bat, Dark, Ghost
+\subitem Light is not very effective vs Fire, Grass, Steel
+\subitem Dark, Fairy, Ghost are not very effective vs Light
+\item other changes:
+\subitem Electric is normally effective vs Dragon % instead of not very
+\subitem Electric is super effective vs Steel (and vice versa) % instead of normal
+\subitem Fairy is normally effective vs Fire % instead of not very
+\subitem Fairy is not very effective vs Grass % instead of normal
+\subitem Fairy has no effect vs Psychic % instead of normal
+\subitem Ground is not very effective vs Dragon % instead of normal
+\subitem Ice is super effective vs Fire (and vice versa) % instead of not very
+\subitem Ice is normally effective vs Ground % instead of super
+\subitem Ice is normally effective vs Steel % instead of not very
+\subitem Poison is not very effective vs Steel % instead of no effect
+\subitem Psychic is not very effective vs Bug % instead of normal
+\subitem Psychic is normally effective vs Steel % instead of not very
+\subitem Steel is super effective vs Electric (and vice versa) % instead of not very
+\subitem Steel is not very effective vs Fighting % instead of normal
+\subitem Steel is normally effective vs Fire % instead of not very
+\subitem Steel is normally effective vs Ice % instead of super
+\subitem Steel is normally effective vs Rock % instead of super
+\end{itemize}
+
+\begin{landscape}
+\clearpage
+\small
+\begin{longtable}{l|cccc|ccccc|cccc|ccccc|cccc|cccc}
+ & Ar & Bt & Bd & Bg & Dk & Dn & Ec & Fy & Fg & Fe & Fh & Gt & Gs & Gd & Ie & Lt & Nl & Pn & Pc & Rk & Sl & Wr & \super & \normal & \notvery & \immune \\
+\hline
+Air &
+\normal & % Air
+\super & % Bat
+\normal & % Bird
+\notvery & % Bug
+\normal & % Dark
+\notvery & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\notvery & % Rock
+\normal & % Steel
+\normal & % Water
+1 & 18 & 3 &  \\
+
+Bat &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\super & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\super & % Fighting
+\normal & % Fire
+\normal & % Fish
+\notvery & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\super & % Psychic
+\notvery & % Rock
+\immune & % Steel
+\normal & % Water
+3 & 16 & 2 & 1 \\
+
+Bird &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\super & % Bug
+\normal & % Dark
+\normal & % Dragon
+\notvery & % Electric
+\normal & % Fairy
+\super & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\notvery & % Rock
+\notvery & % Steel
+\normal & % Water
+2 & 17 & 3 &  \\
+
+Bug &
+\normal & % Air
+\normal & % Bat
+\notvery & % Bird
+\normal & % Bug
+\super & % Dark
+\normal & % Dragon
+\normal & % Electric
+\notvery & % Fairy
+\notvery & % Fighting
+\notvery & % Fire
+\normal & % Fish
+\notvery & % Ghost
+\super & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\notvery & % Poison
+\super & % Psychic
+\normal & % Rock
+\notvery & % Steel
+\normal & % Water
+3 & 12 & 7 &  \\
+
+\hline
+
+Dark &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\notvery & % Dark
+\normal & % Dragon
+\normal & % Electric
+\notvery & % Fairy
+\notvery & % Fighting
+\normal & % Fire
+\normal & % Fish
+\super & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\notvery & % Light
+\normal & % Normal
+\normal & % Poison
+\super & % Psychic
+\normal & % Rock
+\normal & % Steel
+\normal & % Water
+2 & 16 & 4 &  \\
+
+Dragon &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\super & % Dragon
+\normal & % Electric
+\immune & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\normal & % Rock
+\notvery & % Steel
+\normal & % Water
+1 & 19 & 1 & 1 \\
+
+Electric &
+\notvery & % Air
+\normal & % Bat
+\super & % Bird
+\normal & % Bug
+\normal & % Dark
+\normal & % Dragon
+\notvery & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\notvery & % Grass
+\immune & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\normal & % Rock
+\super & % Steel
+\super & % Water
+3 & 15 & 3 & 1 \\
+
+Fairy &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\super & % Dark
+\super & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\super & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\notvery & % Grass
+\normal & % Ground
+\normal & % Ice
+\notvery & % Light
+\normal & % Normal
+\notvery & % Poison
+\immune & % Psychic
+\normal & % Rock
+\notvery & % Steel
+\normal & % Water
+3 & 14 & 4 & 1 \\
+
+Fighting &
+\normal & % Air
+\normal & % Bat
+\notvery & % Bird
+\notvery & % Bug
+\super & % Dark
+\normal & % Dragon
+\normal & % Electric
+\notvery & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\immune & % Ghost
+\normal & % Grass
+\normal & % Ground
+\super & % Ice
+\normal & % Light
+\super & % Normal
+\notvery & % Poison
+\notvery & % Psychic
+\super & % Rock
+\super & % Steel
+\normal & % Water
+5 & 11 & 5 & 1 \\
+
+\hline
+
+Fire &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\super & % Bug
+\normal & % Dark
+\notvery & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\notvery & % Fire
+\normal & % Fish
+\normal & % Ghost
+\super & % Grass
+\normal & % Ground
+\super & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\notvery & % Rock
+\super & % Steel
+\notvery & % Water
+4 & 14 & 4 &  \\
+
+Fish &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\normal & % Ground
+\notvery & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\notvery & % Rock
+\notvery & % Steel
+\normal & % Water
+ & 19 & 3 &  \\
+
+Ghost &
+\normal & % Air
+\notvery & % Bat
+\normal & % Bird
+\normal & % Bug
+\notvery & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\super & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\notvery & % Light
+\immune & % Normal
+\normal & % Poison
+\super & % Psychic
+\normal & % Rock
+\normal & % Steel
+\normal & % Water
+2 & 16 & 3 & 1 \\
+
+Grass &
+\normal & % Air
+\normal & % Bat
+\notvery & % Bird
+\notvery & % Bug
+\normal & % Dark
+\notvery & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\notvery & % Fire
+\normal & % Fish
+\normal & % Ghost
+\notvery & % Grass
+\super & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\notvery & % Poison
+\normal & % Psychic
+\super & % Rock
+\notvery & % Steel
+\super & % Water
+3 & 12 & 7 &  \\
+
+\hline
+
+Ground &
+\normal & % Air
+\immune & % Bat
+\immune & % Bird
+\notvery & % Bug
+\normal & % Dark
+\notvery & % Dragon
+\super & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\super & % Fire
+\normal & % Fish
+\normal & % Ghost
+\notvery & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\super & % Poison
+\normal & % Psychic
+\super & % Rock
+\super & % Steel
+\normal & % Water
+5 & 12 & 3 & 2 \\
+
+Ice &
+\normal & % Air
+\super & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\super & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\super & % Fire
+\normal & % Fish
+\normal & % Ghost
+\super & % Grass
+\normal & % Ground
+\notvery & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\normal & % Rock
+\normal & % Steel
+\notvery & % Water
+4 & 16 & 2 &  \\
+
+Light &
+\normal & % Air
+\super & % Bat
+\normal & % Bird
+\normal & % Bug
+\super & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\notvery & % Fire
+\normal & % Fish
+\super & % Ghost
+\notvery & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\normal & % Rock
+\notvery & % Steel
+\normal & % Water
+3 & 16 & 3 &  \\
+
+Normal &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\immune & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\notvery & % Rock
+\notvery & % Steel
+\normal & % Water
+ & 19 & 2 & 1 \\
+
+Poison &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\normal & % Dragon
+\normal & % Electric
+\super & % Fairy
+\normal & % Fighting
+\normal & % Fire
+\normal & % Fish
+\notvery & % Ghost
+\super & % Grass
+\notvery & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\notvery & % Poison
+\normal & % Psychic
+\notvery & % Rock
+\notvery & % Steel
+\normal & % Water
+2 & 15 & 5 &  \\
+
+\hline
+
+Psychic &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\notvery & % Bug
+\immune & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\super & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\super & % Poison
+\notvery & % Psychic
+\normal & % Rock
+\normal & % Steel
+\normal & % Water
+2 & 17 & 2 & 1 \\
+
+Rock &
+\normal & % Air
+\super & % Bat
+\super & % Bird
+\super & % Bug
+\normal & % Dark
+\normal & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\notvery & % Fighting
+\super & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\notvery & % Ground
+\super & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\normal & % Rock
+\notvery & % Steel
+\normal & % Water
+5 & 14 & 3 &  \\
+
+Steel &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\normal & % Dragon
+\super & % Electric
+\super & % Fairy
+\notvery & % Fighting
+\normal & % Fire
+\normal & % Fish
+\normal & % Ghost
+\normal & % Grass
+\normal & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\normal & % Rock
+\notvery & % Steel
+\notvery & % Water
+2 & 17 & 3 &  \\
+
+Water &
+\normal & % Air
+\normal & % Bat
+\normal & % Bird
+\normal & % Bug
+\normal & % Dark
+\notvery & % Dragon
+\normal & % Electric
+\normal & % Fairy
+\normal & % Fighting
+\super & % Fire
+\notvery & % Fish
+\normal & % Ghost
+\notvery & % Grass
+\super & % Ground
+\normal & % Ice
+\normal & % Light
+\normal & % Normal
+\normal & % Poison
+\normal & % Psychic
+\super & % Rock
+\normal & % Steel
+\notvery & % Water
+3 & 15 & 4 &  \\
+
+\hline
+
+
+\super &
+ & % Air
+4 & % Bat
+2 & % Bird
+3 & % Bug
+5 & % Dark
+3 & % Dragon
+2 & % Electric
+2 & % Fairy
+4 & % Fighting
+4 & % Fire
+ & % Fish
+3 & % Ghost
+4 & % Grass
+2 & % Ground
+3 & % Ice
+ & % Light
+1 & % Normal
+2 & % Poison
+4 & % Psychic
+4 & % Rock
+4 & % Steel
+2 & % Water
+ &  &  &  \\
+
+\normal &
+21 & % Air
+16 & % Bat
+16 & % Bird
+14 & % Bug
+14 & % Dark
+14 & % Dragon
+18 & % Electric
+16 & % Fairy
+14 & % Fighting
+12 & % Fire
+21 & % Fish
+14 & % Ghost
+12 & % Grass
+16 & % Ground
+17 & % Ice
+19 & % Light
+20 & % Normal
+15 & % Poison
+15 & % Psychic
+11 & % Rock
+ 6 & % Steel
+16 & % Water
+ &  &  &  \\
+
+\notvery &
+1 & % Air
+1 & % Bat
+3 & % Bird
+5 & % Bug
+2 & % Dark
+5 & % Dragon
+2 & % Electric
+3 & % Fairy
+4 & % Fighting
+4 & % Fire
+1 & % Fish
+3 & % Ghost
+6 & % Grass
+2 & % Ground
+2 & % Ice
+3 & % Light
+ & % Normal
+5 & % Poison
+2 & % Psychic
+7 & % Rock
+11 & % Steel
+4 & % Water
+ &  &  &  \\
+
+\immune &
+ & % Air
+1 & % Bat
+1 & % Bird
+ & % Bug
+1 & % Dark
+ & % Dragon
+ & % Electric
+1 & % Fairy
+ & % Fighting
+ & % Fire
+ & % Fish
+2 & % Ghost
+ & % Grass
+1 & % Ground
+ & % Ice
+ & % Light
+1 & % Normal
+ & % Poison
+1 & % Psychic
+ & % Rock
+1 & % Steel
+ & % Water
+ &  &  &  \\
+\end{longtable}
+
+\end{landscape}
+
+\clearpage
+\normalsize
+\section{Pok\'emon}
+
+\subsection{Type changes}
+\small
+\begin{longtable}{rl|ll|llll}
+ &  & \textbf{old} &  & \textbf{new} &  &  &  \\
+\hline
+006 & Charizard & Fire, & Flying & Fire, & Dragon &  &  \\
+012 & Butterfree & Bug, & Flying & Bug &  &  &  \\
+016 & Pidgey & Normal, & Flying & Bird &  &  &  \\
+017 & Pidgeotto & Normal, & Flying & Bird &  &  &  \\
+018 & Pidgeot & Normal, & Flying & Bird &  &  &  \\
+021 & Spearow & Normal, & Flying & Bird &  &  &  \\
+022 & Fearow & Normal, & Flying & Bird &  &  &  \\
+039 & Jigglypuff & Normal, & Fairy & Fairy &  &  &  \\
+040 & Wigglytuff & Normal, & Fairy & Fairy &  &  &  \\
+041 & Zubat & Poison, & Flying & Bat, & Poison &  &  \\
+042 & Golbat & Poison, & Flying & Bat, & Poison &  &  \\
+052 & Meowth (Alola) & Dark &  & Normal, & Dark &  &  \\
+    & Meowth (Galar) & Steel &  & Normal, & Steel &  &  \\
+053 & Persian (Alola) & Dark &  & Normal, & Dark &  &  \\
+054 & Psyduck & Water &  & Water, & Bird &  &  \\
+055 & Golduck & Water &  & Water, & Bird &  &  \\
+074 & Geodude & Rock, & Ground & Rock &  &  &  \\
+075 & Graveler & Rock, & Ground & Rock &  &  &  \\
+076 & Golem & Rock, & Ground & Rock &  &  &  \\
+077 & Ponyta & Fire &  & Fire, & Normal &  &  \\
+    & Ponyta (Galar) & Psychic &  & Fairy, & Normal &  &  \\
+078 & Rapidash & Fire &  & Fire, & Normal &  &  \\
+    & Rapidash (Galar) & Psychic, & Fairy & Fairy, & Normal &  &  \\
+083 & Farfetch'd & Normal, & Flying & Bird &  &  &  \\
+    & Farfetch'd (Galar) & Fighting &  & Bird, & Fighting &  &  \\
+084 & Doduo & Normal, & Flying & Bird &  &  &  \\
+085 & Dodrio & Normal, & Flying & Bird &  &  &  \\
+092 & Gastly & Ghost, & Poison & Ghost &  &  &  \\
+093 & Haunter & Ghost, & Poison & Ghost &  &  &  \\
+094 & Gengar & Ghost, & Poison & Ghost &  &  &  \\
+095 & Onix & Rock, & Ground & Rock &  &  &  \\
+098 & Krabby & Water &  & Water, & Bug &  &  \\
+099 & Kingler & Water &  & Water, & Bug &  &  \\
+109 & Koffing & Poison &  & Poison, & Air &  &  \\
+110 & Weezing & Poison &  & Poison, & Air &  &  \\
+116 & Horsea & Water &  & Water, & Fish, & Dragon &  \\
+117 & Seadra & Water &  & Water, & Fish, & Dragon &  \\
+118 & Goldeen & Water &  & Water, & Fish &  &  \\
+119 & Seaking & Water &  & Water, & Fish &  &  \\
+122 & Mr.~Mime (Galar) & Ice, & Psychic & Ice, & Fairy &  &  \\
+123 & Scyther & Bug, & Flying & Bug &  &  &  \\
+129 & Magikarp & Water &  & Water, & Fish &  &  \\
+130 & Gyarados & Water, & Flying & Water, & Fish, & Dragon &  \\
+137 & Porygon & Normal &  &  &  &  &  \\
+140 & Kabuto & Rock, & Water & Bug, & Rock, & Water &  \\
+141 & Kabutops & Rock, & Water & Bug, & Rock, & Water &  \\
+142 & Aerodactyl & Rock, & Flying & Dragon, & Rock &  &  \\
+144 & Articuno & Ice, & Flying & Ice, & Bird &  &  \\
+    & Articuno (Galar) & Psychic, & Flying & Psychic, & Bird &  &  \\
+145 & Zapdos & Electric, & Flying & Electric, & Bird &  &  \\
+    & Zapdos (Galar) & Fighting, & Flying & Fighting, & Bird &  &  \\
+146 & Moltres & Fire, & Flying & Fire, & Bird &  &  \\
+    & Moltres (Galar) & Dark, & Flying & Dark, & Bird &  &  \\
+149 & Dragonite & Dragon, & Flying & Dragon &  &  &  \\
+\hline % 152
+163 & Hoothoot & Normal, & Flying & Bird &  &  &  \\
+164 & Noctowl & Normal, & Flying & Bird &  &  &  \\
+165 & Ledyba & Bug, & Flying & Bug &  &  &  \\
+166 & Ledian & Bug, & Flying & Bug &  &  &  \\
+169 & Crobat & Poison, & Flying & Bat, & Poison &  \\
+170 & Chinchou & Water, & Electric & Water, & Electric, & Fish &  \\
+171 & Lanturn & Water, & Electric & Water, & Electric, & Fish &  \\
+174 & Igglybuff & Normal, & Fairy & Fairy &  &  \\
+176 & Togetic & Fairy, & Flying & Fairy, & Air &  &  \\
+177 & Natu & Psychic, & Flying & Psychic, & Bird &  &  \\
+178 & Xatu & Psychic, & Flying & Psychic, & Bird &  &  \\
+179 & Mareep & Electric &  & Electric, & Normal &  &  \\
+180 & Flaaffy & Electric &  & Electric, & Normal &  &  \\
+181 & Ampharos & Electric &  & Electric, & Normal &  &  \\
+187 & Hoppip & Grass, & Flying & Grass, & Air &  &  \\
+188 & Skiploom & Grass, & Flying & Grass, & Air &  &  \\
+189 & Jumpluff & Grass, & Flying & Grass, & Air &  &  \\
+193 & Yanma & Bug, & Flying & Bug &  &  &  \\
+198 & Murkrow & Dark, & Flying & Bird, & Dark &  &  \\
+207 & Gligar & Ground, & Flying & Bat, & Ground &  &  \\
+208 & Steelix & Steel, & Ground & Steel, & Rock &  &  \\
+209 & Snubbull & Fairy &  & Fairy, & Normal &  &  \\
+210 & Granbull & Fairy &  & Fairy, & Normal &  &  \\
+211 & Qwilfish & Water, & Poison & Water, & Poison, & Fish &  \\
+223 & Remoraid & Water &  & Water, & Fish &  &  \\
+225 & Delibird & Ice, & Flying & Bird, & Ice &  &  \\
+226 & Mantine & Water, & Flying & Water, & Fish &  &  \\
+227 & Skarmory & Steel, & Flying & Steel, & Bird &  &  \\
+230 & Kingdra & Water &  & Water, & Fish, & Dragon &  \\
+231 & Phanpy & Ground &  & Ground, & Normal &  &  \\
+232 & Donphan & Ground &  & Ground, & Normal &  &  \\
+233 & Porygon2 & Normal &  &  &  &  &  \\
+246 & Larvitar & Rock, & Ground & Rock, & Dragon &  &  \\
+247 & Pupitar & Rock, & Ground & Rock, & Dragon &  &  \\
+248 & Tyranitar & Rock, & Dark & Rock, & Dragon &  &  \\
+249 & Lugia & Psychic, & Flying & Water, & Psychic, & Bird &  \\
+250 & Ho-Oh & Fire, & Flying & Light, & Bird &  &  \\
+251 & Celebi & Psychic, & Grass & Grass, & Fairy &  &  \\
+\hline % 252
+255 & Torchic & Fire &  & Fire, & Bird &  &  \\
+256 & Combusken & Fire, & Fighting & Fire, & Fighting, & Bird &  \\
+257 & Blaziken & Fire, & Fighting & Fire, & Fighting, & Bird &  \\
+267 & Beautifly & Bug, & Flying & Bug &  &  &  \\
+276 & Tailow & Normal, & Flying & Bird &  &  &  \\
+277 & Swellow & Normal, & Flying & Bird &  &  &  \\
+278 & Wingull & Water, & Flying & Bird, & Water &  &  \\
+279 & Pelipper & Water, & Flying & Bird, & Water &  &  \\
+284 & Masquerain & Bug, & Flying & Bug, & Air &  &  \\
+291 & Ninjask & Bug, & Flying & Bug &  &  &  \\
+293 & Whismur & Normal &  & Normal, & Air &  &  \\
+294 & Loudred & Normal &  & Normal, & Air &  &  \\
+295 & Exploud & Normal &  & Normal, & Air &  &  \\
+318 & Carvanha & Water, & Dark & Water, & Dark, & Fish &  \\
+319 & Sharpedo & Water, & Dark & Water, & Dark, & Fish &  \\
+325 & Spoink & Psychic &  & Psychic, & Normal &  &  \\
+326 & Grumpig & Psychic &  & Psychic, & Normal &  &  \\
+328 & Trapinch & Ground &  & Ground, & Bug &  &  \\
+329 & Vibrava & Ground &  & Ground, & Bug &  &  \\
+330 & Flygon & Ground &  & Ground, & Bug, & Dragon &  \\
+333 & Swablu & Dragon, & Flying & Air, & Bird &  &  \\
+334 & Altaria & Dragon, & Flying & Air, & Bird, & Dragon &  \\
+339 & Barboach & Water, & Ground & Water, & Ground, & Fish &  \\
+340 & Whiscash & Water, & Ground & Water, & Ground, & Fish &  \\
+341 & Corphish & Water &  & Water, & Bug &  &  \\
+342 & Crawdaunt & Water, & Dark & Water, & Bug, & Dark &  \\
+349 & Feebas & Water &  & Water, & Fish &  &  \\
+350 & Milotic & Water &  & Water, & Fish, & Dragon &  \\
+351 & Castform & Normal &  & Air &  &  &  \\
+    & Castform (Sunny) & Fire &  & Air, & Fire &  &  \\
+    & Castform (Rainy) & Water &  & Air, & Water &  &  \\
+    & Castform (Snowy) & Ice &  & Air, & Ice &  &  \\
+357 & Tropius & Grass, & Flying & Grass, & Dragon &  &  \\
+358 & Chimecho & Psychic &  & Psychic, & Fairy &  &  \\
+367 & Huntail & Water &  & Water, & Fish &  &  \\
+368 & Gorebyss & Water &  & Water, & Fish &  &  \\
+369 & Relicanth & Water, & Rock & Water, & Rock, & Fish &  \\
+370 & Luvdisc & Water &  & Water, & Fish &  &  \\
+373 & Salamence & Dragon, & Flying & Dragon &  &  &  \\
+380 & Latias & Dragon, & Psychic & Air, & Dragon, & Psychic &  \\
+381 & Latios & Dragon, & Psychic & Air, & Dragon, & Psychic &  \\
+384 & Rayquaza & Dragon, & Flying & Dragon, & Air &  &  \\
+385 & Jirachi & Steel, & Psychic & Psychic, & Fairy &  &  \\
+386 & Deoxys & Psychic &  &  &  &  &  \\
+\hline % 387
+393 & Piplup & Water &  & Water, & Bird &  &  \\
+394 & Prinplup & Water &  & Water, & Bird &  &  \\
+395 & Empoleon & Water, & Steel & Water, & Bird &  &  \\
+396 & Starley & Normal, & Flying & Bird &  &  &  \\
+397 & Staravia & Normal, & Flying & Bird &  &  &  \\
+398 & Staraptor & Normal, & Flying & Bird &  &  &  \\
+414 & Mothim & Bug, & Flying & Bug &  &  &  \\
+415 & Combee & Bug, & Flying & Bug &  &  &  \\
+416 & Vespiqueen & Bug, & Flying & Bug &  &  &  \\
+425 & Drifloon & Ghost, & Flying & Ghost, & Air &  &  \\
+426 & Drifblim & Ghost, & Flying & Ghost, & Air &  &  \\
+430 & Honchkrow & Dark, & Flying & Bird, & Dark &  &  \\
+433 & Chingling & Psychic &  & Psychic, & Fairy &  &  \\
+441 & Chatot & Normal, & Flying & Bird, & Air &  &  \\
+452 & Drapion & Poison, & Dark & Poison, & Bug, & Dark &  \\
+456 & Finneon & Water &  & Water, & Fish &  &  \\
+457 & Lumineon & Water &  & Water, & Fish &  &  \\
+458 & Mantyke & Water, & Flying & Water, & Fish &  &  \\
+468 & Togekiss & Fairy, & Flying & Fairy, & Air &  &  \\
+469 & Yanmega & Bug, & Flying & Bug &  &  &  \\
+472 & Gliscor & Ground, & Flying & Bat, & Ground &  &  \\
+474 & Porygon-Z & Normal &  &  &  &  &  \\
+479 & Rotom (Fan) & Electric, & Flying & Electric, & Air &  &  \\
+488 & Cresselia & Psychic &  & Light, & Psychic &  &  \\
+489 & Phione & Water &  & Water, & Fairy &  &  \\
+490 & Manaphy & Water &  & Water, & Fairy &  &  \\
+492 & Shaymin (Sky) & Grass, & Flying & Grass, & Air &  &  \\
+\hline % 494
+494 & Victini & Psychic, & Fire & Fire, & Fairy &  &  \\
+517 & Munna & Psychic &  & Psychic, & Air &  &  \\
+518 & Musharna & Psychic &  & Psychic, & Air &  &  \\
+519 & Pidove & Normal, & Flying & Bird &  &  &  \\
+520 & Tranquill & Normal, & Flying & Bird &  &  &  \\
+521 & Unfezant & Normal, & Flying & Bird &  &  &  \\
+527 & Woobat & Psychic, & Flying & Bat, & Psychic &  &  \\
+528 & Swoobat & Psychic, & Flying & Bat, & Psychic &  &  \\
+550 & Basculin & Water &  & Water, & Fish &  &  \\
+561 & Sigilyph & Psychic, & Flying & Psychic, & Bird &  &  \\
+566 & Archen & Rock, & Flying & Bird, & Rock &  &  \\
+567 & Archeops & Rock, & Flying & Bird, & Rock &  &  \\
+580 & Ducklett & Water, & Flying & Bird, & Water &  &  \\
+581 & Swanna & Water, & Flying & Bird, & Water &  &  \\
+587 & Emolga & Electric, & Flying & Electric, & Air &  &  \\
+594 & Alomomola & Water &  & Water, & Fish &  &  \\
+602 & Tynamo & Electric &  & Electric, & Fish &  &  \\
+603 & Eelektrik & Electric &  & Electric, & Fish &  &  \\
+604 & Eelektross & Electric &  & Electric, & Fish &  &  \\
+613 & Cubchoo & Ice &  & Ice, & Normal &  &  \\
+614 & Beartic & Ice &  & Ice, & Normal &  &  \\
+618 & Stunfisk & Ground, & Electric & Ground, & Electric, & Fish &  \\
+    & Stunfisk (Galar) & Ground, & Steel & Ground, & Steel, & Fish &  \\
+627 & Rufflet & Normal, & Flying & Bird &  &  &  \\
+628 & Braviary & Normal, & Flying & Bird &  &  &  \\
+629 & Vullaby & Dark, & Flying & Bird, & Dark &  &  \\
+630 & Mandibuzz & Dark, & Flying & Bird, & Dark &  &  \\
+641 & Tornadus & Flying &  & Air &  &  &  \\
+    & Tornadus (Therian) & Flying &  & Air, & Bird &  &  \\
+642 & Thundurus & Electric, & Flying & Air, & Electric &  &  \\
+    & Thundurus (Therian) & Electric, & Flying & Electric &  &  &  \\
+645 & Landorus & Ground, & Flying & Air, & Ground &  &  \\
+    & Landorus (Therian) & Ground, & Flying & Ground &  &  &  \\
+648 & Meloetta & Normal, & Psychic & Air, & Fairy &  &  \\
+    & Meloetta (Pirouette) & Normal, & Fighting & Air, & Fairy, & Fighting &  \\
+\hline % 650
+661 & Fletchling & Normal, & Flying & Bird, & Fire &  &  \\
+662 & Fletchinder & Fire, & Flying & Bird, & Fire &  &  \\
+663 & Talonflame & Fire, & Flying & Bird, & Fire &  &  \\
+666 & Vivillon & Bug, & Flying & Bug &  &  &  \\
+674 & Pancham & Fighting &  & Fighting, & Normal &  &  \\
+675 & Pangoro & Fighting, & Dark & Fighting, & Normal, & Dark &  \\
+682 & Spritzee & Fairy &  & Fairy, & Bird &  &  \\
+683 & Aromatisse & Fairy &  & Fairy, & Bird &  &  \\
+690 & Skrelp & Poison, & Water & Poison, & Dragon, & Fish &  \\
+691 & Dragalge & Poison, & Dragon & Poison, & Dragon, & Fish &  \\
+692 & Clauncher & Water &  & Water, & Bug &  &  \\
+693 & Clawitzer & Water &  & Water, & Bug &  &  \\
+694 & Helioptile & Electric, & Normal & Electric &  &  &  \\
+695 & Heliolisk & Electric, & Normal & Electric &  &  &  \\
+701 & Hawlucha & Fighting, & Flying & Bird, & Fighting &  \\
+714 & Noibat & Flying, & Dragon & Bat, & Air &  &  \\
+715 & Noivern & Flying, & Dragon & Bat, & Air, & Dragon &  \\
+716 & Xerneas & Fairy &  & Fairy, & Normal &  &  \\
+717 & Yveltal & Dark, & Flying & Dark, & Bird &  &  \\
+\hline % 722
+722 & Rowlet & Grass, & Flying & Grass, & Bird &  &  \\
+723 & Dartrix & Grass, & Flying & Grass, & Bird &  &  \\
+724 & Decidueye & Grass, & Ghost & Grass, & Bird &  &  \\
+731 & Pikipek & Normal, & Flying & Bird &  &  &  \\
+732 & Trumbeak & Normal, & Flying & Bird &  &  &  \\
+733 & Toucannon & Normal, & Flying & Bird &  &  &  \\
+739 & Crabrawler & Fighting &  & Fighting, & Bug &  &  \\
+739 & Crabominable & Fighting, & Ice & Fighting, & Bug, & Ice &  \\
+741 & Oricorio (Baile) & Fire, & Flying & Bird, & Fire &  &  \\
+    & Oricorio (Pa'u) & Psychic, & Flying & Bird, & Psychis &  &  \\
+    & Oricorio (Pom-Pom) & Electric, & Flying & Bird, & Electric &  &  \\
+    & Oricorio (Sensu) & Ghost, & Flying & Bird, & Ghost &  &  \\
+744 & Rockruff & Rock &  & Normal, & Rock &  &  \\
+745 & Lycanroc & Rock &  & Normal, & Rock &  &  \\
+746 & Wishiwashi & Water &  & Water, & Fish &  &  \\
+749 & Mudbray & Ground &  & Ground, & Normal &  &  \\
+750 & Mudsdale & Ground &  & Ground, & Normal &  &  \\
+771 & Pyukumuku & Water &  & Water, & Fish &  &  \\
+774 & Minior & Rock, & Flying & Rock, & Air &  &  \\
+779 & Bruxish & Water, & Psychic & Water, & Psychic, & Fish &  \\
+789 & Cosmog & Psychic &  & Light, & Air &  &  \\
+790 & Cosmoem & Psychic &  & Light, & Rock &  &  \\
+791 & Solgaleo & Psychic, & Steel & Light, & Steel &  &  \\
+792 & Lunala & Psychic, & Ghost & Light, & Ghost &  &  \\
+797 & Celesteela & Steel, & Flying & Steel, & Air &  &  \\
+800 & Necrozma & Psychic &  & Light &  &  &  \\
+    & Necrozma (Dusk Mane) & Psychic &  & Light, & Steel &  &  \\
+    & Necrozma (Dawn Wings) & Psychic &  & Light, & Ghost &  &  \\
+    & Necrozma (Ultra) & Psychic &  & Light, & Dragon &  &  \\
+\hline % 810
+821 & Rookidee & Flying &  & Bird &  &  &  \\
+822 & Corvisquire & Flying &  & Bird &  &  &  \\
+823 & Corviknight & Flying, & Steel & Bird, & Steel &  &  \\
+845 & Cramorant & Flying, & Water & Bird, & Water &  &  \\
+846 & Arrokuda & Water &  & Water, & Fish &  &  \\
+847 & Barraskewda & Water &  & Water, & Fish &  &  \\
+863 & Perrserker & Steel &  & Normal, & Steel &  &  \\
+865 & Sirfetch'd & Fighting &  & Bird, & Fighting &  &  \\
+866 & Mr.~Rime & Ice, & Psychic & Ice, & Fairy &  &  \\
+878 & Cufant & Steel &  & Steel, & Normal &  &  \\
+879 & Copperajah & Steel &  & Steel, & Normal &  &  \\
+882 & Dracovish & Water, & Dragon & Water, & Dragon, & Fish &  \\
+883 & Arctovish & Water, & Ice & Water, & Ice, & Fish &  \\
+891 & Kubfu & Fighting &  & Fighting, & Normal &  &  \\
+892 & Urshifu & Fighting, & Dark & Fighting, & Normal, & Dark &  \\
+896 & Glastrier & Ice &  & Ice, & Normal &  &  \\
+897 & Spectrier & Ghost &  & Ghost, & Normal &  &  \\
+\end{longtable}
+
+%\clearpage
+\normalsize
+\subsection{Base stat tweaks}
+\small
+\begin{longtable}{rl|cccccc|l}
+ &  & \textbf{Health} & \textbf{Physical} & \textbf{Physical} & \textbf{Special} & \textbf{Special} & \textbf{Combat} & \textbf{total} \\
+ &  &  & \textbf{Attack} & \textbf{Defence} & \textbf{Attack} & \textbf{Defence} & \textbf{Speed} &  \\
+\hline
+144 & Articuno &  &  &  & $+30$ & $-30$ &  & $580$ \\
+150 & Mewtwo & $+5$ & $+1$ & $-1$ & $+1$ & $-1$ & $-19$ & $680 \rightarrow 666$ \\
+\hline % 152
+249 & Lugia & $+2$ &  &  &  & $-4$ &  & $680 \rightarrow 678$ \\
+250 & Ho-Oh & $+2$ &  &  &  & $-4$ &  & $680 \rightarrow 678$ \\
+\hline % 252
+380 & Latias &  &  &  &  &  & $+30$ & $600 \rightarrow 630$ \\
+381 & Latios &  &  &  &  &  & $+30$ & $600 \rightarrow 630$ \\
+382 & Kyogre & $+8$ &  &  &  &  &  & $670 \rightarrow 678$ \\
+383 & Groudon & $+8$ &  &  &  &  &  & $670 \rightarrow 678$ \\
+384 & Rayquaza & $+3$ & $-5$ &  & $-5$ &  & $+5$ & $680 \rightarrow 678$ \\
+\hline % 387
+483 & Dialga & $-1$ &  &  &  & $-1$ &  & $680 \rightarrow 678$ \\
+484 & Palkia &  &  & $-1$ &  &  & $-1$ & $680 \rightarrow 678$ \\
+485 & Heatran & $+5$ & $+5$ & $+5$ & $+5$ & $+5$ & $+5$ & $600 \rightarrow 630$ \\
+486 & Regigigas & $+10$ &  &  &  &  & $-10$ & $670 \rightarrow 660$ \\
+487 & Giratina &  & $-1$ &  & $-1$ &  &  & $680 \rightarrow 678$ \\
+493 & Arceus & $+30$ & $+5$ & $+5$ & $+5$ & $+5$ & $-20$ & $720 \rightarrow 750$ \\
+\hline % 494
+643 & Reshiram & $-1$ &  & $-1$ &  &  &  & $680 \rightarrow 678$ \\
+644 & Zekrom & $-1$ &  &  &  & $-1$ &  & $680 \rightarrow 678$ \\
+\hline % 650
+716 & Xerneas & $-3$ &  &  &  & $-3$ & $+4$ & $680 \rightarrow 678$ \\
+717 & Yveltal & $-3$ &  &  &  & $-3$ & $+4$ & $680 \rightarrow 678$ \\
+\hline % 722
+791 & Solgaleo & $-1$ & $-1$ &  &  &  &  & $680 \rightarrow 678$ \\
+792 & Lunala & $-1$ &  &  & $-1$ &  &  & $680 \rightarrow 678$ \\
+\hline % 810
+%898 & Calyrex &  &  &  &  &  &  & $500$ \\
+%    & Calyrex (Ice Rider) &  &  &  &  &  &  & $680$ \\
+%    & Calyrex (Shadow Rider) &  &  &  &  &  &  & $680$ \\
+\end{longtable}
+
+\begin{comment}
+Starter: {318, 408, 528}
+  * #002 *Ivysaur* +2 PA, +1 PD | total from 405 to 408
+  * #003 *Venusaur* +2 PA, +1 PD | total from 525 to 528
+    * *Mega Venusaur* +4 PA, +1 PD, -2 SA | total from 625 to 628
+  * #153 *Bayleef* +2 PA, +1 SA | total from 405 to 408
+  * #154 *Meganium* +2 PA, +1 SA | total from 525 to 528
+  * #253 *Grovyle* +3 HP | total from 405 to 408
+  * #254 *Sceptile* +3 HP, -5 CS | total from 530 to 528
+    * *Mega Sceptile* +3 HP, -5 CS | total from 630 to 628
+
+changed in Generation VI:
+  * #012 Butterfree +10 SA
+  * #015 Beedrill +10 PA
+  * #018 Pidgeot +10 CS
+  * #025 Pikachu +10 PD and +10 SD
+  * #026 Raichu +10 CS
+  * #031 Nidoqueen +10 PA
+  * #034 Nidoking +10 PA
+  * #036 Clefable +10 SA
+  * #040 Wigglytuff +10 SA
+  * #045 Vileplume +10 SA
+  * #062 Poliwrath +10 PA
+  * #065 Alakazam +10 SD
+  * #071 Victreebel +10 SD
+  * #076 Golem +10 PA
+  * #181 Ampharos +10 PD
+  * #182 Bellossom +10 PD
+  * #184 Azumarill +10 SA
+  * #189 Jumpluff +10 SD
+  * #267 Beautifly +10 SA
+  * #295 Exploud +10 SD
+  * #398 Staraptor +10 SD
+  * #407 Roserade +10 PD
+  * #508 Stoutland +10 PA
+  * #521 Unfezant +10 PA
+  * #526 Gigalith +10 SD
+  * #537 Seismitoad +10 PA
+  * #542 Leavanny +10 SD
+  * #545 Scolipede +10 PA
+  * #553 Krookodile +10 PD
+
+changed in Generation VII:
+  * #024 Arbok +10 PA
+  * #051 Dugtrio +20 PA
+  * #083 Farfetch'd +25 PA
+  * #085 Dodrio +10 CS
+  * #101 Electrode +10 CS
+  * #103 Exeggutor +10 SD
+  * #164 Noctowl +10 SA
+  * #168 Ariados +10 SD
+  * #211 Qwilfish +10 PD
+  * #219 Magcargo +10 SA
+  * #222 Corsola +10 HP, 10 PD, +10 SD
+  * #226 Mantine +20 HP
+  * #277 Swellow +25 SA
+  * #279 Pelipper +10 SA
+  * #284 Masquerain +20 SA, +20 CS
+  * #301 Delcatty +20 CS
+  * #313 Volbeat +20 PD, +10 SD
+  * #314 Illumise +20 PD, +10 SD
+  * #337 Lunatone +20 HP
+  * #338 Solrock +20 HP
+  * #358 Chimecho +10 HP, +10 PD, +10 SD
+  * #527 Woobat +10 HP
+  * #558 Crustle +10 PA
+  * #614 Beartic +20 PA
+  * #615 Cryogonal +10 HP, +20 PD
+
+\end{comment}
+
+\clearpage
+\normalsize
+\subsection{Evolution}
+\small
+\begin{longtable}{rlcrl|ccc}
+\hline
+001 & Bulbasaur & $\rightarrow$ & 002 & Ivysaur & 16 & $\rightarrow$ & 20 \\
+002 & Ivysaur & $\rightarrow$ & 003 & Venusaur & 32 & $\rightarrow$ & 40 \\
+004 & Charmander & $\rightarrow$ & 005 & Charmeleon & 16 & $\rightarrow$ & 20 \\
+005 & Charmeleon & $\rightarrow$ & 006 & Charizard & 36 & $\rightarrow$ & 40 \\
+007 & Squirtle & $\rightarrow$ & 008 & Wartortle & 16 & $\rightarrow$ & 20 \\
+008 & Wartortle & $\rightarrow$ & 009 & Blastoise & 36 & $\rightarrow$ & 40 \\
+042 & Golbat & $\rightarrow$ & 169 & Crobat & high friendship & $\rightarrow$ & 22 \\
+052 & Meowth (Alola) & $\rightarrow$ & 053 & Persian (Alola) & high friendship & $\rightarrow$ & 28 \\
+061 & Poliwhirl & $\rightarrow$ & 186 & Politied & trade holding King's Rock & $\rightarrow$ & King's Rock \\
+063 & Abra & $\rightarrow$ & 064 & Kadabra & 16 & $\rightarrow$ & 25 \\
+064 & Kadabra & $\rightarrow$ & 065 & Alakazam & trade & $\rightarrow$ & 50 \\
+066 & Machop & $\rightarrow$ & 067 & Machoke & 28 & $\rightarrow$ & 25 \\
+067 & Machoke & $\rightarrow$ & 068 & Machamp & trade & $\rightarrow$ & 50 \\
+075 & Graveler & $\rightarrow$ & 076 & Golem & trade & $\rightarrow$ & 50 \\
+079 & Slowpoke & $\rightarrow$ & 199 & Slowking & trade holding King's Rock & $\rightarrow$ & King's Rock \\
+093 & Haunter & $\rightarrow$ & 094 & Gengar & trade & $\rightarrow$ & 50 \\
+095 & Onix & $\rightarrow$ & 208 & Steelix & trade holding Metal Coat & $\rightarrow$ & Metal Coat \\
+112 & Rhydon & $\rightarrow$ & 464 & Rhyperior & trade holding Protector & $\rightarrow$ & Protector \\
+113 & Chansey & $\rightarrow$ & 242 & Blissey & high friendship & $\rightarrow$ & Oval Stone \\
+117 & Seadra & $\rightarrow$ & 230 & Kingdra & trade holding Dragon Scale & $\rightarrow$ & Dragon Scale \\
+123 & Scyther & $\rightarrow$ & 212 & Scizor & trade holding Metal Coat & $\rightarrow$ & Metal Coat \\
+125 & Electabuzz & $\rightarrow$ & 466 & Electivire & trade holding Electirizer & $\rightarrow$ & Electirizer \\
+126 & Magmar & $\rightarrow$ & 467 & Magmortar & trade holding Magmarizer & $\rightarrow$ & Magmarizer \\
+129 & Magikarp & $\rightarrow$ & 130 & Gyarados & 20 & $\rightarrow$ & Dragon Scale \\
+133 & Eevee & $\rightarrow$ & 196 & Espeon & high friendship, day & $\rightarrow$ & Dawn Stone \\
+133 & Eevee & $\rightarrow$ & 197 & Umbreon & high friendship, night & $\rightarrow$ & Dusk Stone \\
+133 & Eevee & $\rightarrow$ & 700 & Sylveon & high friendship, Fairy-type move & $\rightarrow$ & Shiny Stone \\
+137 & Porygon & $\rightarrow$ & 233 & Porygon2 & trade holding Upgrade & $\rightarrow$ & Upgrade \\
+\hline % 152
+152 & Chikorita & $\rightarrow$ & 153 & Bayleef & 16 & $\rightarrow$ & 20 \\
+153 & Bayleef & $\rightarrow$ & 154 & Meganium & 32 & $\rightarrow$ & 40 \\
+155 & Cyndaquil & $\rightarrow$ & 156 & Quilava & 14 & $\rightarrow$ & 20 \\
+156 & Quilava & $\rightarrow$ & 157 & Typhlosion & 36 & $\rightarrow$ & 40 \\
+158 & Totodile & $\rightarrow$ & 159 & Croconaw & 18 & $\rightarrow$ & 20 \\
+159 & Croconaw & $\rightarrow$ & 160 & Feraligatr & 30 & $\rightarrow$ & 40 \\
+172 & Pichu & $\rightarrow$ & 025 & Pikachu & high friendship & $\rightarrow$ & 10 \\
+173 & Cleffa & $\rightarrow$ & 035 & Clefairy & high friendship & $\rightarrow$ & 10 \\
+174 & Cleffa & $\rightarrow$ & 039 & Jigglypuff & high friendship & $\rightarrow$ & 10 \\
+175 & Togepi & $\rightarrow$ & 176 & Togetic & high friendship & $\rightarrow$ & 10 \\
+180 & Flaaffy & $\rightarrow$ & 181 & Ampharos & 30 & $\rightarrow$ & Thunder Stone \\
+183 & Marill & $\rightarrow$ & 184 & Azumarill & 18 & $\rightarrow$ & Water Stone \\
+233 & Porygon2 & $\rightarrow$ & 474 & Porygon-Z & trade holding Dubious Disc & $\rightarrow$ & Dubious Disc \\
+\hline % 252
+252 & Treecko & $\rightarrow$ & 253 & Grovyle & 16 & $\rightarrow$ & 20 \\
+253 & Grovyle & $\rightarrow$ & 254 & Sceptile & 36 & $\rightarrow$ & 40 \\
+255 & Torchic & $\rightarrow$ & 256 & Combusken & 16 & $\rightarrow$ & 20 \\
+256 & Combusken & $\rightarrow$ & 257 & Blaziken & 36 & $\rightarrow$ & 40 \\
+258 & Mudkip & $\rightarrow$ & 259 & Marshtomp & 16 & $\rightarrow$ & 20 \\
+259 & Marshtomp & $\rightarrow$ & 260 & Swampert & 36 & $\rightarrow$ & 40 \\
+298 & Azurill & $\rightarrow$ & 183 & Marill & high friendship & $\rightarrow$ & 10 \\
+299 & Nosepass & $\rightarrow$ & 476 & Probopass & in special magnetic field & $\rightarrow$ & Metal Coat \\
+300 & Skitty & $\rightarrow$ & 301 & Delcatty & Moon Stone & $\rightarrow$ & 21 \\
+349 & Feebas & $\rightarrow$ & 350 & Milotic & trade holding Prism Scale & $\rightarrow$ & Dragon Scale \\
+356 & Dusclops & $\rightarrow$ & 477 & Dusknoir & trade holding Reaper Cloth & $\rightarrow$ & Reaper Cloth \\
+366 & Clamperl & $\rightarrow$ & 367 & Huntail & trade holding Deep Sea Tooth & $\rightarrow$ & Deep Sea Tooth \\
+366 & Clamperl & $\rightarrow$ & 368 & Gorebyss & trade holding Deep Sea Scale & $\rightarrow$ & Deep Sea Scale \\
+\hline % 387
+387 & Turtwig & $\rightarrow$ & 388 & Grotle & 18 & $\rightarrow$ & 20 \\
+388 & Grotle & $\rightarrow$ & 389 & Torterra & 32 & $\rightarrow$ & 40 \\
+390 & Chimchar & $\rightarrow$ & 391 & Monferno & 14 & $\rightarrow$ & 20 \\
+391 & Monferno & $\rightarrow$ & 392 & Infernape & 36 & $\rightarrow$ & 40 \\
+393 & Piplup & $\rightarrow$ & 394 & Prinplup & 16 & $\rightarrow$ & 20 \\
+394 & Prinplup & $\rightarrow$ & 395 & Empoleon & 36 & $\rightarrow$ & 40 \\
+406 & Budew & $\rightarrow$ & 315 & Roselia & high friendship & $\rightarrow$ & 10 \\
+427 & Buneary & $\rightarrow$ & 428 & Lopunny & high friendship & $\rightarrow$ & 19 \\
+433 & Chingling & $\rightarrow$ & 358 & Chimecho & high friendship, night & $\rightarrow$ & 15 \\
+440 & Happiny & $\rightarrow$ & 113 & Chansey & holding Oval Stone, day & $\rightarrow$ & 10 \\
+446 & Munchlax & $\rightarrow$ & 143 & Snorlax & high friendship & $\rightarrow$ & 25 \\
+447 & Riolu & $\rightarrow$ & 448 & Lucario & high friendship, day & $\rightarrow$ & 23 \\
+458 & Mantyke & $\rightarrow$ & 226 & Mantine & Remoraid in party & $\rightarrow$ & 10 \\
+\hline % 494
+495 & Snivy & $\rightarrow$ & 496 & Servine & 17 & $\rightarrow$ & 20 \\
+496 & Servine & $\rightarrow$ & 497 & Serperior & 36 & $\rightarrow$ & 40 \\
+498 & Tepig & $\rightarrow$ & 499 & Pignite & 17 & $\rightarrow$ & 20 \\
+499 & Pignite & $\rightarrow$ & 500 & Emboar & 36 & $\rightarrow$ & 40 \\
+501 & Oshawott & $\rightarrow$ & 502 & Dewott & 17 & $\rightarrow$ & 20 \\
+502 & Dewott & $\rightarrow$ & 503 & Samurott & 36 & $\rightarrow$ & 40 \\
+525 & Boldore & $\rightarrow$ & 526 & Gigalith & trade & $\rightarrow$ & 50 \\
+527 & Woobat & $\rightarrow$ & 528 & Swoobat & high friendship & $\rightarrow$ & 25 \\
+533 & Gurdurr & $\rightarrow$ & 534 & Conkeldurr & trade & $\rightarrow$ & 50 \\
+541 & Sadloon & $\rightarrow$ & 542 & Leavanny & high friendship & $\rightarrow$ & 40 \\
+588 & Karrablast & $\rightarrow$ & 617 & Accelgor & traded for a Shelmet & $\rightarrow$ & 27 \\
+616 & Shelmet & $\rightarrow$ & 589 & Escavalier & traded for a Karrablast & $\rightarrow$ & 27 \\
+\hline % 650
+650 & Chespin & $\rightarrow$ & 651 & Quilladin & 16 & $\rightarrow$ & 20 \\
+651 & Quilladin & $\rightarrow$ & 652 & Chesnaught & 36 & $\rightarrow$ & 40 \\
+653 & Fennekin & $\rightarrow$ & 654 & Braixen & 16 & $\rightarrow$ & 20 \\
+654 & Braixen & $\rightarrow$ & 655 & Delphox & 36 & $\rightarrow$ & 40 \\
+656 & Froakie & $\rightarrow$ & 657 & Frogadier & 16 & $\rightarrow$ & 20 \\
+657 & Frogadier & $\rightarrow$ & 658 & Greninja & 36 & $\rightarrow$ & 40 \\
+674 & Pancham & $\rightarrow$ & 675 & Pangoro & 32, Dark Pok\'emon in party & $\rightarrow$ & 32 \\
+682 & Spritzee & $\rightarrow$ & 683 & Aromatisse & trade holding Sachet & $\rightarrow$ & Sachet \\
+684 & Swirlix & $\rightarrow$ & 685 & Slurpuff & trade holding Whipped Dream & $\rightarrow$ & Whipped Dream \\
+708 & Phantump & $\rightarrow$ & 709 & Trevenant & trade & $\rightarrow$ & 42 \\
+710 & Pumpkaboo & $\rightarrow$ & 711 & Gourgeist & trade & $\rightarrow$ & 42 \\
+718 & Zygarde (10\%) & $\rightarrow$ &  & Zygarde (50\%) & -- & $\rightarrow$ & 50 \\
+    & Zygarde (50\%) & $\rightarrow$ &  & Zygarde (complete) & -- & $\rightarrow$ & 100 \\
+\hline % 722
+722 & Rowlet & $\rightarrow$ & 723 & Dartrix & 17 & $\rightarrow$ & 20 \\
+723 & Dartrix & $\rightarrow$ & 724 & Decidueye & 34 & $\rightarrow$ & 40 \\
+725 & Litten & $\rightarrow$ & 726 & Torracat & 17 & $\rightarrow$ & 20 \\
+726 & Torracat & $\rightarrow$ & 727 & Incineroar & 34 & $\rightarrow$ & 40 \\
+728 & Popplio & $\rightarrow$ & 729 & Brionne & 17 & $\rightarrow$ & 20 \\
+729 & Brionne & $\rightarrow$ & 730 & Primarina & 34 & $\rightarrow$ & 40 \\
+739 & Crabrawler & $\rightarrow$ & 740 & Crabominable & at Mount Lanakila & $\rightarrow$ & Ice Stone \\
+772 & Type: Null & $\rightarrow$ & 773 & Silvally & high friendship & $\rightarrow$ & 42 \\
+\hline % 810
+810 & Grookey & $\rightarrow$ & 811 & Thwackey & 16 & $\rightarrow$ & 20 \\
+811 & Thwackey & $\rightarrow$ & 812 & Rillaboom & 35 & $\rightarrow$ & 40 \\
+813 & Scorbunny & $\rightarrow$ & 814 & Raboot & 16 & $\rightarrow$ & 20 \\
+814 & Raboot & $\rightarrow$ & 815 & Cinderace & 35 & $\rightarrow$ & 40 \\
+816 & Sobble & $\rightarrow$ & 817 & Drizzile & 16 & $\rightarrow$ & 20 \\
+817 & Drizzile & $\rightarrow$ & 818 & Inteleon & 35 & $\rightarrow$ & 40 \\
+\end{longtable}
+
+\begin{landscape}
+\clearpage
+\normalsize
+\section{Moves}
+
+\subsection{Air}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+332 & Aerial Ace & Physical & Flying & $\rightarrow$ Air & 20 &  & 60 & any &  \\
+340 & Bounce & Physical & Flying & $\rightarrow$ Air & 5 & 85\% & 85 & any & semi-invulnerable first turn; 30\% chance to paralyse \\
+731 & Floaty Fall & Physical & Flying & $\rightarrow$ Air & 15 & 95\% & 90 & adjacent & 30\% chance to flinch \\
+019 & Fly & Physical & Flying & $\rightarrow$ Air & 15 & 95\% & 90 & any & semi-invulnerable first turn \\
+--- & G-Max Wind Rage & Physical & Flying & $\rightarrow$ Air & 10 &  & 10 & any adjacent foe &  \\
+766 & Max Airstream & Physical & Flying & $\rightarrow$ Air & 5 &  & varies & any adjacent foe & user and ally $+1$ \cs \\
+143 & Sky Attack & Physical & Flying & $\rightarrow$ Air & 5 & 90\% & 140 & any & does nothing first turn; 30\% chance to flinch \\
+626 & Supersonic Skystrike & Physical & Flying & $\rightarrow$ Air & 1 &  & varies & adjacent &  \\
+\hline
+177 & Aeroblast & Special & Flying & $\rightarrow$ Air & 5 & 95\% & 100 & any &  \\ % double critical
+314 & Air Cutter & Special & Flying & $\rightarrow$ Air & 25 & 95\% & 60 & all adjacent foes &  \\
+403 & Air Slash & Special & Flying & $\rightarrow$ Air & 15 & 95\% & 75 & any &  \\
+586 & Boomburst & Special & Normal & $\rightarrow$ Air & 10 & 100\% & 140 & all adjacent &  \\
+448 & Chatter & Special & Flying & $\rightarrow$ Air & 20 & 100\% & 65 & any &  \\
+497 & Echoed Voice & Special & Normal & $\rightarrow$ Air & 15 & 100\% & 40 & adjacent &  \\
+016 & Gust & Special & Flying & $\rightarrow$ Air & 35 & 100\% & 40 & any &  \\
+542 & Hurricane & Special & Flying & $\rightarrow$ Air & 10 & 70\% & 110 & any & 30\% chance to confuse \\
+304 & Hyper Voice & Special & Normal & $\rightarrow$ Air & 10 & 100\% & 90 & all adjacent foes &  \\
+766 & Max Airstream & Special & Flying & $\rightarrow$ Air & 5 &  & varies & any adjacent foe & user and ally $+1$ \cs \\
+547 & Relic Song & Special & Normal & $\rightarrow$ Air & 10 & 100\% & 75 & all adjacent foes & 10\% chance to cause sleep \\
+496 & Round & Special & Normal & $\rightarrow$ Air & 15 & 100\% & 60 & adjacent & 30\% chance to flinch \\
+173 & Snore & Special & Normal & $\rightarrow$ Air & 15 & 100\% & 50 & adjacent & user must be asleep \\
+049 & Sonic Boom & Special & Normal & $\rightarrow$ Air & 20 & 90\% &  & adjacent & 20 damage \\
+626 & Supersonic Skystrike & Special & Flying & $\rightarrow$ Air & 1 &  & varies & adjacent &  \\
+239 & Twister & Special & Dragon & $\rightarrow$ Air & 20 & 100\% & 40 & all adjacent foes & 20\% to flinch \\
+253 & Uproar & Special & Normal & $\rightarrow$ Air & 10 & 100\% & 90 & random adjacent foe & lasts three turns, prevents sleep \\
+311 & Weather Ball & Special & Normal & $\rightarrow$ Air & 10 & 100\% & 50 & adjacent & type depends on weather \\
+\hline
+432 & Defog & Status & Flying & $\rightarrow$ Air & 15 &  &  & adjacent & $-1$ evasion \\
+045 & Growl & Status & Normal & $\rightarrow$ Air & 40 & 100\% &  & all adjacent foes & $-1$ \pa \\
+336 & Howl & Status & Normal & $\rightarrow$ Air & 40 &  &  & user and all in party & $+1$ \pa \\
+568 & Noble Roar & Status & Normal & $\rightarrow$ Air & 10 & 100\% &  & adjacent & $-1$ \pa, \sa \\
+195 & Perish Song & Status & Normal & $\rightarrow$ Air & 5 &  &  & all & knock-out in four turns \\
+046 & Roar & Status & Normal & $\rightarrow$ Air & 20 &  &  & adjacent & $-6$ priority, switches out target \\
+103 & Screech & Status & Normal & $\rightarrow$ Air & 40 & 85\% &  & adjacent & $-2$ \pd \\
+047 & Sing & Status & Normal & $\rightarrow$ Air & 15 & 55\% &  & adjacent & sleep \\
+048 & Supersonic & Status & Normal & $\rightarrow$ Air & 20 & 55\% &  & adjacent & confusion \\
+366 & Tailwind & Status & Flying & $\rightarrow$ Air & 15 &  &  & user and all in party & doubles speed for four turns \\
+018 & Whirlwind & Status & Normal & $\rightarrow$ Air & 20 &  &  & adjacent & $-6$ priority, switches out target \\
+\end{longtable}
+
+\normalsize
+\subsection{Bat}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+141 & Leech Life & Physical & Bug & $\rightarrow$ Bat & 10 & 100\% & $80$ & adjacent & restores \sfrac{1}{2} of damage inflicted \\
+\end{longtable}
+
+\normalsize
+\subsection{Bird}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+690 & Beak Blast & Physical & Flying & $\rightarrow$ Bird & 15 & 100\% & 100 & adjacent & $-3$ priority \\ % burns all who make contact earlier in turn
+413 & Brave Bird & Physical & Flying & $\rightarrow$ Bird & 15 & 100\% & 120 & any & \sfrac{1}{3} recoil damage \\
+065 & Drill Peck & Physical & Flying & $\rightarrow$ Bird & 20 & 100\% & 80 & any & \\
+814 & Dual Wingbeat & Physical & Flying & $\rightarrow$ Bird & 10 & 90\% & $2 \times 40$ & adjacent &  \\
+064 & Peck & Physical & Flying & $\rightarrow$ Bird & 35 & 100\% & 35 & any &  \\
+365 & Pluck & Physical & Flying & $\rightarrow$ Bird & 20 & 100\% & 60 & any &  \\ % if target holds a berry, the user consumes it
+507 & Sky Drop & Physical & Flying & $\rightarrow$ Bird & 10 & 100\% & 60 & any & semi-invulnerable first turn; fails if target is too heavy \\
+017 & Wing Attack & Physical & Flying & $\rightarrow$ Bird & 35 & 100\% & 60 & any & \\
+\hline
+613 & Oblivion Wing & Special & Flying & $\rightarrow$ Bird & 10 & 100\% & 80 & any & restores \sfrac{3}{4} of damage inflicted \\
+\hline
+297 & Feather Dance & Status & Flying & $\rightarrow$ Bird & 15 & 100\% &  & adjacent & $-2$ \pa \\
+355 & Roost & Status & Flying & $\rightarrow$ Bird & 10 &  &  & user & restores \sfrac{1}{2} of maximum health \\
+\end{longtable}
+
+\normalsize
+\subsection{Bug}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+318 & Silver Wind & Special & Bug &  & $5 \rightarrow 10$ & 100\% & 60 & adjacent & 10\% chance user $+1$ \pa, \pd, \sa, \sd, \cs \\
+\end{longtable}
+
+\normalsize
+\subsection{Dark}
+
+\normalsize
+\subsection{Dragon}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+620 & Dragon Ascent & Physical & Flying & $\rightarrow$ Dragon & 5 & 100\% & 120 & adjacent & user $-1$ \pd, \sd \\
+\end{longtable}
+
+\normalsize
+\subsection{Electric}
+
+\normalsize
+\subsection{Fairy}
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+%565 & Moonblast & Special & Fairy &  & 15 & 100\% & 95 & adjacent & 30\% chance $-1$ \sa \\
+%\hline
+461 & Lunar Dance & Status & Psychic & $\rightarrow$ Fairy & 10 &  &  & user & user faints, fully restores replacement \\
+236 & Moonlight & Status & Fairy &  & $5 \rightarrow 10$ &  &  & user & restores \sfrac{1}{2} of maximum health, \sfrac{2}{3} when sunny, \sfrac{1}{4} other weather \\
+\end{longtable}
+
+\normalsize
+\subsection{Fighting}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+409 & Drain Punch & Physical & Fighting &  & 10 & 100\% & $75 \rightarrow 80$ & adjacent & restores \sfrac{1}{2} of damage inflicted \\
+\end{longtable}
+
+\normalsize
+\subsection{Fire}
+
+\normalsize
+\subsection{Fish}
+
+\normalsize
+\subsection{Ghost}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+%725 & Menacing Moonraze Maelstrom & Special & Ghost &  & 1 &  & 200 & adjacent & ignores abilities \\
+%714 & Moongeist Beam & Special & Ghost &  & 5 & 100\% & 100 & adjacent & ignores abilities \\
+466 & Ominous Wind & Special & Ghost &  & $5 \rightarrow 10$ & 100\% & 60 & adjacent & 10\% chance user $+1$ \pa, \pd, \sa, \sd, \cs \\
+\end{longtable}
+
+\normalsize
+\subsection{Grass}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+071 & Absorb & Special & Grass &  & $25 \rightarrow 20$ & 100\% & $20 \rightarrow 40$ & adjacent & restores \sfrac{1}{2} of damage inflicted \\
+071 & Giga Drain & Special & Grass &  & $10$ & 100\% & $75 \rightarrow 80$ & adjacent & restores \sfrac{1}{2} of damage inflicted \\
+072 & Mega Drain & Special & Grass &  & $15$ & 100\% & $40 \rightarrow 60$ & adjacent & restores \sfrac{1}{2} of damage inflicted \\
+\hline
+077 & Poison Powder & Status & Poison & $\rightarrow$ Grass & 35 & 75\% &  & adjacent & poison \\
+235 & Synthesis & Status & Grass &  & $5 \rightarrow 10$ &  &  & user & restores \sfrac{1}{2} of maximum health, \sfrac{2}{3} when sunny, \sfrac{1}{4} other weather \\
+\end{longtable}
+
+\normalsize
+\subsection{Ground}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+201 & Sandstorm & Status & Rock & $\rightarrow$ Ground & 10 &  &  & all & lasts five turns \\
+\end{longtable}
+
+\normalsize
+\subsection{Ice}
+
+\normalsize
+\subsection{Light}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+723 & Light That Burns the Sky & Physical & Psychic & $\rightarrow$ Light & 1 &  & 200 & adjacent & ignores abilities \\
+669 & Solar Blade & Physical & Grass & $\rightarrow$ Light & 10 & 100\% & 125 & adjacent & hits on second turn \\
+\hline
+605 & Dazzling Gleam & Special & Fairy & $\rightarrow$ Light & 10 & 100\% & 80 & all adjacent foes & \\
+430 & Flash Cannon & Special & Steel & $\rightarrow$ Light & 10 & 100\% & 80 & adjacent & 10\% chance $-1$ \sd \\
+736 & Glitzy Glow & Special & Psychic & $\rightarrow$ Light & 15 & 95\% & 80 & adjacent & and starts Light Screen \\
+617 & Light of Ruin & Special & Fairy & $\rightarrow$ Light & 5 & 90\% & 140 & adjacent & \sfrac{1}{2} recoil damage \\
+723 & Light That Burns the Sky & Special & Psychic & $\rightarrow$ Light & 1 &  & 200 & adjacent & ignores abilities \\
+711 & Prismatic Laser & Special & Psychic & $\rightarrow$ Light & 10 & 100\% & 160 & adjacent & recharges second turn \\
+324 & Signal Beam & Special & Bug & $\rightarrow$ Light & 15 & 100\% & 75 & adjacent & 10\% chance to confuse \\
+076 & Solar Beam & Special & Grass & $\rightarrow$ Light & 10 & 100\% & 120 & adjacent & hits on second turn \\
+\hline
+109 & Confuse Ray & Status & Ghost & $\rightarrow$ Light & 10 & 100\% &  & adjacent & confuses \\
+104 & Double Team & Status & Normal & $\rightarrow$ Light & 15 &  &  & user & $+1$ evasion \\
+148 & Flash & Status & Normal & $\rightarrow$ Light & 20 & 100\% &  & adjacent & $-1$ accuracy \\
+673 & Laser Focus & Status & Normal & $\rightarrow$ Light & 30 &  &  & user & next move is a critical hit \\
+113 & Light Screen & Status & Psychic & $\rightarrow$ Light & $30 \rightarrow 20$ &  &  & user and all in party & doubles \sd, lasts five turns \\
+234 & Morning Sun & Status & Normal & $\rightarrow$ Light & $5 \rightarrow 10$ &  &  & user & restores \sfrac{1}{2} of maximum health, \sfrac{2}{3} when sunny, \sfrac{1}{4} other weather \\
+115 & Reflect & Status & Psychic & $\rightarrow$ Light & 20 &  &  & user and all in party & doubles \pd, lasts five turns \\
+493 & Simple Beam & Status & Normal & $\rightarrow$ Light & 15 & 100\% &  & adjacent & changes ability to Simple \\
+671 & Spotlight & Status & Normal & $\rightarrow$ Light & 15 &  &  & adjacent & $+3$ priority, redirects attacks \\
+241 & Sunny Day & Status & Fire & $\rightarrow$ Light & 5 &  &  & all & lasts five turns \\
+\end{longtable}
+
+\normalsize
+\subsection{Normal}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+512 & Acrobatics & Physical & Flying & $\rightarrow$ Normal & 15 & 100\% & 55 & any & double damage if user holds no item\\
+\hline
+%129 & Swift & Special & Normal &  & 20 &  & 60 & all adjacent foes & \\
+%\hline
+119 & Mirror Move & Status & Flying & $\rightarrow$ Normal & 20 &  &  & adjacent & uses the last move used against the user \\
+489 & Coil & Status & Poison & $\rightarrow$ Normal & 20 &  &  & user & $+1$ \pa, \pd, accuracy \\
+\end{longtable}
+
+\normalsize
+\subsection{Poison}
+
+\normalsize
+\subsection{Psychic}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+138 & Dream Eater & Special & Psychic &  & $15 \rightarrow 10$ & 100\% & 100 & adjacent & restores \sfrac{1}{2} of damage inflicted \\
+\end{longtable}
+
+\normalsize
+\subsection{Rock}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+246 & Ancient Power & Special & Rock &  & $5 \rightarrow 10$ & 100\% & 60 & adjacent & 10\% chance user $+1$ \pa, \pd, \sa, \sd, \cs \\
+\end{longtable}
+
+\normalsize
+\subsection{Steel}
+\small
+\begin{longtable}{rl|l|ll|rrr|l|l}
+ &  & category & type &  & uses & accuracy & base power & target & other \\
+\hline
+012 & Guillotine & Physical & Normal & $\rightarrow$ Steel & 5 & 30\% &  & adjacent & one-hit knock-out \\
+\end{longtable}
+
+\normalsize
+\subsection{Water}
+
+\end{landscape}
+
+\begin{comment}
+\normalsize
+\section{Items}
+
+* medicine:
+  * non-volatile status conditions:
+    * 50 **Awakening**: cures sleep
+    * 100 **Antidote**: cures poison
+    * 150 **Paralyse Heal**: cures paralysis
+    * 200 **Burn Heal**: cures burn
+    * 250 **Ice Heal**: cures frozen
+    * 500 **Full Heal**: cures sleep, poison, paralysis, burn, freeze, and confusion
+  * HP:
+    * 300 **Tiny Potion** (*Potion*): heals 30 HP
+    * 700 **Small Potion** (*Super Potion*): heals 60 HP
+    * 1200 **Medium Potion** (*new*): heals 120 HP
+    * 1800 **Large Potion** (*Hyper Potion*): heals 240 HP
+    * 2400 **Huge Potion** (*Max Potion*): heals 480 HP
+    * 3000 **Full Restore**: heals all HP and cures sleep, poison, paralysis, burn, freeze, and confusion
+  * PP: 
+    * 400 **Tiny Energy Bar** (*new*): restores the PP of one move by 20% of default PP
+    * 700 **Small Energy Bar** (*new*): restores the PP of one move by 40% of default PP
+    * 1000 **Medium Energy Bar** (*new*): restores the PP of one move by 60% of default PP
+    * 1300 **Large Energy Bar** (*new*): restores the PP of one move by 80% of default PP
+    * 1600 **Huge Energy Bar** (*new*): restores the PP of one move by 100% of default PP
+    * 1200 **Ether**: restores 10 PP of one move
+    * 2000 **Max Ether**: fully restores the PP of a selected move
+    * 3000 **Elixir**: restores 10 PP to each move
+    * 4500 **Max Elixir**: fully restores the PP of a Pokémon's moves
+* battle items:
+  * single-use consumables:
+    * 1000 **Smoke Ball** (*Fluffy Tail*, *Poké Doll*, *Poké Toy*): ends a battle with a wild Pokémon
+    * 500 **X Ph. Attack**: raises the physical attack of a Pokémon currently in battle by two stages
+    * 550 **X Ph. Defence**: raises the physical defence of a Pokémon currently in battle by two stages
+    * 350 **X Sp. Attack**: raises the special attack of a Pokémon currently in battle by two stages
+    * 350 **X Sp. Defence**: raises the special defence of a Pokémon currently in battle by two stages
+    * 350 **X Speed**: raises the combat speed of a Pokémon currently in battle by two stages
+    * 950 **X Accuracy**: raises the accuracy of a Pokémon currently in battle by two stages
+    * 650 **X Critical** (*Dire Hit*): raises the critical hit ratio of a Pokémon currently in battle by two stages
+    * 700 **X Guard** (*Guard Spec.*): prevents stat reduction by opponents' moves for the user's party for five turns
+  * repeated-use:
+    * **Blue Flute**: wakes a sleeping Pokémon
+    * **Green Flute** (*new*): snaps a Pokémon out of a taunt
+    * **Red Flute**: snaps a Pokémon out of infatuation
+    * **Yellow Flute**: snaps a Pokémon out of confusion
+* miscellaneous:
+  * repels:
+    * 200 **Tiny Repel** (*new*): no lower-level wild Pokémon for 50 steps
+    * 350 **Small Repel** (*Repel*): no lower-level wild Pokémon for 100 steps
+    * 500 **Medium Repel** (*new*): no lower-level wild Pokémon for 150 steps
+    * 650 **Large Repel** (*Super Repel*): no lower-level wild Pokémon for 200 steps
+    * 800 **Huge Repel** (*Max Repel*): no lower-level wild Pokémon for 250 steps
+  * mulch:
+
+\subsection{Department Stores}
+Department stores sell the following items:
+  * adventure counter: **Poké Ball**, **Great Ball**, **Ultra Ball**, **Tiny Repel**, **Small Repel**, **Medium Repel**, **Large Repel**, **Huge Repel**, **Smoke Ball**
+  * medicine counter: **Awakening**, **Antidote**, **Paralyse Heal**, **Burn Heal**, **Ice Heal**, **Full Heal**, **Tiny Potion**, **Small Potion**, **Medium Potion**, **Large Potion**, **Huge Potion**, **Full Restore**, **Tiny Energy Bar**, **Small Energy Bar**, **Medium Energy Bar**, **Large Energy Bar**, **Huge Energy Bar**
+  * battle counter: **X Ph. Attack**, **X Ph. Defence**, **X Sp. Attack**, **X Sp. Defence**, **X Speed**, **X Accuracy**, **X Critical**, **X Guard**
+  * vitamin counter: **PP Up**, **HP Up**, **Protein**, **Iron**, **Calcium**, **Zinc**, **Carbos**
+  * evolution counter: **Dawn Stone**, **Dusk Stone**, **Fire Stone**, **Ice Stone**, **Leaf Stone**, **Magnetic Stone** (*new*), **Moon Stone**, **Oval Stone**, **Shiny Stone**, **Sun Stone**, **Thunder Stone**, **Water Stone**
+  * mulch counter:
+
+\subsection{Marts}
+Poké-marts are now a separate counter present in every Poké-centre (instead of a separate building)
+  * available at game start: **Poké Ball**, **Awakening**, **Antidote**, **Paralyse Heal**, **Burn Heal**, **Ice Heal**, **Tiny Potion**, **Tiny Energy Bar**, **Tiny Repel**, **Smoke Ball**
+  * added after acquiring a certain number of gym badges: **Small Potion** (1), **Small Energy Bar** (2), **Small Repel** (3), **Great Ball** (4), **Medium Potion** (5), **Medium Energy Bar**(6), **Medium Repel** (7), **Full Heal** (8), **Large Potion** (9), **Large Energy Bar** (10), **Large Repel** (11), **Ultra Ball** (12), **Huge Potion** (13), **Huge Energy Bar** (14), **Huge Repel** (15), **Full Restore** (16), **X Ph. Attack** (17), **X Ph. Defence** (18), **X Sp. Attack** (19), **X Sp. Defence** (20), **X Speed** (21), **X Accuracy** (22), **X Critical** (23), **X Guard** (24)
+
+* Poké-centres contain:
+  * a nurse, Chansey, and healing machine to fully heal your Pokémon
+  * a computer to change Pokémon
+  * a Poké-mart to purchase ordinary items
+  * an Alakazam to teleport you to any other Poké-centre you've visited before (Dig, Fly, Teleport no longer work outside of battles)
+  * various NPCs to talk to
+
+ ×···×       #####
+ ··A··       ··S··
+ ·····       =====
+ ····· **·## ·····
+ ×···× **NC· ·····
+   ·   =====   ·
+ P···············P
+ ··++++·····++++··
+ ·+[][]+···+[][]+·
+ ·+[][]+···+[][]+·
+ ··++++·····++++··
+ ×······|||······×
+
+| entrance, exit
+· walking space
+\/ corners
++ chair
+[] table
+× plant
+= counter
+# shelves
+* healing machine
+A Alakazam (teleport)
+C Chansey
+E escalator
+N nurse
+P computer
+S shopkeeper
+V vending machine
+
+ /×##=**N#=P··\  
+ ·++·======····  /·=···####\
+ ··············  .S=·······×
+ ··············  ===···##··#
+ E·········+[]·  ······##··#
+ ··········+[]·  ······##··#
+ \·····||···++/  \··||·····/
+
+\end{comment}
+
+\end{document}
+
