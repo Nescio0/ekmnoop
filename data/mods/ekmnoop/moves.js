@@ -107,7 +107,7 @@ let BattleMovedex = {
 	},
 	"drainpunch": {
 		inherit: true,
-		basePower: 70,
+		basePower: 80,
 	},
 	"dreameater": {
 		inherit: true,
@@ -124,6 +124,10 @@ let BattleMovedex = {
 	"earthquake": {
 		inherit: true,
 		flags: {grounded: 1, protect: 1, mirror: 1, nonsky: 1},
+	},
+	"echoedvoice": {
+		inherit: true,
+		type: "Air",
 	},
 	"featherdance": {
 		inherit: true,
@@ -161,6 +165,10 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
+	"growl": {
+		inherit: true,
+		type: "Air",
+	},
 	"guillotine": {
 		inherit: true,
 		type: "Steel",
@@ -169,7 +177,15 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
+	"howl": {
+		inherit: true,
+		type: "Air",
+	},
 	"hurricane": {
+		inherit: true,
+		type: "Air",
+	},
+	"hypervoice": {
 		inherit: true,
 		type: "Air",
 	},
@@ -179,10 +195,6 @@ let BattleMovedex = {
 	},
 	"leechlife": {
 		inherit: true,
-		basePower: 75,
-		desc: "The user recovers 2/3 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3× normal, rounded half down.",
-		shortDesc: "User recovers 67% of the damage dealt.",
-		drain: [2, 3],
 		type: "Bat",
 	},
 	"lightofruin": {
@@ -191,13 +203,10 @@ let BattleMovedex = {
 	},
 	"lightscreen": {
 		inherit: true,
+		pp: 20,
 		type: "Light",
 	},
 	"lightthatburnsthesky": {
-		inherit: true,
-		type: "Light",
-	},
-	"lunardance": {
 		inherit: true,
 		type: "Light",
 	},
@@ -213,29 +222,22 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 60,
 	},
-	"menacingmoonrazemaelstrom": {
-		inherit: true,
-		type: "Light",
-	},
 	"mirrormove": {
 		inherit: true,
 		type: "Normal",
 	},
-	"moonblast": {
-		inherit: true,
-		type: "Light",
-	},
-	"moongeistbeam": {
-		inherit: true,
-		type: "Light",
-	},
 	"moonlight": {
 		inherit: true,
-		type: "Light",
+		pp: 10,
 	},
 	"morningsun": {
 		inherit: true,
+		pp: 10,
 		type: "Light",
+	},
+	"nobleroar": {
+		inherit: true,
+		type: "Air",
 	},
 	"oblivionwing": {
 		inherit: true,
@@ -248,6 +250,10 @@ let BattleMovedex = {
 	"peck": {
 		inherit: true,
 		type: "Bird",
+	},
+	"perishsong": {
+		inherit: true,
+		type: "Air",
 	},
 	"pluck": {
 		inherit: true,
@@ -265,6 +271,14 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Light",
 	},
+	"relicsong": {
+		inherit: true,
+		type: "Air",
+	},
+	"roar": {
+		inherit: true,
+		type: "Air",
+	},
 	"roost": {
 		inherit: true,
 		type: "Bird",
@@ -273,10 +287,18 @@ let BattleMovedex = {
 		inherit: true,
 		flags: {distance: 1, grounded: 1, nonsky: 1},
 	},
+	"round": {
+		inherit: true,
+		type: "Air",
+	},
 	"sandstorm": {
 		inherit: true,
 		type: "Ground",
-  },
+	},
+	"screech": {
+		inherit: true,
+		type: "Air",
+	},
 	"signalbeam": {
 		inherit: true,
 		type: "Light",
@@ -289,6 +311,10 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Light",
 	},
+	"sing": {
+		inherit: true,
+		type: "Air",
+	},
 	"skyattack": {
 		inherit: true,
 		type: "Air",
@@ -296,6 +322,10 @@ let BattleMovedex = {
 	"skydrop": {
 		inherit: true,
 		type: "Bird",
+	},
+	"snore": {
+		inherit: true,
+		type: "Air",
 	},
 	"solarbeam": {
 		inherit: true,
@@ -333,9 +363,9 @@ let BattleMovedex = {
 		inherit: true,
 		type: "Air",
 	},
-	"swift": {
+	"synthesis": {
 		inherit: true,
-		type: "Light",
+		pp: 10,
 	},
 	"tailwind": {
 		inherit: true,

@@ -50,34 +50,35 @@ This is currently a mod for [Pokémon Showdown](https://github.com/Zarel/Pokemon
   * **Flying**
 * New types:
   * **Air**:
-    * not very effective vs **Dragon**
-    * no effect vs **Rock**
+    * super-effective vs **Bat**
+    * not very effective vs **Bug**, **Dragon**, **Rock**
   * **Bat**:
-    * super-effective vs **Fighting**, **Psychic**
+    * super-effective vs **Dark**, **Fighting**, **Psychic**
     * not very effective vs **Ghost**, **Rock**
     * no effect vs **Steel**
   * **Bird**:
-    * super-effective vs **Bug**
-    * not very effective vs **Rock**, **Steel**
+    * super-effective vs **Bug**, **Fighting**
+    * not very effective vs **Electric**, **Rock**, **Steel**
   * **Fish**:
   * **Light**:
     * super-effective vs **Bat**, **Dark**, **Ghost**
-    * not very effective vs **Rock**, **Steel**
-    * no effect vs **Grass**
+    * not very effective vs **Fire**, **Grass**, **Steel**
 * Effectiviness changes of existing types:
   * **Bug** is not very effective vs **Bird** (new)
-  * **Dark** has no effect vs **Light** (new)
+  * **Dark** is not very effective vs **Light** (new)
   * **Electric** is not very effective vs **Air** (new)
+  * **Electric** is super-effective vs **Bird** (new)
   * **Electric** is normally effective vs **Dragon** (instead of not very effective)
   * **Electric** is super-effective vs **Steel** (instead of normally effective)
   * **Fairy** is normally effective vs **Fire** (instead of not very effective)
   * **Fairy** is not very effective vs **Grass** (instead of normally effective)
   * **Fairy** has no effect vs **Psychic** (instead of normally effective)
-  * **Fire** is super-effective vs **Bat** (new)
-  * **Fighting** is normally effective vs **Bug** (instead of not very effective)
+  * **Fighting** is not very effective vs **Bird** (new)
   * **Ghost** is not very effective vs **Bat** (new)
   * **Ghost** is not very effective vs **Light** (new)
   * **Grass** is not very effective vs **Bird** (new)
+  * **Ground** has no effect vs **Bat** (new)
+  * **Ground** has no effect vs **Bird** (new)
   * **Ground** is not very effective vs **Dragon** (instead of normally effective)
   * **Ice** is super-effective vs **Bat** (new)
   * **Ice** is super-effective vs **Fire** (instead of not very effective)
@@ -104,8 +105,7 @@ To do:
 * Accuracy changes:
 * Base power changes:
   * decreased:
-    * from 75 to 70: Drain Punch
-    * from 80 to 75: Leech Life
+    * from 75 to 80: Drain Punch
   * increased:
     * from 20 to 40: Absorb
     * from 40 to 60: Mega Drain
@@ -114,29 +114,30 @@ To do:
   * decreased:
     * from 15 to 10: Dream Eater
     * from 25 to 20: Absorb
+    * from 30 to 20: Light Screen
   * increased:
     * from 5 to 10: Ancient Power, Ominous Wind, Silver Wind
+    * from 5 to 10: Moonlight, Morning Sun, Synthesis
 * Type changes:
   * **Air** instead of **Dragon**: Twister
-  * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Defog, Floaty Fall, Fly, G-Max Wind Rage, Gust, Hurricane, Max Airstream, Sky Attack, Supersonic Skystrike, Tailwind
-  * **Air** instead of **Normal**: Boom Burst, Sonic Boom, Supersonic, Uproar, Weather Ball, Whirlwind
+  * **Air** instead of **Flying**: Aerial Ace, Aeroblast, Air Cutter, Air Slash, Bounce, Chatter, Defog, Floaty Fall, Fly, G-Max Wind Rage, Gust, Hurricane, Max Airstream, Sky Attack, Supersonic Skystrike, Tailwind
+  * **Air** instead of **Normal**: Boomburst, Echoed Voice, Growl, Howl, Hyper Voice, Noble Roar, Perish Song, Relic Song, Roar, Round, Screech, Sing, Snore, Sonic Boom, Supersonic, Uproar, Weather Ball, Whirlwind
   * **Bat** instead of **Bug**: Leech Life
-  * **Bird** instead of **Flying**: Beak Blast, Brave Bird, Chatter, Drill Peck, Feather Dance, Oblivion Wing, Peck, Pluck, Roost, Sky Drop, Wing Attack
+  * **Bird** instead of **Flying**: Beak Blast, Brave Bird, Drill Peck, Feather Dance, Oblivion Wing, Peck, Pluck, Roost, Sky Drop, Wing Attack
   * **Dragon** instead of **Flying**: Dragon Ascent
   * **Grass** instead of **Poison**: Poison Powder
   * **Ground** instead of **Rock**: Sandstorm
   * **Light** instead of **Bug**: Signal Beam
-  * **Light** instead of **Fairy**: Light of Ruin, Moonblast, Moonlight
+  * **Light** instead of **Fairy**: Light of Ruin
   * **Light** instead of **Fire**: Sunny Day
-  * **Light** instead of **Ghost**: Confuse Ray, Menacing Moonraze Maelstrom, Moongeist Beam
+  * **Light** instead of **Ghost**: Confuse Ray
   * **Light** instead of **Grass**: Solar Beam, Solar Blade
-  * **Light** instead of **Normal**: Double Team, Flash, Laser Focus, Morning Sun, Simple Beam, Spotlight, Swift
-  * **Light** instead of **Psychic**: Glitzy Glow, Light Screen, Light That Burns the Sky, Lunar Dance, Prismatic Laser, Reflect
+  * **Light** instead of **Normal**: Double Team, Flash, Laser Focus, Morning Sun, Simple Beam, Spotlight
+  * **Light** instead of **Psychic**: Glitzy Glow, Light Screen, Light That Burns the Sky, Prismatic Laser, Reflect
   * **Light** instead of **Steel**: Flash Cannon
   * **Normal** instead of **Flying**: Acrobatics, Mirror Move
   * **Normal** instead of **Poison**: Coil
 * Other changes:
-  * Leech Life recovers 2/3 of damage dealt (instead of 1/2)
   * added new `grounded` flag to Dig, Earthquake, Fissure, Magnitude, Rototiller, Spikes, Sticky Web, Toxic Spikes
 * To do:
   * Lunar Dance:

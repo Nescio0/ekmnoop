@@ -612,6 +612,18 @@ let BattlePokedex = {
 	ninjask: {
 		types: ["Bug"],
 	},
+	// #293
+	whismur: {
+		types: ["Normal", "Air"],
+	},
+	// #294
+	loudred: {
+		types: ["Normal", "Air"],
+	},
+	// #295
+	exploud: {
+		types: ["Normal", "Air"],
+	},
 	// #301
 	delcatty: {
 		evoLevel: 21,
@@ -873,7 +885,7 @@ let BattlePokedex = {
 	},
 	// #441
 	chatot: {
-		types: ["Bird"],
+		types: ["Bird", "Air"],
 	},
 	// #448
 	lucario: {
@@ -1373,11 +1385,11 @@ let BattlePokedex = {
 	},
 	// #714
 	noibat: {
-		types: ["Bat", "Dragon"],
+		types: ["Bat", "Air"],
 	},
 	// #715
 	noivern: {
-		types: ["Bat", "Dragon"],
+		types: ["Bat", "Air", "Dragon"],
 	},
 	// #716
 	xerneas: {
