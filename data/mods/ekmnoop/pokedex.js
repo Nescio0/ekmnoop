@@ -753,20 +753,16 @@ let BattlePokedex = {
 	// #380
 	latias: {
 		types: ["Air", "Dragon", "Psychic"],
-		baseStats: {hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 140},
 	},
 	latiasmega: {
 		types: ["Air", "Dragon", "Psychic"],
-		baseStats: {hp: 80, atk: 100, def: 120, spa: 140, spd: 150, spe: 140},
 	},
 	// #381
 	latios: {
 		types: ["Air", "Dragon", "Psychic"],
-		baseStats: {hp: 80, atk: 90, def: 80, spa: 130, spd: 110, spe: 140},
 	},
 	latiosmega: {
 		types: ["Air", "Dragon", "Psychic"],
-		baseStats: {hp: 80, atk: 130, def: 100, spa: 160, spd: 120, spe: 140},
 	},
 	// #382
 	kyogre: {
@@ -961,10 +957,6 @@ let BattlePokedex = {
 	// #484
 	palkia: {
 		baseStats: {hp: 90, atk: 120, def: 99, spa: 150, spd: 120, spe: 99},
-	},
-	// #485
-	heatran: {
-		baseStats: {hp: 96, atk: 95, def: 111, spa: 135, spd: 111, spe: 82},
 	},
 	// #486
 	regigigas: {
